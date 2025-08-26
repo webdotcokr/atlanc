@@ -7,6 +7,8 @@ export { default as TagLabel } from './tag-label';
 export { default as ReviewInfo } from './review-info';
 export { default as WhoWeAreSection } from './who-we-are-section';
 export { default as ItemCard } from './item-card';
+export { default as DesignerCard } from './designer-card';
+export { default as SlideArrows } from './slide-arrows';
 export { default as Footer } from './footer';
 
 // Types
@@ -18,4 +20,6 @@ export type { TagLabelProps } from './tag-label';
 export type { ReviewInfoProps } from './review-info';
 export type { WhoWeAreSectionProps } from './who-we-are-section';
 export type { ItemCardProps } from './item-card';
+export type { DesignerCardProps } from './designer-card';
+export type { SlideArrowsProps } from './slide-arrows';
 export type { FooterProps } from './footer';
