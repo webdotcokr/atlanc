@@ -18,10 +18,10 @@ export default function RootLayout({
     <html lang="ko">
       <body className="antialiased">
         <Header />
-        <main className="pt-20">
-          <BtBanner />
+        <main>
           {children}
         </main>
+        <BtBanner />
         <Footer />
       </body>
     </html>
