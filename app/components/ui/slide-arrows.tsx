@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Arrow component assets
-const ellipseGray = "http://localhost:3845/assets/abfc2ba66ef4a898dda62433a80d524aa925a0c5.svg";
-const vectorGrayLight = "http://localhost:3845/assets/522cdedc95a40b76b4107851c39f5129511f74aa.svg";
-const vectorGrayDark = "http://localhost:3845/assets/b90f05e14ec5372855e36e154d3ec19a0e264a66.svg";
-const ellipseDark = "http://localhost:3845/assets/affb3199c4950aa65ae486d3daed9f6a87490dad.svg";
-const vectorDark = "http://localhost:3845/assets/84702af049090946d4942ae0b6c77214bba87c14.svg";
+const ellipseGray = "/Ellipse.svg";
+const vectorGrayLight = "/slide-arrows-left.svg";
+const vectorGrayDark = "/VectorGrayDark.svg";
+const ellipseDark = "/EllipseDark.svg";
+const vectorDark = "/VectorDark.svg";
 const ellipseDefault = "http://localhost:3845/assets/a3b552a84b629768e226d1d0e90dac66e096075a.svg";
 
 export interface SlideArrowsProps {

@@ -9,6 +9,7 @@ export { default as WhoWeAreSection } from './who-we-are-section';
 export { default as ItemCard } from './item-card';
 export { default as DesignerCard } from './designer-card';
 export { default as SlideArrows } from './slide-arrows';
+export { default as RightArrow } from './right-arrow';
 export { default as Footer } from './footer';
 
 // Types

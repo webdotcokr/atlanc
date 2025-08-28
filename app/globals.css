@@ -11,7 +11,7 @@
 
 :root {
   /* Figma Design System Colors */
-  --color-primary-500: #242423;
+  --color-primary-500: #26D07C;
   
   /* Green Scale */
   --color-green-000: #dde4e1;
@@ -63,7 +63,7 @@
   
   /* Semantic Colors */
   --background: var(--color-gray-50);
-  --foreground: var(--color-primary-500);
+  --foreground: #000000;
 }
 
 @theme inline {
@@ -127,8 +127,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--color-extended-gray-900);
+    --background: #fff;
     --foreground: var(--color-gray-50);
+  }
+}
+
+* {
+  transition: 0.15s linear;
+}
+
+html {
+  font-size: 16px; /* 데스크톱 기본값 (1rem = 16px) */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* 모바일에서 1rem = 14px */
   }
 }
 
@@ -136,4 +150,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  cursor:
+}
+
+.en {
+  font-family: 'Poppins';
+}
+.num {
+  font-family: 'Cormorant Garamond', serif;
 }
