@@ -5,6 +5,7 @@ import Section2Client from './components/sections/Section2Client';
 import Section3 from './components/sections/Section3';
 import NewsClient, { NewsItem } from './components/sections/NewsClient';
 import BeforeAfterSlider from './components/ui/BeforeAfterSlider';
+import { SynchronizedSliderProvider } from './components/ui/SynchronizedSliderContext';
 
 // Hero Section Images
 const imgRectangle193989 = "http://localhost:3845/assets/aad7a07a18c5778c7589b7cd82daf88815b6453a.png";
@@ -35,20 +36,6 @@ export default function Home() {
       title: '남자를 위한 특별한 공간, 아뜰랑 맨즈헤어에서 프리미엄 스타일링으로 차별화된 경험 선사합니다.',
       imageUrl: '/news-3.webp'
     },
-    {
-      id: '4',
-      date: '25.08',
-      day: 12,
-      title: '아뜰랑 맨즈헤어, 전국 프랜차이즈 확장으로 남성 뷰티 시장 선도',
-      imageUrl: '/news-4.webp'
-    },
-    {
-      id: '5',
-      date: '25.08',
-      day: 18,
-      title: '고객 만족도 98% 달성, 아뜰랑만의 차별화된 서비스 비결은?',
-      imageUrl: '/news-5.webp'
-    }
   ];
 
   return (
@@ -65,34 +52,36 @@ export default function Home() {
       </section>
 
       {/* Hair Consulting Section */}
-      <section className="pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-[url('/consulting-bg.webp')]">
-          <div className="max-w-[1440px] mx-auto">
-              <h2 className="en text-lg max-md:text-[16px]] font-semibold text-center text-[var(--color-primary-500)]">HAIR CONSULTING</h2>
-              <p className="font-bold text-white text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3 tracking-[-1.5]">내게 맞는 헤어스타일만 찾아도 <br/>인상은 완전히 달라집니다.</p>
-              <div className="mt-10">
-                  <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6 max-md:gap-4">
-                      <BeforeAfterSlider 
-                          beforeImage="/dashboard-report.webp"
-                          afterImage="/circular-diagram.webp"
-                          beforeLabel="BEFORE"
-                          afterLabel="AFTER"
-                      />
-                      <BeforeAfterSlider 
-                          beforeImage="/dashboard-report.webp"
-                          afterImage="/circular-diagram.webp"
-                          beforeLabel="BEFORE"
-                          afterLabel="AFTER"
-                      />
-                      <BeforeAfterSlider 
-                          beforeImage="/dashboard-report.webp"
-                          afterImage="/circular-diagram.webp"
-                          beforeLabel="BEFORE"
-                          afterLabel="AFTER"
-                      />
-                  </div>
-              </div>
-          </div>           
-      </section>
+      <SynchronizedSliderProvider>
+        <section className="pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-[url('/consulting-bg.webp')]">
+            <div className="max-w-[1440px] mx-auto">
+                <h2 className="en text-lg max-md:text-[16px]] font-semibold text-center text-[var(--color-primary-500)]">HAIR CONSULTING</h2>
+                <p className="font-bold text-white text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3 tracking-[-1.5]">내게 맞는 헤어스타일만 찾아도 <br/>인상은 완전히 달라집니다.</p>
+                <div className="mt-10">
+                    <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6 max-md:gap-4">
+                        <BeforeAfterSlider 
+                            beforeImage="before/before-1.webp"
+                            afterImage="after/after-1.webp"
+                            beforeLabel="BEFORE"
+                            afterLabel="AFTER"
+                        />
+                        <BeforeAfterSlider 
+                            beforeImage="before/before-2.webp"
+                            afterImage="after/after-2.webp"
+                            beforeLabel="BEFORE"
+                            afterLabel="AFTER"
+                        />
+                        <BeforeAfterSlider 
+                            beforeImage="before/before-3.webp"
+                            afterImage="after/after-3.webp"
+                            beforeLabel="BEFORE"
+                            afterLabel="AFTER"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+      </SynchronizedSliderProvider>
 
       {/* Who We Are Section */}
       <section className="pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-white">
@@ -165,7 +154,7 @@ export default function Home() {
         </section>
 
         {/* 아뜰랑은 이렇게 다릅니다. */}
-        <section className="tracking-tight bg-white pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px]">
+        <section className="tracking-tight bg-white pt-35 pb-0 max-md:pt-[60px] max-md:pb-[60px]">
             <div className="max-w-[1440px] mx-auto">
                 <h2 className="en text-lg max-md:text-[16px] font-semibold text-center text-[var(--color-primary-500)]">Why Atlanc?</h2>
                 <p className="text-black font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3">아뜰랑은 이렇게 다릅니다.</p>

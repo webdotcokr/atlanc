@@ -13,28 +13,24 @@ export default function Section2Client() {
 
     const cardData = [
         {
-            beforeImg: '/before-1.webp',
-            afterImg: '/after-1.webp',
+            beforeImg: '/before/before-1.webp',
+            afterImg: '/after/after-1.webp',
         },
         {
-            beforeImg: '/before-2.webp', 
-            afterImg: '/after-2.webp',
+            beforeImg: '/before/before-2.webp', 
+            afterImg: '/after/after-2.webp',
         },
         {
-            beforeImg: '/before-3.webp',
-            afterImg: '/after-3.webp',
+            beforeImg: '/before/before-3.webp',
+            afterImg: '/after/after-3.webp',
         },
         {
-            beforeImg: '/before-4.webp',
-            afterImg: '/after-4.webp',
+            beforeImg: '/before/before-4.webp',
+            afterImg: '/after/after-4.webp',
         },
         {
-            beforeImg: '/before-5.webp',
-            afterImg: '/after-5.webp',
-        },
-        {
-            beforeImg: '/before-6.webp',
-            afterImg: '/after-6.webp',
+            beforeImg: '/before/before-5.webp',
+            afterImg: '/after/after-5.webp',
         }
     ];
 

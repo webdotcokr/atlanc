@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
+import { useSliderContext } from './SynchronizedSliderContext';
 
 interface BeforeAfterSliderProps {
   beforeImage: string;
@@ -17,8 +18,7 @@ export default function BeforeAfterSlider({
   afterLabel = 'AFTER',
   className = ''
 }: BeforeAfterSliderProps) {
-  const [sliderPosition, setSliderPosition] = useState(50);
-  const [isDragging, setIsDragging] = useState(false);
+  const { sliderPosition, setSliderPosition, isDragging, setIsDragging } = useSliderContext();
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMouseDown = () => {
