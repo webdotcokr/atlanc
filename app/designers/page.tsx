@@ -265,7 +265,7 @@ export default function DesignersPage() {
         </div>
 
         {/* Hero Slider */}
-        <div className="w-[1440px] h-[405px] mt-12">
+        <div className="relative w-[1440px] h-[405px] mt-12">
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={20}
@@ -314,7 +314,6 @@ export default function DesignersPage() {
                     {slide.quote && isActive && (
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800/90 rounded-lg">
                         <div className="absolute bottom-0 left-0 right-0 p-5 text-center">
-                          <div className="w-3 h-3 bg-green-400 rounded-full mx-auto mb-3" />
                           <p className="text-white text-base leading-relaxed font-semibold mb-2">
                             {slide.quote.split('\n').map((line, lineIndex) => (
                               <span key={lineIndex}>
@@ -334,14 +333,14 @@ export default function DesignersPage() {
           </Swiper>
           
           {/* Navigation Arrows */}
-          <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-20">
+          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20">
             <SlideArrows 
               type="01"
               direction="left"
               onClick={() => swiperInstance?.slidePrev()}
             />
           </div>
-          <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20">
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20">
             <SlideArrows 
               type="01"
               direction="right"

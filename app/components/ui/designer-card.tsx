@@ -35,9 +35,9 @@ export default function DesignerCard({
   className = ""
 }: DesignerCardProps) {
   return (
-    <div className={`flex gap-8 items-end p-3 border border-gray-100 ${className}`}>
+    <div className={`flex gap-8 items-end p-3 border border-gray-100 max-md:flex-col ${className}`}>
       {/* Designer Image */}
-      <div className="w-[284px] h-[360px] bg-cover bg-center overflow-hidden" 
+      <div className="w-[284px] max-md:w-full h-[360px] max-md:h-[393px] bg-cover bg-center overflow-hidden" 
            style={{ backgroundImage: `url('${image}')` }} 
       />
       
