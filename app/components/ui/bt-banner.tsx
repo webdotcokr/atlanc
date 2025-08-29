@@ -38,12 +38,17 @@ export default function BtBanner() {
           </button>
           
           {/* Secondary button (green) */}
-          <button className="bg-[#26d07c] text-white hover:bg-[#20b569] transition-colors duration-200 px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm tracking-tight">
+          <a 
+            href="https://map.naver.com/p/entry/place/1547650412?" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-[#26d07c] text-white hover:bg-[#20b569] transition-colors duration-200 px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm tracking-tight"
+          >
             지점 예약 바로가기
             <div className="w-2 h-2">
               <img src="/arrowLight.svg" alt="" className="w-full h-full" />
             </div>
-          </button>
+          </a>
         </div>
       </div>
     </div>
