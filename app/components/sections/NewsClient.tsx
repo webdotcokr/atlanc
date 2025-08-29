@@ -27,7 +27,7 @@ export default function NewsClient({ newsItems }: NewsClientProps) {
             <div className="max-w-[1440px] mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="en text-lg max-md:text-[16px] font-semibold text-center text-[var(--color-primary-500)]">NEWS</h2>
-                    <p className="text-white font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3">시장은 아뜰랑에 대해 이렇게 이야기합니다.</p>
+                    <p className="text-white font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3 tracking-[-1.5]">시장은 아뜰랑에 대해 <br className="md:hidden"/>이렇게 이야기합니다.</p>
                 </div>
 
                 <div className="relative">

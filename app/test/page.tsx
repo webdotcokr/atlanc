@@ -3,34 +3,15 @@ import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
 export default function Test() {
     return (
         <>
-        <section className="tracking-tight pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-[url('/consulting-bg.webp')]">
-            <div className="max-w-[1440px] mx-auto">
-                <h2 className="en text-lg max-md:text-[16px]] font-semibold text-center text-[var(--color-primary-500)]">HAIR CONSULTING</h2>
-                <p className="font-bold text-white text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3">내게 맞는 헤어스타일만 찾아도 <br/>인상은 완전히 달라집니다.</p>
-                <div className="mt-10">
-                    <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6 max-md:gap-4">
-                        <BeforeAfterSlider 
-                            beforeImage="/dashboard-report.webp"
-                            afterImage="/circular-diagram.webp"
-                            beforeLabel="BEFORE"
-                            afterLabel="AFTER"
-                        />
-                        <BeforeAfterSlider 
-                            beforeImage="/dashboard-report.webp"
-                            afterImage="/circular-diagram.webp"
-                            beforeLabel="BEFORE"
-                            afterLabel="AFTER"
-                        />
-                        <BeforeAfterSlider 
-                            beforeImage="/dashboard-report.webp"
-                            afterImage="/circular-diagram.webp"
-                            beforeLabel="BEFORE"
-                            afterLabel="AFTER"
-                        />
-                    </div>
-                </div>
-            </div>           
-        </section>
+      <section className="relative flex flex-col items-center justify-center h-[890px] max-md:h-[656px] w-full text-center bg-[url('/hero.webp')]">
+        <h2 className="en text-xl max-md:text-[14px] text-white">Atlanc Premium Men's Hair Consulting</h2>
+        <p className="mt-6 text-white text-[55px] max-md:text-[30px] font-bold leading-[1.3] tracking-[-2]">우리는 헤어를 <br className="md:hidden"/>디자인하지 않습니다. <br/>당신의 인상을 디자인합니다.</p>
+        {/* Bottom Center Text with Line */}
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+          <span className="num text-white text-xl font-medium tracking-wide mb-4">explore</span>
+          <div className="w-px h-16 bg-white opacity-60"></div>
+        </div>
+      </section>
         </>
     )
 } 

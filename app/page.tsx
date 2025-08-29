@@ -10,51 +10,6 @@ import BeforeAfterSlider from './components/ui/BeforeAfterSlider';
 const imgRectangle193989 = "http://localhost:3845/assets/aad7a07a18c5778c7589b7cd82daf88815b6453a.png";
 const imgVector10 = "http://localhost:3845/assets/05170cd84baf4a5b251b65e5103e72a3ddc08dd6.svg";
 
-// Hair Consulting Section Images
-const imgRectangle194030 = "http://localhost:3845/assets/dd9c1c2c0df8e2ba56dfdbdc7a8b412ccb432ace.png";
-const imgRectangle194031 = "http://localhost:3845/assets/90282f0b82baf19720ca71c85c4933ecb8808d6a.png";
-const imgImg88741 = "http://localhost:3845/assets/6e515b36ed7ad680781c3b94b7dfb759338f0f2d.png";
-const imgImg88742 = "http://localhost:3845/assets/102900ee6d5fc5e74c4308b1228407cad51213b7.png";
-const imgRectangle194033 = "http://localhost:3845/assets/104c1a233f375a4c6b6ca97cacea71f9ce25c352.png";
-const imgRectangle194032 = "http://localhost:3845/assets/1371b3e9d72499462b0753bd445731aa597e86fa.png";
-const imgGroup51 = "http://localhost:3845/assets/c093154d83369435be74992c136be4f7f15550ff.svg";
-const imgGroup52 = "http://localhost:3845/assets/59ed3560000ec85a7b7caff45da072ef2b55f9ce.svg";
-
-// News Section Images
-const imgNews1 = "http://localhost:3845/assets/3f4644bfb8291d6f4617ec7b2dd4214a894833ad.png";
-const imgNews2 = "http://localhost:3845/assets/92eb0870dab41d53735dbcd61ef6db6f6efaba7d.png";
-const imgNews3 = "http://localhost:3845/assets/d04a1781681e2b454c1d630001d2b75b4e6170ff.png";
-
-// Review Section Images
-const imgImage185 = "http://localhost:3845/assets/db13c38b7576c9319e2fbc866f8c6e410ac7a2c5.png";
-const imgImage186 = "http://localhost:3845/assets/cb8ce909166831628e9fbd1faac3549a0ee79d93.png";
-const imgImage184 = "http://localhost:3845/assets/bc3872eed70274adcf0633e6ebe7ece0a39a56db.png";
-const imgImage187 = "http://localhost:3845/assets/1637edd76d6e18d1be830ab320d4ebd22ca5c818.png";
-const imgBgDeco = "http://localhost:3845/assets/62bc0aff2da1af6379264bbe178f2872002b24e2.svg";
-const imgVector2 = "http://localhost:3845/assets/fce21bda13b192f26d8b74162a66afca3417b9a9.svg";
-
-// Video Section Images
-const imgRectangle194007 = "http://localhost:3845/assets/2e9a88489b032559dfe025ca3cdab537195332da.png";
-const imgPolygon3 = "http://localhost:3845/assets/5107a2c531bb2924c09310c05e93c7958bbaf1c8.svg";
-
-// Differentiator Section Images
-const imgVector2_2 = "http://localhost:3845/assets/fce21bda13b192f26d8b74162a66afca3417b9a9.svg";
-const imgVector3_2 = "http://localhost:3845/assets/dbf3818b7c7ae9a0a391bc5d0d02989e237b2764.svg";
-
-// Location Section Images
-const imgLocationBanner = "http://localhost:3845/assets/a7950e8190e5e4003e53bf92b07e829b639c632b.png";
-const imgRectangle194011 = "http://localhost:3845/assets/437f38165a93485c451a7557f52549aef2149177.png";
-const imgRectangle194012 = "http://localhost:3845/assets/d0ca6ee4373e8b5f0ae59ff752c4eb86e024f161.png";
-const imgRectangle194013 = "http://localhost:3845/assets/53453098ee25e7182aae43d1c33b7a749e83a7c2.png";
-const imgArrowWhite = "http://localhost:3845/assets/d942459d521256a4c0a88162be5d5643c7a486b1.svg";
-const imgArrowGreen = "http://localhost:3845/assets/c86ff43f308a99a3ab36dcb1cd1c7195b7028d79.svg";
-
-// Footer Images
-const imgFooterLogo = "http://localhost:3845/assets/22ecebc567a0e64b0944246435ceb46df01e06cb.png";
-const imgFooterLine = "http://localhost:3845/assets/cd2994e78cd2adef238fbc95ef2f8fea6d42fb75.svg";
-const imgInstagram = "http://localhost:3845/assets/be1c875da0477d036e435a2a33a93bce647a47f1.svg";
-const imgYoutube = "http://localhost:3845/assets/2853fca569f2612d8d886a06975665ff985d24a2.svg";
-const imgKakao = "http://localhost:3845/assets/1feb48efc10043d30f334f61474945da939c9370.svg";
 
 export default function Home() {
   // Sample news data - this will be replaced with DB data later
@@ -99,41 +54,21 @@ export default function Home() {
   return (
     <div>
       {/* Main Hero Section */}
-      <section className="relative h-[890px] w-full">
-        <div 
-          className="absolute bg-[#000000a6] h-full w-full bg-cover bg-center"
-          style={{ backgroundImage: `url('${imgRectangle193989}')` }} 
-        />
-        <div className="absolute left-1/2 top-[340px] -translate-x-1/2 w-[780px] flex flex-col gap-6 items-start justify-start">
-          <div className="w-full flex items-center justify-center pl-1">
-            <p className="font-medium text-[20px] text-white text-center leading-[28px]">
-              Atlanc Premium Men&apos;s Hair Consulting
-            </p>
-          </div>
-          <div className="w-full text-center text-white">
-            <p className="font-bold text-[55px] leading-[1.3] tracking-[-1.65px] mb-0">
-              우리는 헤어를 디자인하지 않습니다.
-            </p>
-            <p className="font-bold text-[55px] leading-[1.3] tracking-[-1.65px]">
-              당신의 인상을 디자인합니다.
-            </p>
-          </div>
-        </div>
-        <div className="absolute left-[931px] top-[804px] flex flex-col gap-3 items-center justify-start w-[58px]">
-          <p className="text-white text-[20px] leading-[28px] font-medium">explore</p>
-          <div className="h-[46px] w-0 relative">
-            <div className="absolute bottom-0 left-[-0.5px] right-[-0.5px] top-0">
-              <img alt="" className="block max-w-none size-full" src={imgVector10} />
-            </div>
-          </div>
+      <section className="relative flex flex-col items-center justify-center h-[890px] max-md:h-[656px] w-full text-center bg-[url('/hero.webp')]">
+        <h2 className="en text-xl max-md:text-[14px] text-white">Atlanc Premium Men's Hair Consulting</h2>
+        <p className="mt-6 text-white text-[55px] max-md:text-[30px] font-bold leading-[1.3] tracking-[-2]">우리는 헤어를 <br className="md:hidden"/>디자인하지 않습니다. <br/>당신의 인상을 디자인합니다.</p>
+        {/* Bottom Center Text with Line */}
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+          <span className="num text-white text-xl font-medium tracking-wide mb-4">explore</span>
+          <div className="w-px h-16 bg-white opacity-60"></div>
         </div>
       </section>
 
       {/* Hair Consulting Section */}
-      <section className="tracking-tight pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-[url('/consulting-bg.webp')]">
+      <section className="pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-[url('/consulting-bg.webp')]">
           <div className="max-w-[1440px] mx-auto">
               <h2 className="en text-lg max-md:text-[16px]] font-semibold text-center text-[var(--color-primary-500)]">HAIR CONSULTING</h2>
-              <p className="font-bold text-white text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3">내게 맞는 헤어스타일만 찾아도 <br/>인상은 완전히 달라집니다.</p>
+              <p className="font-bold text-white text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3 tracking-[-1.5]">내게 맞는 헤어스타일만 찾아도 <br/>인상은 완전히 달라집니다.</p>
               <div className="mt-10">
                   <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6 max-md:gap-4">
                       <BeforeAfterSlider 
@@ -160,38 +95,38 @@ export default function Home() {
       </section>
 
       {/* Who We Are Section */}
-      <section className="tracking-tight pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-white">
+      <section className="pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-white">
             <div className="max-w-[1440px] mx-auto">
                 <h2 className="en text-lg max-md:text-[16px]] font-semibold text-center text-[var(--color-primary-500)]">Who We Are</h2>
-                <p className="font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3">맨즈 헤어컨설팅 분야에서 <br/>끊임없이 실력을 증명해 왔습니다.</p>
+                <p className="font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3 tracking-[-1.5]">맨즈 헤어컨설팅 분야에서 <br/>끊임없이 실력을 증명해 왔습니다.</p>
                 <div className="mt-10">
                     <div className="grid grid-cols-4 max-md:grid-cols-1 gap-6 max-md:gap-4">
                         <div className="flex flex-col justify-between bg-[var(--color-gray-50)] p-[40px] max-md:p-[30px]">
                             <img src="/icon-1.png" alt="평균 고객 만족도" className="w-[90px] max-md:w-[70px]" />
                             <div className="text-right mt-[120px] max-md:mt-[40px]">
-                                <h3 className="text-xl font-bold mt-2">평균 고객 만족도</h3>
+                                <h3 className="text-xl font-bold mt-2 tracking-tight">평균 고객 만족도</h3>
                                 <p className="num text-7xl italic font-semibold text-[var(--color--gray-500)] mt-1">98%</p>
                             </div>
                         </div>
                         <div className="flex flex-col justify-between bg-[var(--color-gray-50)] p-[40px] max-md:p-[30px]">
                             <img src="/icon-2.png" alt="누적 방문 고객수" className="w-[90px] max-md:w-[70px]" />
                             <div className="text-right mt-[120px] max-md:mt-[40px]">
-                                <h3 className="text-xl font-bold mt-2">누적 방문 고객수</h3>
+                                <h3 className="text-xl font-bold mt-2 tracking-tight">누적 방문 고객수</h3>
                                 <p className="num text-7xl italic font-semibold text-[var(--color--gray-500)] mt-1">20,000+</p>
                             </div>  
                         </div>
                         <div className="flex flex-col justify-between bg-[var(--color-gray-50)] p-[40px] max-md:p-[30px]">
                             <img src="/icon-3.png" alt="평균 재방문율" className="w-[90px] max-md:w-[70px]" />
                             <div className="text-right mt-[120px] max-md:mt-[40px]">
-                                <h3 className="text-xl font-bold mt-2">평균 재방문율</h3>
+                                <h3 className="text-xl font-bold mt-2 tracking-tight">평균 재방문율</h3>
                                 <p className="num text-7xl italic font-semibold text-[var(--color--gray-500)] mt-1">98%</p>
                             </div>
                         </div>
                         <div className="flex flex-col justify-between bg-[var(--color-gray-50)] p-[40px] max-md:p-[30px]">
                             <img src="/icon-4.png" alt="평균 재방문율" className="w-[120px] max-md:w-[70px]" />
                             <div className="text-right mt-[70px] max-md:mt-[30px]">
-                                <h3 className="text-2xl font-bold mt-2">태원빠 | 남자머리 컨설턴트</h3>
-                                <p className="text-[var(--color-gray-600)] mt-1">아뜰랑 맨즈헤어 원장 태원빠의 <br/>B급 갬성 남성 뷰티 채널</p>
+                                <h3 className="text-2xl font-bold mt-2 tracking-tight">태원빠 | 남자머리 컨설턴트</h3>
+                                <p className="text-[var(--color-gray-600)] mt-1 tracking-tight">아뜰랑 맨즈헤어 원장 태원빠의 <br/>B급 감성 남성 뷰티 채널</p>
                                 <p className="num text-5xl italic font-semibold text-[var(--color--gray-500)] mt-1">41.6K</p>
                             </div>
                         </div>
@@ -208,10 +143,10 @@ export default function Home() {
 
 
       {/* 아뜰랑 맨즈헤어 대표원장이 직접 소개합니다. */}
-        <section className="tracking-tight bg-[url('/welcome-bg.webp')] pt-32 pb-32 max-md:pt-[60px] max-md:pb-[60px]">
+        <section className="bg-[url('/welcome-bg.webp')] pt-32 pb-32 max-md:pt-[60px] max-md:pb-[60px]">
             <div className="max-w-[1440px] mx-auto">
                 <h2 className="en text-lg max-md:text-[16px] font-semibold text-center text-[var(--color-primary-500)]">Welcome</h2>
-                <p className="text-white font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3">아뜰랑 맨즈헤어 <br/>대표원장이 직접 소개합니다.</p>
+                <p className="text-white font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3 tracking-[-1.5]">아뜰랑 맨즈헤어 <br/>대표원장이 직접 소개합니다.</p>
                 <div className="mt-10 flex justify-center">
                     <div className="relative w-full max-w-[1000px] aspect-video overflow-hidden">
                         <iframe 
