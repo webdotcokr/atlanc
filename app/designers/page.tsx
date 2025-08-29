@@ -116,7 +116,7 @@ const designersData = {
       id: 1,
       name: '태원빠',
       position: '대표 원장',
-      image: '/Konkuk/태원빠.webp',
+      image: '/konkuk/태원빠.webp',
       social: {
         wonbar: '@WonBar',
         instagram: '@atlanc_wonbar'
@@ -131,7 +131,7 @@ const designersData = {
       id: 2,
       name: '민종',
       position: '원장',
-      image: '/Konkuk/민종.webp',
+      image: '/konkuk/민종.webp',
       social: {
         wonbar: '',
         instagram: 'atlanc_minjong'
@@ -146,7 +146,7 @@ const designersData = {
       id: 3,
       name: '영재',
       position: '팀장',
-      image: '/Konkuk/영재.webp',
+      image: '/konkuk/영재.webp',
       social: {
         wonbar: '',
         instagram: 'atlanc_genius.0'
@@ -161,7 +161,7 @@ const designersData = {
       id: 4,
       name: '새로',
       position: '디자이너',
-      image: '/Konkuk/새로.webp',
+      image: '/konkuk/새로.webp',
       social: {
         wonbar: '',
         instagram: 'atlanc_saero'
@@ -176,7 +176,7 @@ const designersData = {
       id: 5,
       name: '승원',
       position: '디자이너',
-      image: '/Konkuk/승원.webp',
+      image: '/konkuk/승원.webp',
       social: {
         wonbar: '',
         instagram: 'atlanc_sw'

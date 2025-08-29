@@ -79,8 +79,8 @@ export default function AboutPage() {
             <div className="text-right max-md:text-center max-md:order-2">
               <p className="num text-5xl max-md:text-[36px] font-bold text-[var(--color-gray-200)]">Man’s Hair Counsulting</p>
               <p className="text-xl mt-6">방문하시는 고객님들께서 가장 많이 물어보시는 질문이 <br/>“저는 어떤 머리가 어울릴까요?” 입니다.</p>
-              <p className="text-xl mt-8">최근에는 유행하는 스타일을 우후죽순 따라하는 것보다<br/>개개인에게 어울리는 스타일을 찾고 싶다는 니즈가 세분화 되고. <br/>
-저희 아뜰랑 맨즈헤어는 세분화 된 고객님의 니즈를 충족시켜 드리기 위해 <br/>고객님의 얼굴형, 두상, 모발 상태는 물론 <br/>직업과 라이프스타일까지 고려한 1:1 맞춤 헤어 컨설팅을 진행하고 있습니다. <br/>단순한 유행을 넘어서, 당신만의 인상을 디자인해 드립니다</p>
+              <p className="text-xl mt-8">최근에는 유행하는 스타일을 우후죽순 따라하는 것보다 <br className="max-md:hidden"/>개개인에게 어울리는 스타일을 찾고 싶다는 니즈가 세분화 되고. <br/><br className="md:hidden"/>
+저희 아뜰랑 맨즈헤어는 세분화 된 <br className="md:hidden"/>고객님의 니즈를 충족시켜 드리기 위해 <br/>고객님의 얼굴형, 두상, 모발 상태는 물론 <br/>직업과 라이프스타일까지 고려한 1:1 맞춤 헤어 컨설팅을 진행하고 있습니다. <br/><br className="md:hidden"/>단순한 유행을 넘어서, <br className="md:hidden"/>당신만의 인상을 디자인해 드립니다</p>
             </div>
             <img src="/about-6.webp" className="max-md:order-1"/>
           </div>
