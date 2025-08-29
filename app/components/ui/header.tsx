@@ -80,16 +80,16 @@ export default function Header({ className = "" }: HeaderProps) {
             <div className="flex items-center justify-between">
               {/* Mobile Logo */}
               <Link href="/" className="flex items-center">
-                <div className="text-white font-bold text-lg tracking-wide">
-                  <span className="text-xl">🅰️</span> ATLANC
-                </div>
+                <img src="/logo.png" alt="Logo" className="h-12" />
               </Link>
 
               <div className="flex items-center gap-3">
                 {/* Mobile CTA Button */}
                 <Link href="/booking">
-                  <button className="bg-white text-primary hover:bg-gray-100 px-4 py-2 rounded-full font-semibold text-xs transition-all duration-200">
-                    예약 문의하기
+                  <button className="flex flex-row gap-2 items-center bg-white text-md hover:bg-gray-100 px-4 py-2 rounded-full font-semibold">
+                    <span><img src="/cta-icon-1.png" alt="CTA Icon 1" className="max-md:h-[14px]"/></span>
+                    <span>문의하기</span>
+                    <span><img src="/cta-icon-2.png" alt="CTA Icon 2" className="max-md:h-[10px]"/></span>
                   </button>
                 </Link>
 
