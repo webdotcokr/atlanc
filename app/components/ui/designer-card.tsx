@@ -42,7 +42,7 @@ export default function DesignerCard({
       />
       
       {/* Designer Info */}
-      <div className="flex flex-col gap-6 w-[324px] pb-8">
+      <div className="flex flex-col gap-6 w-[324px] max-md:w-full pb-8">
         <div className="flex flex-col gap-4 pb-8 border-b border-gray-200">
           {/* Name and Position */}
           <div className="flex flex-col gap-3">

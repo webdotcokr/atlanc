@@ -257,15 +257,15 @@ export default function DesignersPage() {
   return (
     <div className="bg-white">
       {/* Hero Section with Slides */}
-      <section className="flex flex-col justify-center items-center h-[890px] bg-[url('/designers-bg.webp')] overflow-hidden tracking-[-1.5]">        
+      <section className="flex flex-col justify-center items-center h-[890px] max-md:h-[656px] bg-[url('/designers-bg.webp')] overflow-hidden tracking-[-1.5]">        
         {/* Section Title */}
         <div className="flex flex-col gap-1 text-center text-white">
           <h2 className="en text-xl max-md:text-[14px] font-semibold text-[var(--color-primary-500))] uppercase">Atlanc Consultant</h2>
-          <p className="mb-0 text-4xl font-bold">전문 맨즈 헤어 컨설턴트가 <br />여러분의 이미지를 완성해드립니다.</p>
+          <p className="mt-2 text-4xl max-md:text-[26px] font-bold">전문 맨즈 헤어 컨설턴트가 <br />여러분의 이미지를 완성해드립니다.</p>
         </div>
 
         {/* Hero Slider */}
-        <div className="relative w-[1440px] h-[405px] mt-12">
+        <div className="relative w-[1440px] h-[405px] max-md:h-[309px] mt-12">
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={20}
@@ -306,7 +306,7 @@ export default function DesignersPage() {
             {heroSlides.map((slide) => (
               <SwiperSlide key={slide.id}>
                 {({ isActive }) => (
-                  <div className="relative h-[380px] w-full">
+                  <div className="relative h-[380px] max-md:h-[309px] w-full">
                     <div 
                       className="slide-content w-full h-full bg-cover bg-center rounded-lg overflow-hidden transition-opacity duration-300"
                       style={{ backgroundImage: `url('${slide.image}')` }}
@@ -352,9 +352,9 @@ export default function DesignersPage() {
 
       {/* Tab Section */}
       <section className="py-20">
-        <div className="max-w-[1440px] mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto">
           {/* Tab Buttons */}
-          <div className="flex justify-center mb-16">
+          <div className="flex justify-center mb-16 max-md:mb-8">
             <div className="bg-white border border-gray-200 rounded-full p-[5px]">
               <button
                 onClick={() => setActiveTab('sinsa')}
