@@ -14,7 +14,6 @@ export { default as Footer } from './footer';
 
 // Types
 export type { HeaderProps } from './header';
-export type { BtBannerProps } from './bt-banner';
 export type { SectionTitleProps } from './section-title';
 export type { StatisticCardProps } from './statistic-card';
 export type { TagLabelProps } from './tag-label';
@@ -23,4 +22,3 @@ export type { WhoWeAreSectionProps } from './who-we-are-section';
 export type { ItemCardProps } from './item-card';
 export type { DesignerCardProps } from './designer-card';
 export type { SlideArrowsProps } from './slide-arrows';
-export type { FooterProps } from './footer';

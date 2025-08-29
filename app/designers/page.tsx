@@ -252,7 +252,10 @@ const heroSlides = [
 export default function DesignersPage() {
   const [activeTab, setActiveTab] = useState<'sinsa' | 'konkuk'>('konkuk');
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  const [swiperInstance, setSwiperInstance] = useState<{
+    slidePrev: () => void;
+    slideNext: () => void;
+  } | null>(null);
 
   return (
     <div className="bg-white">

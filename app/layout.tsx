@@ -5,7 +5,7 @@ import BtBanner from "./components/ui/bt-banner";
 import Footer from "./components/ui/footer";
 
 export const metadata: Metadata = {
-  title: "디자인 토큰 테스트",
+  title: "아뜰랑 맨즈헤어",
   description: "Figma 디자인 토큰을 Next.js에 적용한 예시",
   viewport: "width=device-width, initial-scale=1",
 };

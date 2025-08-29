@@ -43,8 +43,8 @@ export default function ComponentsShowcase() {
           <section className="border rounded-lg p-8 bg-white">
             <h2 className="text-2xl font-semibold mb-4">Section Title</h2>
             <div className="grid gap-4">
-              <SectionTitle>기본 섹션 제목</SectionTitle>
-              <SectionTitle className="text-green-600">커스텀 색상 섹션 제목</SectionTitle>
+              <SectionTitle title="기본 섹션 제목" />
+              <SectionTitle title="커스텀 색상 섹션 제목" className="text-green-600" />
             </div>
           </section>
 
@@ -103,6 +103,10 @@ export default function ComponentsShowcase() {
                 social={{
                   wonbar: "@kimdesigner",
                   instagram: "@kim_designer"
+                }}
+                urls={{
+                  instagram: "https://instagram.com/kim_designer",
+                  booking: "#"
                 }}
                 description="10년 경력의 시니어 디자이너입니다.
 브랜딩과 UI/UX 전문가로 다양한 프로젝트를 진행했습니다."

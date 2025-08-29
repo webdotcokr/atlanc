@@ -4,7 +4,7 @@ export default function Footer() {
       <footer className="bg-black">
         <div className="pt-23 pb-12 max-w-[1440px] mx-auto pl-[20px] pr-[20px]">
           <img src="/footer-logo.png" className="max-md:w-[140px]"></img>
-          <p className="text-2xl max-md:text-[18px] font-semibold text-white mt-4">A premium men's hair salon<br/>designed to shape your impression</p>
+          <p className="text-2xl max-md:text-[18px] font-semibold text-white mt-4">A premium men&apos;s hair salon<br/>designed to shape your impression</p>
           <hr className="border-white/20 mt-12"></hr>
           <div className="flex flex-row max-md:flex-col flex-wrap justify-between items-center max-md:items-start mt-8">
             <p className="text-xs text-[var(--color-gray-500)] max-md:order-2 max-md:mt-12">© 2025 ATLANC</p>
