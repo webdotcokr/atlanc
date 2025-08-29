@@ -194,38 +194,58 @@ const designersData = {
 const heroSlides = [
   {
     id: 1,
-    image: 'http://localhost:3845/assets/8f7a91377549aecf41ca303643e5fb29998ff472.png'
-  },
-  {
-    id: 2,
-    image: 'http://localhost:3845/assets/e61c213d537d50b07afbd9bb03c2da8dbef076c9.png'
-  },
-  {
-    id: 3,
-    image: 'http://localhost:3845/assets/6b84f1147337a824876f9c32393b7248aab2a857.png',
+    image: '/sinsa/태원빠.webp',
     quote: '항상 저희 아뜰랑 맨즈헤어를\n빛나게 해주셔서 감사합니다!!',
     author: '태원 대표원장'
   },
   {
+    id: 2,
+    image: '/sinsa/다애.webp',
+    quote: '| 컨설팅 마스터 | ’일상 속 완벽한 변화는 헤어스타일로부터 시작됩니다.‘ 두상과 얼굴형에 가장 최적인 당신만의 이미지를 디자인합니다.',
+    author: '다애 실장'
+  },
+  {
+    id: 3,
+    image: '/sinsa/서한.webp',
+    quote: '편한 손질로 하루의 시작을 \n행복하게 만들어드립니다!',
+    author: '서한 디자이너'
+  },
+  {
     id: 4,
-    image: 'http://localhost:3845/assets/bf00ccadcd336f6bd88adb137327322c86334656.png'
+    image: '/sinsa/수현.webp',
+    quote: '여자들이 좋아하는 꾸안꾸 느낌의 네추럴한 스타일을 추구합니다. 지나치게 화려하거나 인위적이지 않은, 가볍고 손질이 편한 디자인으로 고객님 본연의 아름다움을 살려 드리겠습니다!!',
+    author: '수현 디자이너'
   },
   {
     id: 5,
-    image: 'http://localhost:3845/assets/9742294614e47cc67f856c7b100d73e3fbe52711.png'
+    image: '/sinsa/승빈.webp',
+    quote: '대한민국 남성의 두상·모질·라이프스타일까지 고려한 1:1 맞춤 헤어 컨설턴트, 승빈T',
+    author: '승빈 디자이너'
   },
   {
     id: 6,
-    image: 'http://localhost:3845/assets/5ef41fd958b7dcf08fc76ede1e2ae29bbd67b121.png'
+    image: '/konkuk/민종.webp',
+    quote: '대화와 디테일로 당신만의 분위기를 디자인해, 더 나은 하루를 만들어드립니다.',
+    author: '민종 원장'
   },
   {
     id: 7,
-    image: 'http://localhost:3845/assets/41e9be2438e2b6142bfc1c452a58ef72d08b8f90.png'
+    image: '/konkuk/영재.webp',
+    quote: '헤어스타일 하나로 당신의 인생이 달라지게 만들어 드리겠습니다!',
+    author: '영재 팀장'
   },
   {
     id: 8,
-    image: 'http://localhost:3845/assets/344d975c7c0b45f701111e57e916ad9bdcc9abda.png'
-  }
+    image: '/konkuk/새로.webp',
+    quote: '[당신만을 위한 1:1 맞춤 컨설팅] 실패 없는 맞춤 컨설팅으로 디테일한 디자인을 선물해드립니다.',
+    author: '새로 디자이너'
+  },
+  {
+    id: 9,
+    image: '/konkuk/승원.webp',
+    quote: '스타일은 바뀌어도, \n인생머리는 진심에서 시작됩니다.',
+    author: '승원 디자이너'
+  },
 ];
 
 
@@ -237,18 +257,18 @@ export default function DesignersPage() {
   return (
     <div className="bg-white">
       {/* Hero Section with Slides */}
-      <section className="relative h-[890px] bg-[url('/designers-bg.webp')] overflow-hidden tracking-[-1.5]">        
+      <section className="flex flex-col justify-center items-center h-[890px] bg-[url('/designers-bg.webp')] overflow-hidden tracking-[-1.5]">        
         {/* Section Title */}
-        <div className="flex flex-col gap-1 items-center justify-center text-center text-white">
+        <div className="flex flex-col gap-1 text-center text-white">
           <h2 className="en text-xl max-md:text-[14px] font-semibold text-[var(--color-primary-500))] uppercase">Atlanc Consultant</h2>
           <p className="mb-0 text-4xl font-bold">전문 맨즈 헤어 컨설턴트가 <br />여러분의 이미지를 완성해드립니다.</p>
         </div>
 
         {/* Hero Slider */}
-        <div className="absolute top-[342px] left-1/2 transform -translate-x-1/2 w-[1440px] h-[405px] z-10">
+        <div className="w-[1440px] h-[405px] mt-12">
           <Swiper
             modules={[Pagination, Autoplay]}
-            spaceBetween={8}
+            spaceBetween={20}
             slidesPerView={5}
             centeredSlides={true}
             loop={true}
