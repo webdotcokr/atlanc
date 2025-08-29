@@ -30,7 +30,7 @@ export default function BtBanner() {
         {/* Button area */}
         <div className="flex gap-3 pt-4">
           {/* Primary button (white) */}
-          <button className="bg-white text-primary hover:bg-gray-100 transition-colors duration-200 px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm tracking-tight">
+          <button className="bg-white hover:bg-gray-100 transition-colors duration-200 px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm tracking-tight">
             가맹 문의
             <div className="w-2 h-2">
               <img src="/arrowDark.svg" alt="" className="w-full h-full" />

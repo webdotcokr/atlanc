@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="flex flex-row flex-wrap justify-between items-center mt-8">
             <p className="text-xs text-[var(--color-gray-500)]">© 2025 ATLANC</p>
             <div className="flex flex-row flex-wrap items-center gap-5">
-              <a><span><img src="/instagram.svg"></img></span></a>
-              <a><span><img src="/youtube.svg"></img></span></a>
-              <a><span><img src="/blog.svg"></img></span></a>
+              <a href="https://www.instagram.com/atlanc_wonbar/" target="_blank"><img src="/instagram.svg"></img></a>
+              <a href="https://www.youtube.com/@%EC%95%84%EB%9C%B0%EB%9E%91%EB%A7%A8%EC%A6%88%ED%97%A4%EC%96%B4" target="_blank"><img src="/youtube.svg"></img></a>
+              <a href="https://blog.naver.com/atlanc_wonbar" target="_blank"><img src="/blog.svg"></img></a>
             </div>
           </div>
         </div>
