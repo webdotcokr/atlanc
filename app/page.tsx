@@ -4,6 +4,7 @@ import Section1 from './components/sections/Section1';
 import Section2Client from './components/sections/Section2Client';
 import Section3 from './components/sections/Section3';
 import NewsClient, { NewsItem } from './components/sections/NewsClient';
+import BeforeAfterSlider from './components/ui/BeforeAfterSlider';
 
 // Hero Section Images
 const imgRectangle193989 = "http://localhost:3845/assets/aad7a07a18c5778c7589b7cd82daf88815b6453a.png";
@@ -129,6 +130,34 @@ export default function Home() {
       </section>
 
       {/* Hair Consulting Section */}
+      <section className="tracking-tight pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-[url('/consulting-bg.webp')]">
+          <div className="max-w-[1440px] mx-auto">
+              <h2 className="en text-lg max-md:text-[16px]] font-semibold text-center text-[var(--color-primary-500)]">HAIR CONSULTING</h2>
+              <p className="font-bold text-white text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3">내게 맞는 헤어스타일만 찾아도 <br/>인상은 완전히 달라집니다.</p>
+              <div className="mt-10">
+                  <div className="grid grid-cols-3 max-md:grid-cols-1 gap-6 max-md:gap-4">
+                      <BeforeAfterSlider 
+                          beforeImage="/dashboard-report.webp"
+                          afterImage="/circular-diagram.webp"
+                          beforeLabel="BEFORE"
+                          afterLabel="AFTER"
+                      />
+                      <BeforeAfterSlider 
+                          beforeImage="/dashboard-report.webp"
+                          afterImage="/circular-diagram.webp"
+                          beforeLabel="BEFORE"
+                          afterLabel="AFTER"
+                      />
+                      <BeforeAfterSlider 
+                          beforeImage="/dashboard-report.webp"
+                          afterImage="/circular-diagram.webp"
+                          beforeLabel="BEFORE"
+                          afterLabel="AFTER"
+                      />
+                  </div>
+              </div>
+          </div>           
+      </section>
 
       {/* Who We Are Section */}
       <section className="tracking-tight pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-white">
@@ -251,19 +280,19 @@ export default function Home() {
                 <div className="mt-10">
                     <div className="grid grid-cols-3 max-md:grid-cols-1 gap-8 max-md:gap-12">
                         <div>
-                            <img src="/sinsa-office.webp" alt="아뜰랑 신사점" />
+                            <img src="/sinsa-office.webp" alt="아뜰랑 신사점" className="w-full h-auto" />
                             <p className="mt-4 font-semibold text-[var(--color-primary-500)]">1호점</p>
                             <h3 className="text-2xl font-bold mt-2 text-white">아뜰랑 신사점</h3>
                             <p className="mt-1"><span className="mr-2 text-white">영업시간</span><span className="text-[var(--color-extended-gray-400)]">10:00 ~ 21:00 (매주 화요일 휴무)</span></p>
                         </div>
                         <div>
-                            <img src="/ku-office.webp" alt="아뜰랑 건대점" />
+                            <img src="/ku-office.webp" alt="아뜰랑 건대점" className="w-full h-auto" />
                             <p className="mt-4 font-semibold text-[var(--color-primary-500)]">2호점</p>
                             <h3 className="text-2xl font-bold mt-2 text-white">아뜰랑 건대점</h3>
                             <p className="mt-1"><span className="mr-2 text-white">영업시간</span><span className="text-[var(--color-extended-gray-400)]">11:00 ~ 20:00 (매주 수요일 휴무)</span></p>
                         </div>
                         <div>
-                            <img src="/virtual-office.webp" alt="아뜰랑 가맹점" />
+                            <img src="/virtual-office.webp" alt="아뜰랑 가맹점" className="w-full h-auto" />
                             <p className="mt-4 font-semibold text-[var(--color-primary-500)]">3호점</p>
                             <h3 className="text-2xl font-bold mt-2 text-white">아뜰랑 OO점</h3>
                             <p className="mt-1"><span className="mr-2 text-white">영업시간</span><span className="text-[var(--color-extended-gray-400)]">11:00 ~ 20:00 (매주 수요일 휴무)</span></p>

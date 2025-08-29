@@ -15,8 +15,18 @@ export default function Test() {
                             beforeLabel="BEFORE"
                             afterLabel="AFTER"
                         />
-                        <div></div>
-                        <div></div>
+                        <BeforeAfterSlider 
+                            beforeImage="/dashboard-report.webp"
+                            afterImage="/circular-diagram.webp"
+                            beforeLabel="BEFORE"
+                            afterLabel="AFTER"
+                        />
+                        <BeforeAfterSlider 
+                            beforeImage="/dashboard-report.webp"
+                            afterImage="/circular-diagram.webp"
+                            beforeLabel="BEFORE"
+                            afterLabel="AFTER"
+                        />
                     </div>
                 </div>
             </div>           

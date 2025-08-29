@@ -74,7 +74,7 @@ export default function BeforeAfterSlider({
   }, [isDragging]);
 
   return (
-    <div className={`relative w-full aspect-square overflow-hidden rounded-lg ${className}`} ref={containerRef}>
+    <div className={`relative w-full aspect-square overflow-hidden ${className}`} ref={containerRef}>
       {/* After Image (Right side) */}
       <img 
         src={afterImage}
@@ -97,25 +97,40 @@ export default function BeforeAfterSlider({
       </div>
 
       {/* Labels */}
-      <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded text-sm font-medium">
+      <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 text-sm font-medium">
         {beforeLabel}
       </div>
-      <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded text-sm font-medium">
+      <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 text-sm font-medium">
         {afterLabel}
       </div>
 
       {/* Slider Line */}
       <div 
-        className="absolute top-0 bottom-0 w-0.5 bg-white cursor-ew-resize"
-        style={{ left: `${sliderPosition}%` }}
+        className="absolute top-0 bottom-0 w-1 bg-[var(--color-primary-500)] cursor-ew-resize shadow-lg"
+        style={{ left: `calc(${sliderPosition}% - 2px)` }}
       >
         {/* Slider Handle */}
         <div 
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-green-500 cursor-ew-resize flex items-center justify-center shadow-lg"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-[var(--color-primary-500)] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg"
           onMouseDown={handleMouseDown}
           onTouchStart={handleTouchStart}
         >
-          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+          {/* Left Arrow */}
+          <svg 
+            className="w-3 h-3 text-black mr-0.5" 
+            fill="currentColor" 
+            viewBox="0 0 20 20"
+          >
+            <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+          </svg>
+          {/* Right Arrow */}
+          <svg 
+            className="w-3 h-3 text-black ml-0.5" 
+            fill="currentColor" 
+            viewBox="0 0 20 20"
+          >
+            <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+          </svg>
         </div>
       </div>
     </div>
