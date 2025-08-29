@@ -39,25 +39,106 @@ const designersData = {
       id: 1,
       name: '태원빠',
       position: '대표 원장',
-      image: 'http://localhost:3845/assets/6b84f1147337a824876f9c32393b7248aab2a857.png',
+      image: '/sinsa/태원빠.webp',
       social: {
         wonbar: '@WonBar',
         instagram: '@atlanc_wonbar'
       },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_wonbar',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044732'
+      },
       description: '항상 저희 아뜰랑 맨즈헤어를 빛나게 해주셔서 감사합니다!!',
-      slideImage: 'http://localhost:3845/assets/6b84f1147337a824876f9c32393b7248aab2a857.png',
-      slideQuote: '항상 저희 아뜰랑 맨즈헤어를\n빛나게 해주셔서 감사합니다!!'
-    }
+    },
+    {
+      id: 2,
+      name: '다애',
+      position: '실장',
+      image: '/sinsa/다애.webp',
+      social: {
+        wonbar: '',
+        instagram: '@atlanc_daae'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_daae',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044732'
+      },
+      description: '| 컨설팅 마스터 | 일상 속 완벽한 변화는 헤어스타일로부터 시작됩니다. 두상과 얼굴형에 가장 최적인 당신만의 이미지를 디자인합니다.',
+    },
+    {
+      id: 3,
+      name: '서한',
+      position: '디자이너',
+      image: '/sinsa/서한.webp',
+      social: {
+        wonbar: '',
+        instagram: '@atlanc_s'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_s',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044732'
+      },
+      description: '편한 손질로 하루의 시작을 행복하게 만들어드립니다!',
+    },
+    {
+      id: 4,
+      name: '수현',
+      position: '디자이너',
+      image: '/sinsa/수현.webp',
+      social: {
+        wonbar: '',
+        instagram: '@atlanc_soohyun'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_soohyun',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044732'
+      },
+      description: '여자들이 좋아하는 꾸안꾸 느낌의 네추럴한 스타일을 추구합니다. 지나치게 화려하거나 인위적이지 않은, 가볍고 손질이 편한 디자인으로 고객님 본연의 아름다움을 살려 드리겠습니다!!',
+    },
+    {
+      id: 5,
+      name: '승빈',
+      position: '디자이너',
+      image: '/sinsa/승빈.webp',
+      social: {
+        wonbar: '',
+        instagram: '@atlanc_bin'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_bin',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044732'
+      },
+      description: '대한민국 남성의 두상·모질·라이프스타일까지 고려한 1:1 맞춤 헤어 컨설턴트, 승빈T',
+    }     
   ],
   konkuk: [
+    {
+      id: 1,
+      name: '태원빠',
+      position: '대표 원장',
+      image: '/Konkuk/태원빠.webp',
+      social: {
+        wonbar: '@WonBar',
+        instagram: '@atlanc_wonbar'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_wonbar',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044733'
+      },
+      description: '항상 저희 아뜰랑 맨즈헤어를 빛나게 해주셔서 감사합니다!!'
+    },
     {
       id: 2,
       name: '민종',
       position: '원장',
-      image: 'http://localhost:3845/assets/5ef41fd958b7dcf08fc76ede1e2ae29bbd67b121.png',
+      image: '/Konkuk/민종.webp',
       social: {
-        wonbar: '@WonBar',
+        wonbar: '',
         instagram: 'atlanc_minjong'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_minjong',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044733'
       },
       description: '대화와 디테일로 당신만의 분위기를 디자인해, 더 나은 하루를 만들어드립니다.'
     },
@@ -65,10 +146,14 @@ const designersData = {
       id: 3,
       name: '영재',
       position: '팀장',
-      image: 'http://localhost:3845/assets/41e9be2438e2b6142bfc1c452a58ef72d08b8f90.png',
+      image: '/Konkuk/영재.webp',
       social: {
-        wonbar: '@WonBar',
+        wonbar: '',
         instagram: 'atlanc_genius.0'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_genius.0',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044733'
       },
       description: '헤어스타일 하나로 당신의 인생이 달라지게 만들어 드리겠습니다!'
     },
@@ -76,10 +161,14 @@ const designersData = {
       id: 4,
       name: '새로',
       position: '디자이너',
-      image: 'http://localhost:3845/assets/344d975c7c0b45f701111e57e916ad9bdcc9abda.png',
+      image: '/Konkuk/새로.webp',
       social: {
-        wonbar: '@WonBar',
+        wonbar: '',
         instagram: 'atlanc_saero'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_saero',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044733'
       },
       description: '[당신만을 위한 1:1 맞춤 컨설팅] 실패 없는 맞춤 컨설팅으로 디테일한 디자인을 선물해드립니다.'
     },
@@ -87,10 +176,14 @@ const designersData = {
       id: 5,
       name: '승원',
       position: '디자이너',
-      image: 'http://localhost:3845/assets/bf00ccadcd336f6bd88adb137327322c86334656.png',
+      image: '/Konkuk/승원.webp',
       social: {
-        wonbar: '@WonBar',
+        wonbar: '',
         instagram: 'atlanc_sw'
+      },
+      urls: {
+        instagram: 'https://instagram.com/atlanc_sw',
+        booking: 'https://booking.naver.com/booking/13/bizes/1044733'
       },
       description: '스타일은 바뀌어도, 인생머리는 진심에서 시작됩니다.'
     }
@@ -144,24 +237,11 @@ export default function DesignersPage() {
   return (
     <div className="bg-white">
       {/* Hero Section with Slides */}
-      <section className="relative h-[890px] bg-black/80 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("http://localhost:3845/assets/d1035ca66fb5744495ec1ff238cc3b99e41caec1.png")' }}
-        />
-        <div className="absolute inset-0 bg-black/80" />
-        
+      <section className="relative h-[890px] bg-[url('/designers-bg.webp')] overflow-hidden tracking-[-1.5]">        
         {/* Section Title */}
-        <div className="absolute top-44 left-1/2 transform -translate-x-1/2 z-20">
-          <div className="flex flex-col gap-1 items-center text-center text-white">
-            <div className="font-semibold text-lg tracking-tight uppercase text-green-400">
-              <p className="leading-relaxed">Atlanc Consultant</p>
-            </div>
-            <div className="font-bold text-4xl leading-tight tracking-tight text-white">
-              <p className="mb-0">전문 맨즈 헤어 컨설턴트가</p>
-              <p>여러분의 이미지를 완성해드립니다.</p>
-            </div>
-          </div>
+        <div className="flex flex-col gap-1 items-center justify-center text-center text-white">
+          <h2 className="en text-xl max-md:text-[14px] font-semibold text-[var(--color-primary-500))] uppercase">Atlanc Consultant</h2>
+          <p className="mb-0 text-4xl font-bold">전문 맨즈 헤어 컨설턴트가 <br />여러분의 이미지를 완성해드립니다.</p>
         </div>
 
         {/* Hero Slider */}
@@ -261,7 +341,7 @@ export default function DesignersPage() {
                 onClick={() => setActiveTab('sinsa')}
                 className={`px-5 py-3 rounded-full text-base font-semibold transition-colors ${
                   activeTab === 'sinsa' 
-                    ? 'bg-gray-800 text-green-400' 
+                    ? 'bg-gray-800 text-[var(--color-primary-500)]' 
                     : 'text-gray-400 hover:text-gray-600'
                 }`}
               >
@@ -271,7 +351,7 @@ export default function DesignersPage() {
                 onClick={() => setActiveTab('konkuk')}
                 className={`px-5 py-3 rounded-full text-base font-semibold transition-colors ${
                   activeTab === 'konkuk' 
-                    ? 'bg-gray-800 text-green-400' 
+                    ? 'bg-gray-800 text-[var(--color-primary-500)]' 
                     : 'text-gray-400 hover:text-gray-600'
                 }`}
               >
@@ -289,6 +369,7 @@ export default function DesignersPage() {
                 position={designer.position}
                 image={designer.image}
                 social={designer.social}
+                urls={designer.urls}
                 description={designer.description}
                 onDetailClick={() => console.log(`Detail for ${designer.name}`)}
                 onBookingClick={() => console.log(`Booking for ${designer.name}`)}
