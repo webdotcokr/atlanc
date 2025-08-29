@@ -6,7 +6,7 @@ const vectorGrayLight = "/slide-arrows-left.svg";
 const vectorGrayDark = "/slide-arrows-left.svg";
 const ellipseDark = "/EllipseDark.svg";
 const vectorDark = "/slide-arrows-left.svg";
-const ellipseDefault = "http://localhost:3845/assets/a3b552a84b629768e226d1d0e90dac66e096075a.svg";
+const ellipseDefault = "/Ellipse.svg";
 
 export interface SlideArrowsProps {
   type?: "01" | "02";

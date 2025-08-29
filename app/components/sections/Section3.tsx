@@ -1,6 +1,6 @@
 export default function Section3() {
     return (
-        <section className="py-24 pb-30 max-md:py-16 tracking-tighter bg-white">
+        <section id="section3" className="py-24 pb-30 max-md:py-16 tracking-tighter bg-white">
             <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-12 max-md:mb-8">
                     <span className="num text-gray-200 text-8xl font-semibold italic">03</span>

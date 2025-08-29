@@ -138,7 +138,7 @@ export default function Home() {
             </div>
             
             {/* Right Side - Sliding Reviews */}
-            <div className="relative h-[600px] max-md:h-[400px]">
+            <div className="relative h-[900px] max-md:h-[400px]">
               <div className="grid grid-cols-2 gap-4 h-full">
                 {/* Left Column - Moving Up */}
                 <div className="relative overflow-hidden">
@@ -275,7 +275,7 @@ export default function Home() {
                 <p className="text-black font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3">아뜰랑은 이렇게 다릅니다.</p>
                 <div className="mt-10">
                     <div className="grid grid-cols-3 max-md:grid-cols-1 gap-4">
-                        <a className="" href="#" style={{ cursor: 'pointer' }}>
+                        <a className="" href="#section1" style={{ cursor: 'pointer' }}>
                             <div className="group flex flex-col max-md:flex-row max-md:items-center max-md:gap-8 p-[32px] bg-[var(--color-gray-50)] hover:bg-black">
                                 <p className="num font-semibold text-6xl text-[var(--color-gray-300)] group-hover:text-[var(--color-gray-700)]">01</p>
                                 <div>
@@ -284,7 +284,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </a>
-                        <a className="" href="#" style={{ cursor: 'pointer' }}>
+                        <a className="" href="#section2" style={{ cursor: 'pointer' }}>
                             <div className="group flex flex-col max-md:flex-row max-md:items-center max-md:gap-8 p-[32px] bg-[var(--color-gray-50)] hover:bg-black">
                                 <p className="num font-semibold text-6xl text-[var(--color-gray-300)] group-hover:text-[var(--color-gray-700)]">02</p>
                                 <div>
@@ -293,7 +293,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </a>
-                          <a className="" href="#" style={{ cursor: 'pointer' }}>
+                          <a className="" href="#section3" style={{ cursor: 'pointer' }}>
                             <div className="group flex flex-col max-md:flex-row max-md:items-center max-md:gap-8 p-[32px] bg-[var(--color-gray-50)] hover:bg-black">
                                 <p className="num font-semibold text-6xl text-[var(--color-gray-300)] group-hover:text-[var(--color-gray-700)]">03</p>
                                 <div>

@@ -35,7 +35,7 @@ export default function Section2Client() {
     ];
 
     return (
-        <section className="bg-white py-12 max-md:py-16 tracking-tighter">
+        <section id="section2" className="bg-white py-12 max-md:py-16 tracking-tighter">
             <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-12 max-md:mb-8">
                     <span className="num text-gray-200 text-8xl font-semibold italic">02</span>
@@ -46,7 +46,7 @@ export default function Section2Client() {
                 </div>
 
                 {/* Tab Buttons */}
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-16 max-md:mb-8">
                     <div className="bg-white border border-gray-200 rounded-full p-[5px]">
                         <button
                             onClick={() => setIsAfter(false)}
