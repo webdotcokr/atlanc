@@ -128,7 +128,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #fff;
-    --foreground: var(--color-gray-50);
+    --foreground: #000;
   }
 }
 
