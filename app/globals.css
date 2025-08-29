@@ -171,3 +171,30 @@ a {
 .num {
   font-family: 'Cormorant Garamond', serif;
 }
+
+/* Vertical sliding animations for reviews */
+@keyframes slide-up-infinite {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes slide-down-infinite {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up-infinite {
+  animation: slide-up-infinite 30s linear infinite;
+}
+
+.animate-slide-down-infinite {
+  animation: slide-down-infinite 30s linear infinite;
+}

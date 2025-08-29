@@ -6,6 +6,7 @@ import Section3 from './components/sections/Section3';
 import NewsClient, { NewsItem } from './components/sections/NewsClient';
 import BeforeAfterSlider from './components/ui/BeforeAfterSlider';
 import { SynchronizedSliderProvider } from './components/ui/SynchronizedSliderContext';
+import ReviewInfo from './components/ui/review-info';
 
 // Hero Section Images
 const imgRectangle193989 = "http://localhost:3845/assets/aad7a07a18c5778c7589b7cd82daf88815b6453a.png";
@@ -129,6 +130,123 @@ export default function Home() {
       <NewsClient newsItems={newsData} />
 
       {/* Customer Reviews Section */}
+      <section className="bg-white h-[890px] max-md:h-[650px] max-md:pt-[60px] max-md:pb-[60px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto">
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-16 max-md:gap-8 items-center h-[890px] max-md:h-auto">
+            {/* Left Side - Text Content */}
+            <div className="flex flex-col justify-center">
+              <h2 className="en text-lg max-md:text-[16px] font-semibold text-[var(--color-primary-500)] mb-4">REVIEWS</h2>
+              <h3 className="font-bold text-5xl max-md:text-[26px] leading-[1.3] tracking-[-1.5] mb-6">아뜰랑을 통해 <br/>새로운 나의 모습을 발견한 <br/>고객님들의 실시간 후기</h3>
+              <a className="text-sm font-semibold" href="https://map.naver.com/p/entry/place/1547650412?placePath=/review" target='_blank'>리뷰 더보기 →</a>
+            </div>
+            
+            {/* Right Side - Sliding Reviews */}
+            <div className="relative h-[600px] max-md:h-[400px]">
+              <div className="grid grid-cols-2 gap-4 h-full">
+                {/* Left Column - Moving Up */}
+                <div className="relative overflow-hidden">
+                  <div className="animate-slide-up-infinite flex flex-col gap-6">
+                    {/* First Set */}
+                    <ReviewInfo 
+                      reviewText="정말 만족스러운 컷팅이었어요!
+디자이너님이 제 얼굴형에 맞는
+스타일을 추천해주셔서 너무 좋았습니다."
+                      tags={["💚 원하는 스타일로 잘 해줘요", "😎 트렌디해요"]}
+                      imageUrl="/review-1.webp"
+                    />
+                    <ReviewInfo 
+                      reviewText="처음 방문했는데 직원분들이
+너무 친절하시고 실력도 좋으세요.
+앞으로 계속 다닐 예정입니다!"
+                      tags={["🔍 꼼꼼해요", "👦 남자 머리를 잘해요"]}
+                      imageUrl="/review-2.webp"
+                    />
+                    <ReviewInfo 
+                      reviewText="머리 스타일링 받고 나서
+자신감이 생겼어요. 정말
+프로페셜한 서비스였습니다."
+                      tags={["💚 원하는 스타일로 잘 해줘요", "😎 트렌디해요"]}
+                      imageUrl="/review-3.webp"
+                    />
+                    {/* Duplicate Set for Seamless Loop */}
+                    <ReviewInfo 
+                      reviewText="정말 만족스러운 컷팅이었어요!
+디자이너님이 제 얼굴형에 맞는
+스타일을 추천해주셔서 너무 좋았습니다."
+                      tags={["💚 원하는 스타일로 잘 해줘요", "😎 트렌디해요"]}
+                      imageUrl="/review-1.webp"
+                    />
+                    <ReviewInfo 
+                      reviewText="처음 방문했는데 직원분들이
+너무 친절하시고 실력도 좋으세요.
+앞으로 계속 다닐 예정입니다!"
+                      tags={["🔍 꼼꼼해요", "👦 남자 머리를 잘해요"]}
+                      imageUrl="/review-2.webp"
+                    />
+                    <ReviewInfo 
+                      reviewText="머리 스타일링 받고 나서
+자신감이 생겼어요. 정말
+프로페셜한 서비스였습니다."
+                      tags={["💚 원하는 스타일로 잘 해줘요", "😎 트렌디해요"]}
+                      imageUrl="/review-3.webp"
+                    />
+                  </div>
+                </div>
+                
+                {/* Right Column - Moving Down */}
+                <div className="relative overflow-hidden">
+                  <div className="animate-slide-down-infinite flex flex-col gap-6">
+                    {/* First Set */}
+                    <ReviewInfo 
+                      reviewText="아뜰랑에서 받은 서비스는
+정말 최고였어요. 헤어스타일
+상담부터 마무리까지 완벽했습니다."
+                      tags={["🔍 꼼꼼해요", "👦 남자 머리를 잘해요"]}
+                      imageUrl="/review-4.webp"
+                    />
+                    <ReviewInfo 
+                      reviewText="시술 과정에서 세심한 배려와
+전문적인 기술력을 느낄 수 있었어요.
+정말 추천합니다!"
+                      tags={["💗친절해요", "😎 트렌디해요"]}
+                      imageUrl="/review-5.webp"
+                    />
+                    <ReviewInfo 
+                      reviewText="예약부터 시술까지 모든 과정이
+매끄러웠고, 결과도 기대 이상이었습니다.
+계속 방문할 계획이에요."
+                      tags={["💚 원하는 스타일로 잘 해줘요", "👦 남자 머리를 잘해요"]}
+                      imageUrl="/review-6.webp"
+                    />
+                    {/* Duplicate Set for Seamless Loop */}
+                    <ReviewInfo 
+                      reviewText="아뜰랑에서 받은 서비스는
+정말 최고였어요. 헤어스타일
+상담부터 마무리까지 완벽했습니다."
+                      tags={["🔍 꼼꼼해요", "👦 남자 머리를 잘해요"]}
+                      imageUrl="/review-4.webp"
+                    />
+                    <ReviewInfo 
+                      reviewText="시술 과정에서 세심한 배려와
+전문적인 기술력을 느낄 수 있었어요.
+정말 추천합니다!"
+                      tags={["💗친절해요", "😎 트렌디해요"]}
+                      imageUrl="/review-5.webp"
+                    />
+                    <ReviewInfo 
+                      reviewText="예약부터 시술까지 모든 과정이
+매끄러웠고, 결과도 기대 이상이었습니다.
+계속 방문할 계획이에요."
+                      tags={["💚 원하는 스타일로 잘 해줘요", "👦 남자 머리를 잘해요"]}
+                      imageUrl="/review-6.webp"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* 아뜰랑 맨즈헤어 대표원장이 직접 소개합니다. */}

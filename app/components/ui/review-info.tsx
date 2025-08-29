@@ -37,7 +37,7 @@ export default function ReviewInfo({
       
       {/* Content Section with Gradient */}
       <div className="relative px-4 py-4 bg-gradient-to-b from-white via-gray-50 to-gray-100">
-        <div className="font-semibold text-lg text-black tracking-tight leading-relaxed w-full mb-4">
+        <div className="font-semibold text-lg max-md:text-sm text-black tracking-tight leading-relaxed w-full mb-4">
           {reviewText.split('\n').map((line, index) => (
             <React.Fragment key={index}>
               {line}

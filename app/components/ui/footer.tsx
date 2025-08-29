@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex flex-row flex-wrap items-center gap-5 max-md:order-1">
               <a href="https://www.instagram.com/atlanc_wonbar/" target="_blank"><img src="/instagram.svg"></img></a>
               <a href="https://www.youtube.com/@%EC%95%84%EB%9C%B0%EB%9E%91%EB%A7%A8%EC%A6%88%ED%97%A4%EC%96%B4" target="_blank"><img src="/youtube.svg"></img></a>
-              <a href="https://blog.naver.com/atlanc_wonbar" target="_blank"><img src="/blog.svg"></img></a>
+              <a href="https://blog.naver.com/atlanc100" target="_blank"><img src="/blog.svg"></img></a>
             </div>
           </div>
         </div>
