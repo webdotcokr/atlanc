@@ -64,7 +64,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 </Link>
 
             {/* CTA Button */}
-              <Link href="/booking">
+              <Link href="/#">
                 <button className="flex flex-row gap-2 items-center bg-white text-lg hover:bg-gray-100 px-5 py-3 rounded-full font-semibold">
                   <span><img src="/cta-icon-1.png"/></span><span>문의하기</span><span><img src="/cta-icon-2.png"/></span>
                 </button>
@@ -85,7 +85,7 @@ export default function Header({ className = "" }: HeaderProps) {
 
               <div className="flex items-center gap-3">
                 {/* Mobile CTA Button */}
-                <Link href="/booking">
+                <Link href="/#">
                   <button className="flex flex-row gap-2 items-center bg-white text-md hover:bg-gray-100 px-4 py-2 rounded-full font-semibold">
                     <span><img src="/cta-icon-1.png" alt="CTA Icon 1" className="max-md:h-[14px]"/></span>
                     <span>문의하기</span>
@@ -124,34 +124,88 @@ export default function Header({ className = "" }: HeaderProps) {
       </header>
 
       {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-sm">
-          <div className="flex flex-col items-center justify-center h-full gap-8">
-            <nav className="flex flex-col items-center gap-6">
-              <Link 
-                href="/atlanc" 
-                className="text-white text-xl font-semibold hover:text-green-400 transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Atlanc
-              </Link>
-              <Link 
-                href="/designers" 
-                className="text-white text-xl font-semibold hover:text-green-400 transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                디자이너 소개
-              </Link>
-            </nav>
+      <div 
+        className={`md:hidden fixed inset-0 z-60 transition-all duration-300 ${
+          isMobileMenuOpen 
+            ? 'opacity-100 pointer-events-auto' 
+            : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div 
+          className="absolute inset-0 bg-black/50 backdrop-blur-md"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        
+        <div 
+          className={`absolute right-0 top-0 w-80 h-full bg-white backdrop-blur-md transform transition-transform duration-300 ease-in-out ${
+            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          {/* Close Button */}
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200"
+              aria-label="메뉴 닫기"
+            >
+              <div className="w-6 h-5 flex flex-col justify-center items-center">
+                <span className="w-[22px] h-0.5 bg-black rotate-45 absolute" />
+                <span className="w-[22px] h-0.5 bg-black -rotate-45 absolute" />
+              </div>
+            </button>
+          </div>
 
-            <Link href="/booking" onClick={() => setIsMobileMenuOpen(false)}>
-              <button className="bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition-colors duration-200">
-                예약 문의하기
-              </button>
-            </Link>
+          {/* Menu Content */}
+          <div className="px-8 pt-8">
+            {/* Logo */}
+            <div className="mb-12">
+              <img src="/logo-color.png" alt="Logo" className="h-12" />
+            </div>
+
+            {/* Navigation */}
+            <nav className="space-y-8">
+              <div className="border-b border-[var(--color-gray-100)] pb-6">
+                <Link 
+                  href="/atlanc" 
+                  className="flex items-center justify-between text-xl font-semibold group"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <span>Atlanc</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+              </div>
+
+              <div className="border-b border-[var(--color-gray-100)] pb-6">
+                <Link 
+                  href="/designers" 
+                  className="flex items-center justify-between text-xl font-semibold group"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <span>디자이너 소개</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+              </div>
+
+              <div className="border-b border-[var(--color-gray-100)] pb-6">
+                <Link 
+                  href="#" 
+                  className="flex items-center justify-between text-xl font-semibold group"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <span>가맹문의</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+              </div>
+            </nav>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }
