@@ -46,7 +46,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_wonbar',
-        booking: 'https://map.naver.com/p/entry/place/1547650412?placePath=/stylist'
+        booking: 'https://naver.me/GfCpS0ha'
       },
       description: '항상 저희 아뜰랑 맨즈헤어를 빛나게 해주셔서 감사합니다!!',
     },
@@ -61,7 +61,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_daae',
-        booking: 'https://map.naver.com/p/entry/place/1547650412?placePath=/stylist'
+        booking: 'https://naver.me/GB0zpbjR'
       },
       description: '| 컨설팅 마스터 | 일상 속 완벽한 변화는 헤어스타일로부터 시작됩니다. 두상과 얼굴형에 가장 최적인 당신만의 이미지를 디자인합니다.',
     },
@@ -76,7 +76,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_s',
-        booking: 'https://map.naver.com/p/entry/place/1547650412?placePath=/stylist'
+        booking: 'https://naver.me/5UT9DgW2'
       },
       description: '편한 손질로 하루의 시작을 행복하게 만들어드립니다!',
     },
@@ -91,7 +91,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_soohyun',
-        booking: 'https://map.naver.com/p/entry/place/1547650412?placePath=/stylist'
+        booking: 'https://naver.me/xXDTs98A'
       },
       description: '여자들이 좋아하는 꾸안꾸 느낌의 네추럴한 스타일을 추구합니다. 지나치게 화려하거나 인위적이지 않은, 가볍고 손질이 편한 디자인으로 고객님 본연의 아름다움을 살려 드리겠습니다!!',
     },
@@ -106,7 +106,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_bin',
-        booking: 'https://map.naver.com/p/entry/place/1547650412?placePath=/stylist'
+        booking: 'https://naver.me/GG7lQx3C'
       },
       description: '대한민국 남성의 두상·모질·라이프스타일까지 고려한 1:1 맞춤 헤어 컨설턴트, 승빈T',
     }     
@@ -123,7 +123,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_wonbar',
-        booking: 'https://map.naver.com/p/entry/place/2020414764?c=15.00,0,0,0,dh&placePath=/stylist'
+        booking: 'https://naver.me/G9pb9FlM'
       },
       description: '항상 저희 아뜰랑 맨즈헤어를 빛나게 해주셔서 감사합니다!!'
     },
@@ -138,7 +138,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_minjong',
-        booking: 'https://map.naver.com/p/entry/place/2020414764?c=15.00,0,0,0,dh&placePath=/stylist'
+        booking: 'https://naver.me/FgTHJqD1'
       },
       description: '대화와 디테일로 당신만의 분위기를 디자인해, 더 나은 하루를 만들어드립니다.'
     },
@@ -153,7 +153,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_genius.0',
-        booking: 'https://map.naver.com/p/entry/place/2020414764?c=15.00,0,0,0,dh&placePath=/stylist'
+        booking: 'https://naver.me/Gq9JsxDL'
       },
       description: '헤어스타일 하나로 당신의 인생이 달라지게 만들어 드리겠습니다!'
     },
@@ -168,7 +168,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_saero',
-        booking: 'https://map.naver.com/p/entry/place/2020414764?c=15.00,0,0,0,dh&placePath=/stylist'
+        booking: 'https://naver.me/FkL7Wemh'
       },
       description: '[당신만을 위한 1:1 맞춤 컨설팅] 실패 없는 맞춤 컨설팅으로 디테일한 디자인을 선물해드립니다.'
     },
@@ -183,7 +183,7 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_sw',
-        booking: 'https://map.naver.com/p/entry/place/2020414764?c=15.00,0,0,0,dh&placePath=/stylist'
+        booking: 'https://naver.me/FdosOn3T'
       },
       description: '스타일은 바뀌어도, 인생머리는 진심에서 시작됩니다.'
     }
