@@ -1,21 +1,4 @@
 import React from 'react';
-import { SectionTitle } from '../components/ui';
-
-const heroBackgroundImage = "http://localhost:3845/assets/a7d84877b64bccafe110d8770b8eda90cb3594f3.png";
-const heroBackgroundMobile = "http://localhost:3845/assets/a120d39c351885791072bf5f65c3866da166a1fc.png";
-const mainVideoThumbnail = "http://localhost:3845/assets/3adeb1e37421bd7b4e84621d427131f22323d465.png";
-const mainVideoThumbnailMobile = "http://localhost:3845/assets/2e9a88489b032559dfe025ca3cdab537195332da.png";
-const galleryImages = [
-  "http://localhost:3845/assets/7b73b0a2284bbf997f6e3201b96686aa7f81db88.png",
-  "http://localhost:3845/assets/1086493a236e9f71b0b12c1b8905a8df82a2efb9.png",
-  "http://localhost:3845/assets/31ec8f59edef6e1b77dbfd3b9ddf55ea2b4a2885.png",
-  "http://localhost:3845/assets/9f2c60cfc1fb26d60b8c90d4780e92d14bc84362.png",
-  "http://localhost:3845/assets/407ddf265b68ae5dddaf0ad1959a4a0fc1eb2549.png"
-];
-const consultingImage = "http://localhost:3845/assets/75234b633b8112e50bf25d6a0f17e9609152528d.png";
-const stylistImage = "http://localhost:3845/assets/67ecbda9efd85f33dac0f5c207cb9066aa5fabc5.png";
-const stylistIcon = "http://localhost:3845/assets/7091e184906063db45c253fdec4f69b55ef3e583.png";
-const playButtonIcon = "http://localhost:3845/assets/22fa20258c14f05392a449d309f52de590919492.svg";
 
 export default function AboutPage() {
   return (
