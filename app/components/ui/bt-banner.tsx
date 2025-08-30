@@ -18,13 +18,13 @@ export default function BtBanner() {
           <h2 className="en font-semibold text-lg text-[var(--color-primary-500)]">
             ATLANC Men&apos;s Hair
           </h2>
-          <h1 className="font-bold text-2xl md:text-4xl leading-tight tracking-tight text-white max-w-2xl">
+          <p className="font-bold text-2xl md:text-4xl leading-tight tracking-tight text-white max-w-2xl">
             당신의 인상에 특별함을 더해줄
             <br />
             섬세한 디테일의 차이,
             <br />
             아뜰랑이 찾아드리겠습니다.
-          </h1>
+          </p>
         </div>
         
         {/* Button area */}

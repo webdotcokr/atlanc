@@ -140,6 +140,7 @@ html {
   font-size: 16px; /* 데스크톱 기본값 (1rem = 16px) */
 }
 
+
 @media (max-width: 768px) {
   html {
     font-size: 14px; /* 모바일에서 1rem = 14px */
@@ -151,6 +152,17 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 
 section {
   background-repeat: no-repeat;

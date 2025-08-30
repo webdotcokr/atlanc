@@ -20,6 +20,7 @@ const playButtonIcon = "http://localhost:3845/assets/22fa20258c14f05392a449d309f
 export default function AboutPage() {
   return (
     <>
+      <h1 className="sr-only">아뜰랑 맨즈헤어, 브랜드 소개</h1>
       <section 
         className="relative flex flex-col items-center justify-center h-[890px] max-md:h-[656px] w-full text-center bg-[url('/atlanc-bg.webp')]"
       >

@@ -259,6 +259,7 @@ export default function DesignersPage() {
 
   return (
     <div className="bg-white">
+      <h1 className="sr-only">아뜰랑 맨즈헤어 디자이너 소개</h1>
       {/* Hero Section with Slides */}
       <section className="flex flex-col justify-center items-center h-[890px] max-md:h-[656px] bg-[url('/designers-bg.webp')] overflow-hidden tracking-[-1.5]">        
         {/* Section Title */}

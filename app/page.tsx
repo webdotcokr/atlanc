@@ -38,6 +38,7 @@ export default function Home() {
 
   return (
     <div>
+      <h1 className="sr-only">아뜰랑 맨즈헤어, 프리미엄 남성 전문 헤어샵</h1>
       {/* Main Hero Section */}
       <section className="relative flex flex-col items-center justify-center h-[600px] max-md:h-[656px] w-full text-center bg-[url('/hero.webp')]">
         <h2 className="en text-xl max-md:text-[14px] text-white">Atlanc Premium Men&apos;s Hair Consulting</h2>
