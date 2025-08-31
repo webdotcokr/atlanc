@@ -38,6 +38,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+        <meta name="naver-site-verification" content="00072606d809c0707346a415d7c6122ec807ab53" />
       </head>
       <body className="antialiased">
         <Header />
