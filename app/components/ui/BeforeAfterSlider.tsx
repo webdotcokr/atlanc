@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 import { useSliderContext } from './SynchronizedSliderContext';
 
 interface BeforeAfterSliderProps {
@@ -20,66 +20,77 @@ export default function BeforeAfterSlider({
 }: BeforeAfterSliderProps) {
   const { sliderPosition, setSliderPosition, isDragging, setIsDragging } = useSliderContext();
   const containerRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number | null>(null);
+  const sliderHandleRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseDown = () => {
-    setIsDragging(true);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging || !containerRef.current) return;
-
+  const updatePosition = useCallback((clientX: number) => {
+    if (!containerRef.current) return;
+    
     const rect = containerRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
+    const x = clientX - rect.left;
     const percentage = (x / rect.width) * 100;
     
     setSliderPosition(Math.min(Math.max(percentage, 0), 100));
-  };
+  }, [setSliderPosition]);
 
-  const handleTouchStart = () => {
+  const handlePointerDown = useCallback((e: React.PointerEvent) => {
     setIsDragging(true);
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
-
-  const handleTouchMove = (e: TouchEvent) => {
-    if (!isDragging || !containerRef.current) return;
-
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = e.touches[0].clientX - rect.left;
-    const percentage = (x / rect.width) * 100;
     
-    setSliderPosition(Math.min(Math.max(percentage, 0), 100));
-  };
-
-  useEffect(() => {
-    if (isDragging) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('touchmove', handleTouchMove);
-      document.addEventListener('touchend', handleTouchEnd);
+    // Capture pointer for stable dragging
+    if (sliderHandleRef.current) {
+      sliderHandleRef.current.setPointerCapture(e.pointerId);
     }
+    
+    // Update position immediately on click
+    updatePosition(e.clientX);
+    
+    // Prevent text selection
+    e.preventDefault();
+  }, [setIsDragging, updatePosition]);
 
+  const handlePointerUp = useCallback((e: React.PointerEvent) => {
+    setIsDragging(false);
+    
+    // Release pointer capture
+    if (sliderHandleRef.current) {
+      sliderHandleRef.current.releasePointerCapture(e.pointerId);
+    }
+    
+    // Cancel any pending animation frame
+    if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current);
+    }
+  }, [setIsDragging]);
+
+  const handlePointerMove = useCallback((e: React.PointerEvent) => {
+    if (!isDragging) return;
+    
+    // Update immediately without RAF for better responsiveness
+    updatePosition(e.clientX);
+  }, [isDragging, updatePosition]);
+
+  // Clean up animation frame on unmount
+  useEffect(() => {
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleTouchEnd);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
-  }, [isDragging]);
+  }, []);
 
   return (
-    <div className={`relative w-full aspect-square overflow-hidden ${className}`} ref={containerRef}>
+    <div 
+      className={`relative w-full aspect-square overflow-hidden select-none ${className}`} 
+      ref={containerRef}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerLeave={handlePointerUp}
+    >
       {/* After Image (Right side) */}
       <img 
         src={afterImage}
         alt="After"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         draggable={false}
       />
       
@@ -91,33 +102,38 @@ export default function BeforeAfterSlider({
         <img 
           src={beforeImage}
           alt="Before"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover pointer-events-none"
           draggable={false}
         />
       </div>
 
       {/* Labels */}
-      <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 text-sm font-medium">
+      <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 text-sm font-medium pointer-events-none">
         {beforeLabel}
       </div>
-      <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 text-sm font-medium">
+      <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 text-sm font-medium pointer-events-none">
         {afterLabel}
       </div>
 
       {/* Slider Line */}
       <div 
-        className="absolute top-0 bottom-0 w-1 bg-[var(--color-primary-500)] cursor-ew-resize shadow-lg"
-        style={{ left: `calc(${sliderPosition}% - 2px)` }}
+        className={`absolute top-0 bottom-0 w-1 bg-[var(--color-primary-500)] cursor-ew-resize shadow-lg`}
+        style={{ 
+          left: `${sliderPosition}%`,
+          transform: 'translateX(-2px)',
+          willChange: isDragging ? 'left' : 'auto'
+        }}
       >
         {/* Slider Handle */}
         <div 
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-[var(--color-primary-500)] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg"
-          onMouseDown={handleMouseDown}
-          onTouchStart={handleTouchStart}
+          ref={sliderHandleRef}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-[var(--color-primary-500)] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform duration-150"
+          onPointerDown={handlePointerDown}
+          style={{ touchAction: 'none' }}
         >
           {/* Left Arrow */}
           <svg 
-            className="w-3 h-3 text-black mr-0.5" 
+            className="w-3 h-3 text-black mr-0.5 pointer-events-none" 
             fill="currentColor" 
             viewBox="0 0 20 20"
           >
@@ -125,7 +141,7 @@ export default function BeforeAfterSlider({
           </svg>
           {/* Right Arrow */}
           <svg 
-            className="w-3 h-3 text-black ml-0.5" 
+            className="w-3 h-3 text-black ml-0.5 pointer-events-none" 
             fill="currentColor" 
             viewBox="0 0 20 20"
           >
