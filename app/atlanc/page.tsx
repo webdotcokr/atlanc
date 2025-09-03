@@ -9,7 +9,7 @@ export default function AboutPage() {
       >
         <h2 className="en text-xl max-md:text-[14px] text-[var(--color-primary-500))]">Atlanc Man&apos;s Hair</h2>
         <p className="num mt-6 text-white text-[80px] max-md:text-[38px] font-bold leading-[1.1] tracking-[-2]">Efficiency isn&apos;t our goal <br/>your satisfaction is</p>
-        <p className="text-white text-xl max-md:text-[14px] text-medium mt-6">효율이 아닌 고객님의 만족이 <br/>우리의 목표입니다.</p>
+        <p className="text-white text-xl max-md:text-[14px] text-medium mt-6">효율은 우리의 목표가 아닙니다. <br/>당신의 만족이죠.</p>
         {/* Bottom Center Text with Line */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
           <span className="num text-white text-xl font-medium tracking-wide mb-4">explore</span>
@@ -26,8 +26,8 @@ export default function AboutPage() {
                     <div className="relative w-full aspect-video overflow-hidden">
                         <iframe 
                             width="100%" 
-                            height="100%" 
-                            src="https://www.youtube.com/embed/xUKyB8ITNzs" 
+                            height="100%"
+                            src="https://www.youtube.com/embed/Ghqe3lR3h84" 
                             title="YouTube video player" 
                             frameBorder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
