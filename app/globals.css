@@ -210,3 +210,53 @@ a {
 .animate-slide-down-infinite {
   animation: slide-down-infinite 30s linear infinite;
 }
+
+/* Ripple animation for slider handle */
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(38, 208, 124, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(38, 208, 124, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(38, 208, 124, 0);
+  }
+}
+
+.animate-ripple {
+  animation: ripple 2s infinite;
+}
+
+/* Smooth slider oscillation */
+@keyframes slider-oscillate {
+  0% {
+    left: 42%;
+  }
+  50% {
+    left: 58%;
+  }
+  100% {
+    left: 42%;
+  }
+}
+
+@keyframes clip-oscillate {
+  0% {
+    clip-path: inset(0 58% 0 0);
+  }
+  50% {
+    clip-path: inset(0 42% 0 0);
+  }
+  100% {
+    clip-path: inset(0 58% 0 0);
+  }
+}
+
+.animate-slider-oscillate {
+  animation: slider-oscillate 4s ease-in-out infinite;
+}
+
+.animate-clip-oscillate {
+  animation: clip-oscillate 4s ease-in-out infinite;
+}

@@ -18,10 +18,11 @@ export default function BeforeAfterSlider({
   afterLabel = 'AFTER',
   className = ''
 }: BeforeAfterSliderProps) {
-  const { sliderPosition, setSliderPosition, isDragging, setIsDragging } = useSliderContext();
+  const { sliderPosition, setSliderPosition, isDragging, setIsDragging, hasInteracted, setHasInteracted } = useSliderContext();
   const containerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
   const sliderHandleRef = useRef<HTMLDivElement>(null);
+  const autoAnimationRef = useRef<NodeJS.Timeout | null>(null);
 
   const updatePosition = useCallback((clientX: number) => {
     if (!containerRef.current) return;
@@ -35,6 +36,7 @@ export default function BeforeAfterSlider({
 
   const handlePointerDown = useCallback((e: React.PointerEvent) => {
     setIsDragging(true);
+    setHasInteracted(true);
     
     // Capture pointer for stable dragging
     if (sliderHandleRef.current) {
@@ -46,7 +48,7 @@ export default function BeforeAfterSlider({
     
     // Prevent text selection
     e.preventDefault();
-  }, [setIsDragging, updatePosition]);
+  }, [setIsDragging, setHasInteracted, updatePosition]);
 
   const handlePointerUp = useCallback((e: React.PointerEvent) => {
     setIsDragging(false);
@@ -69,11 +71,15 @@ export default function BeforeAfterSlider({
     updatePosition(e.clientX);
   }, [isDragging, updatePosition]);
 
+
   // Clean up animation frame on unmount
   useEffect(() => {
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
+      }
+      if (autoAnimationRef.current) {
+        clearInterval(autoAnimationRef.current);
       }
     };
   }, []);
@@ -96,8 +102,10 @@ export default function BeforeAfterSlider({
       
       {/* Before Image (Left side) */}
       <div 
-        className="absolute inset-0 overflow-hidden"
-        style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+        className={`absolute inset-0 overflow-hidden ${!hasInteracted && !isDragging ? 'animate-clip-oscillate' : ''}`}
+        style={{ 
+          clipPath: hasInteracted || isDragging ? `inset(0 ${100 - sliderPosition}% 0 0)` : 'inset(0 50% 0 0)'
+        }}
       >
         <img 
           src={beforeImage}
@@ -117,9 +125,9 @@ export default function BeforeAfterSlider({
 
       {/* Slider Line */}
       <div 
-        className={`absolute top-0 bottom-0 w-1 bg-[var(--color-primary-500)] cursor-ew-resize shadow-lg`}
+        className={`absolute top-0 bottom-0 w-1 bg-[var(--color-primary-500)] cursor-ew-resize shadow-lg ${!hasInteracted && !isDragging ? 'animate-slider-oscillate' : ''}`}
         style={{ 
-          left: `${sliderPosition}%`,
+          left: hasInteracted || isDragging ? `${sliderPosition}%` : '50%',
           transform: 'translateX(-2px)',
           willChange: isDragging ? 'left' : 'auto'
         }}
@@ -127,7 +135,7 @@ export default function BeforeAfterSlider({
         {/* Slider Handle */}
         <div 
           ref={sliderHandleRef}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-[var(--color-primary-500)] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform duration-150"
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-[var(--color-primary-500)] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform duration-150 ${!hasInteracted && !isDragging ? 'animate-ripple' : ''}`}
           onPointerDown={handlePointerDown}
           style={{ touchAction: 'none' }}
         >

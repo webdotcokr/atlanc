@@ -7,6 +7,8 @@ interface SliderContextType {
   setSliderPosition: (position: number) => void;
   isDragging: boolean;
   setIsDragging: (dragging: boolean) => void;
+  hasInteracted: boolean;
+  setHasInteracted: (interacted: boolean) => void;
 }
 
 const SliderContext = createContext<SliderContextType | undefined>(undefined);
@@ -14,9 +16,10 @@ const SliderContext = createContext<SliderContextType | undefined>(undefined);
 export function SynchronizedSliderProvider({ children }: { children: ReactNode }) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   return (
-    <SliderContext.Provider value={{ sliderPosition, setSliderPosition, isDragging, setIsDragging }}>
+    <SliderContext.Provider value={{ sliderPosition, setSliderPosition, isDragging, setIsDragging, hasInteracted, setHasInteracted }}>
       {children}
     </SliderContext.Provider>
   );
