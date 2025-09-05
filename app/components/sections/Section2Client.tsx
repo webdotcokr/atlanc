@@ -20,9 +20,6 @@ export default function Section2Client() {
         },
         {
             afterImg: '/after/after-4.webp',
-        },
-        {
-            afterImg: '/after/after-5.webp',
         }
     ];
 
