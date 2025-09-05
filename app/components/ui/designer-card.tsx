@@ -17,6 +17,7 @@ export interface DesignerCardProps {
   urls: {
     instagram: string;
     booking: string;
+    youtube?: string;
   };
   onDetailClick?: () => void;
   onBookingClick?: () => void;
@@ -55,7 +56,10 @@ export default function DesignerCard({
             {(social.wonbar || social.instagram) && (
               <div className="flex gap-2">
                 {social.wonbar && (
-                  <div className="flex items-center gap-3 px-2 py-2 border border-gray-100 rounded-full">
+                  <div 
+                    className="flex items-center gap-3 px-2 py-2 border border-gray-100 rounded-full cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => urls.youtube && window.open(urls.youtube, '_blank')}
+                  >
                     <div className="flex items-center gap-1">
                       <img src={wonbarIcon} alt="WonBar" className="w-5 h-5" />
                       <span className="text-sm font-semibold text-gray-800 tracking-tight">
@@ -69,7 +73,10 @@ export default function DesignerCard({
                 )}
                 
                 {social.instagram && (
-                  <div className="flex items-center gap-3 px-2 py-2 border border-gray-100 rounded-full">
+                  <div 
+                    className="flex items-center gap-3 px-2 py-2 border border-gray-100 rounded-full cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => window.open(urls.instagram, '_blank')}
+                  >
                     <div className="flex items-center gap-1">
                       <img src={instagramIcon} alt="Instagram" className="w-5 h-5 rounded-full" />
                       <span className="text-sm font-semibold text-gray-800 tracking-tight">

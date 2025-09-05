@@ -46,7 +46,8 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_wonbar',
-        booking: 'https://naver.me/GfCpS0ha'
+        booking: 'https://naver.me/GfCpS0ha',
+        youtube: 'https://www.youtube.com/channel/UCgil4B6Ag7wC9j0nXLPEhpQ'
       },
       description: '항상 저희 아뜰랑 맨즈헤어를 빛나게 해주셔서 감사합니다!!',
     },
@@ -123,7 +124,8 @@ const designersData = {
       },
       urls: {
         instagram: 'https://instagram.com/atlanc_wonbar',
-        booking: 'https://naver.me/G9pb9FlM'
+        booking: 'https://naver.me/G9pb9FlM',
+        youtube: 'https://www.youtube.com/channel/UCgil4B6Ag7wC9j0nXLPEhpQ'
       },
       description: '항상 저희 아뜰랑 맨즈헤어를 빛나게 해주셔서 감사합니다!!'
     },
