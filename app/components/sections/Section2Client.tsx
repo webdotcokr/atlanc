@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import SlideArrows from '../ui/slide-arrows';
@@ -9,27 +8,20 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function Section2Client() {
-    const [isAfter, setIsAfter] = useState(false);
-
     const cardData = [
         {
-            beforeImg: '/before/before-1.webp',
             afterImg: '/after/after-1.webp',
         },
         {
-            beforeImg: '/before/before-2.webp', 
             afterImg: '/after/after-2.webp',
         },
         {
-            beforeImg: '/before/before-3.webp',
             afterImg: '/after/after-3.webp',
         },
         {
-            beforeImg: '/before/before-4.webp',
             afterImg: '/after/after-4.webp',
         },
         {
-            beforeImg: '/before/before-5.webp',
             afterImg: '/after/after-5.webp',
         }
     ];
@@ -45,31 +37,6 @@ export default function Section2Client() {
                     </p>
                 </div>
 
-                {/* Tab Buttons */}
-                <div className="flex justify-center mb-16 max-md:mb-8">
-                    <div className="bg-white border border-gray-200 rounded-full p-[5px]">
-                        <button
-                            onClick={() => setIsAfter(false)}
-                            className={`px-5 py-3 rounded-full text-base font-semibold transition-colors ${
-                                !isAfter 
-                                    ? 'bg-gray-800 text-[var(--color-primary-500)]' 
-                                    : 'text-gray-400 hover:text-gray-600'
-                            }`}
-                        >
-                            Before
-                        </button>
-                        <button
-                            onClick={() => setIsAfter(true)}
-                            className={`px-5 py-3 rounded-full text-base font-semibold transition-colors ${
-                                isAfter 
-                                    ? 'bg-gray-800 text-[var(--color-primary-500)]' 
-                                    : 'text-gray-400 hover:text-gray-600'
-                            }`}
-                        >
-                            After
-                        </button>
-                    </div>
-                </div>
 
                 <div className="relative">
                     <Swiper
@@ -106,8 +73,8 @@ export default function Section2Client() {
                                 <div className="bg-white rounded-lg overflow-hidden shadow-md">
                                     <div className="aspect-square overflow-hidden">
                                         <img 
-                                            src={isAfter ? card.afterImg : card.beforeImg}
-                                            alt={`${isAfter ? 'After' : 'Before'} ${index + 1}`}
+                                            src={card.afterImg}
+                                            alt={`After ${index + 1}`}
                                             className="w-full h-full object-cover"
                                         />
                                     </div>

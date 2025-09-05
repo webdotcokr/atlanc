@@ -28,16 +28,14 @@ export default function SlideArrows({
     if (type === "02" && state === "default") {
       return (
         <div className="relative size-full">
-          <div className="absolute inset-0">
-            <img alt="Background" className="block max-w-none size-full" src={ellipseGray} />
-          </div>
-          <div className="absolute inset-[32.2%_42.37%_30.51%_38.98%]">
-            <div 
-              className="absolute inset-[-2.41%_-4.82%_-2.41%_-9.64%]"
+          <img alt="Background" className="absolute inset-0 size-full" src={ellipseGray} />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img 
+              alt="Arrow" 
+              className="w-4 h-4" 
+              src={vectorGrayLight}
               style={{ transform: direction === "right" ? "rotate(180deg)" : "none" }}
-            >
-              <img alt="Arrow" className="block max-w-none size-full" src={vectorGrayLight} />
-            </div>
+            />
           </div>
         </div>
       );
@@ -46,16 +44,14 @@ export default function SlideArrows({
     if (type === "02" && state === "hover") {
       return (
         <div className="relative size-full">
-          <div className="absolute inset-0">
-            <img alt="Background" className="block max-w-none size-full" src={ellipseGray} />
-          </div>
-          <div className="absolute inset-[32.2%_42.37%_30.51%_38.98%]">
-            <div 
-              className="absolute inset-[-2.41%_-4.82%_-2.41%_-9.64%]"
+          <img alt="Background" className="absolute inset-0 size-full" src={ellipseGray} />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img 
+              alt="Arrow" 
+              className="w-4 h-4" 
+              src={vectorGrayDark}
               style={{ transform: direction === "right" ? "rotate(180deg)" : "none" }}
-            >
-              <img alt="Arrow" className="block max-w-none size-full" src={vectorGrayDark} />
-            </div>
+            />
           </div>
         </div>
       );
@@ -65,16 +61,14 @@ export default function SlideArrows({
     if (type === "01" && state === "hover") {
       return (
         <div className="relative size-full">
-          <div className="absolute inset-0">
-            <img alt="Background" className="block max-w-none size-full" src={ellipseDark} />
-          </div>
-          <div className="absolute inset-[32.2%_42.37%_30.51%_38.98%]">
-            <div 
-              className="absolute inset-[-2.41%_-4.82%_-2.41%_-9.64%]"
+          <img alt="Background" className="absolute inset-0 size-full" src={ellipseDark} />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img 
+              alt="Arrow" 
+              className="w-4 h-4" 
+              src={vectorDark}
               style={{ transform: direction === "right" ? "rotate(180deg)" : "none" }}
-            >
-              <img alt="Arrow" className="block max-w-none size-full" src={vectorDark} />
-            </div>
+            />
           </div>
         </div>
       );
@@ -83,16 +77,14 @@ export default function SlideArrows({
     // Type 01 default
     return (
       <div className="relative size-full">
-        <div className="absolute inset-0">
-          <img alt="Background" className="block max-w-none size-full" src={ellipseDefault} />
-        </div>
-        <div className="absolute inset-[32.2%_42.37%_30.51%_38.98%]">
-          <div 
-            className="absolute inset-[-2.41%_-4.82%_-2.41%_-9.64%]"
+        <img alt="Background" className="absolute inset-0 size-full" src={ellipseDefault} />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            alt="Arrow" 
+            className="w-4 h-4" 
+            src={vectorDark}
             style={{ transform: direction === "right" ? "rotate(180deg)" : "none" }}
-          >
-            <img alt="Arrow" className="block max-w-none size-full" src={vectorDark} />
-          </div>
+          />
         </div>
       </div>
     );
