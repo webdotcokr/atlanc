@@ -10,16 +10,16 @@ import 'swiper/css/pagination';
 export default function Section2Client() {
     const cardData = [
         {
-            afterImg: '/after/after-1.webp',
+            afterImg: '/after-1.webp',
         },
         {
-            afterImg: '/after/after-2.webp',
+            afterImg: '/after-2.webp',
         },
         {
-            afterImg: '/after/after-3.webp',
+            afterImg: '/after-3.webp',
         },
         {
-            afterImg: '/after/after-4.webp',
+            afterImg: '/after-4.webp',
         }
     ];
 
