@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import SlideArrows from '../ui/slide-arrows';
+import MotionWrapper from '../ui/motion-wrapper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -27,15 +28,21 @@ export default function Section2Client() {
         <section id="section2" className="bg-white py-12 max-md:py-16 tracking-tighter">
             <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-12 max-md:mb-8">
-                    <span className="num text-gray-200 text-8xl font-semibold italic">02</span>
-                    <h2 className="text-black font-bold text-5xl max-md:text-3xl">개인 맞춤형 컨설팅</h2>
-                    <p className="text-lg mt-6 max-md:text-base">
-                        단순히 트렌드를 따르기 보다<br/>개개인의 특성에 맞게 설계하고 완벽하게 구현합니다.
-                    </p>
+                    <MotionWrapper animation="fadeIn">
+                        <span className="num text-gray-200 text-8xl font-semibold italic">02</span>
+                    </MotionWrapper>
+                    <MotionWrapper animation="fadeInUp" delay={0.2}>
+                        <h2 className="text-black font-bold text-5xl max-md:text-3xl">개인 맞춤형 컨설팅</h2>
+                    </MotionWrapper>
+                    <MotionWrapper animation="fadeInUp" delay={0.4}>
+                        <p className="text-lg mt-6 max-md:text-base">
+                            단순히 트렌드를 따르기 보다<br/>개개인의 특성에 맞게 설계하고 완벽하게 구현합니다.
+                        </p>
+                    </MotionWrapper>
                 </div>
 
 
-                <div className="relative">
+                <MotionWrapper className="relative" animation="fadeInUp" delay={0.6}>
                     <Swiper
                         modules={[Navigation, Pagination]}
                         slidesPerView={4}
@@ -95,7 +102,7 @@ export default function Section2Client() {
                             className="hover:scale-105"
                         />
                     </div>
-                </div>
+                </MotionWrapper>
             </div>
         </section>
     );

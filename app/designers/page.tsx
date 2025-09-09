@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { DesignerCard, SlideArrows } from '../components/ui';
+import MotionWrapper, { StaggerContainer, StaggerItem } from '../components/ui/motion-wrapper';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -266,12 +267,16 @@ export default function DesignersPage() {
       <section className="flex flex-col justify-center items-center h-[890px] max-md:h-[656px] bg-[url('/designers-bg.webp')] overflow-hidden tracking-[-1.5]">        
         {/* Section Title */}
         <div className="flex flex-col gap-1 text-center text-white">
-          <h2 className="en text-xl max-md:text-[14px] font-semibold text-[var(--color-primary-500))] uppercase">Atlanc Consultant</h2>
-          <p className="mt-2 text-4xl max-md:text-[26px] font-bold">전문 맨즈 헤어 컨설턴트가 <br />여러분의 이미지를 완성해드립니다.</p>
+          <MotionWrapper animation="fadeIn" duration={1}>
+            <h2 className="en text-xl max-md:text-[14px] font-semibold text-[var(--color-primary-500))] uppercase">Atlanc Consultant</h2>
+          </MotionWrapper>
+          <MotionWrapper animation="fadeInUp" delay={0.2}>
+            <p className="mt-2 text-4xl max-md:text-[26px] font-bold">전문 맨즈 헤어 컨설턴트가 <br />여러분의 이미지를 완성해드립니다.</p>
+          </MotionWrapper>
         </div>
 
         {/* Hero Slider */}
-        <div className="relative w-[1440px] h-[405px] max-md:h-[309px] mt-12">
+        <MotionWrapper className="relative w-[1440px] h-[405px] max-md:h-[309px] mt-12" animation="fadeInUp" delay={0.4}>
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={20}
@@ -353,14 +358,14 @@ export default function DesignersPage() {
               onClick={() => swiperInstance?.slideNext()}
             />
           </div>
-        </div>
+        </MotionWrapper>
       </section>
 
       {/* Tab Section */}
       <section className="py-20">
         <div className="max-w-[1440px] mx-auto">
           {/* Tab Buttons */}
-          <div className="flex justify-center mb-16 max-md:mb-8">
+          <MotionWrapper className="flex justify-center mb-16 max-md:mb-8" animation="fadeInUp">
             <div className="bg-white border border-gray-200 rounded-full p-[5px]">
               <button
                 onClick={() => setActiveTab('sinsa')}
@@ -383,13 +388,13 @@ export default function DesignersPage() {
                 아뜰랑 건대점
               </button>
             </div>
-          </div>
+          </MotionWrapper>
 
           {/* Designer Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-8" staggerDelay={0.15} delay={0.2}>
             {designersData[activeTab].map((designer) => (
-              <DesignerCard 
-                key={designer.id} 
+              <StaggerItem key={designer.id} animation="fadeInUp">
+                <DesignerCard 
                 name={designer.name}
                 position={designer.position}
                 image={designer.image}
@@ -398,9 +403,10 @@ export default function DesignersPage() {
                 description={designer.description}
                 onDetailClick={() => console.log(`Detail for ${designer.name}`)}
                 onBookingClick={() => console.log(`Booking for ${designer.name}`)}
-              />
+                />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
     </div>
