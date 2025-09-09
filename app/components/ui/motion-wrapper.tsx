@@ -51,7 +51,7 @@ export default function MotionWrapper({
   duration = 0.6,
   animation = 'fadeInUp',
   once = true,
-  amount = 0.3
+  amount = 0.1
 }: MotionWrapperProps) {
   return (
     <motion.div
@@ -100,7 +100,7 @@ export function StaggerContainer({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={containerVariants}
     >
       {children}

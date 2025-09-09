@@ -383,7 +383,7 @@ export default function DesignersPage() {
       </section>
 
       {/* Tab Section */}
-      <section className="py-20">
+      <section className="py-20 px-4">
         <div className="max-w-[1440px] mx-auto">
           {/* Tab Buttons */}
           <MotionWrapper className="flex justify-center mb-16 max-md:mb-8" animation="fadeInUp">
