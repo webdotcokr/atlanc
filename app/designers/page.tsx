@@ -263,9 +263,9 @@ export default function DesignersPage() {
     <div className="bg-white">
       <h1 className="sr-only">아뜰랑 맨즈헤어 디자이너 소개</h1>
       {/* Hero Section with Slides */}
-      <section className="flex flex-col justify-center items-center h-[890px] max-md:h-[656px] bg-[url('/designers-bg.webp')] overflow-hidden tracking-[-1.5]">        
+      <section className="flex flex-col justify-center items-center h-[890px] max-md:h-[656px] bg-[url('/designers-bg.webp')] bg-cover bg-center px-4 tracking-[-1.5]">        
         {/* Section Title */}
-        <div className="flex flex-col gap-1 text-center text-white">
+        <div className="flex flex-col gap-1 text-center text-white max-w-4xl">
           <MotionWrapper animation="fadeIn" duration={1}>
             <h2 className="en text-xl max-md:text-[14px] font-semibold text-[var(--color-primary-500))] uppercase">Atlanc Consultant</h2>
           </MotionWrapper>
@@ -275,11 +275,10 @@ export default function DesignersPage() {
         </div>
 
         {/* Hero Slider */}
-        <MotionWrapper className="relative w-[1440px] h-[405px] max-md:h-[309px] mt-12" animation="fadeInUp" delay={0.4}>
+        <MotionWrapper className="relative w-full max-w-[1440px] h-[405px] max-md:h-[309px] mt-12 px-4" animation="fadeInUp" delay={0.4}>
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={20}
-            slidesPerView={5}
             centeredSlides={true}
             loop={true}
             autoplay={{
@@ -291,25 +290,49 @@ export default function DesignersPage() {
               bulletClass: 'swiper-pagination-bullet-custom',
               bulletActiveClass: 'swiper-pagination-bullet-custom-active',
             }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+              },
+              1024: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+              }
+            }}
             className="h-full pb-12"
             onSwiper={setSwiperInstance}
             onSlideChange={(swiper) => {
-              // 모든 슬라이드의 투명도 업데이트
-              swiper.slides.forEach((slideElement, index) => {
-                const slideContent = slideElement.querySelector('.slide-content') as HTMLElement;
-                if (slideContent) {
-                  const distance = Math.abs(index - swiper.activeIndex);
-                  let opacity = '0.5'; // 기본값 (가장 외곽)
-                  
-                  if (distance === 0) {
-                    opacity = '1'; // 정중앙
-                  } else if (distance === 1) {
-                    opacity = '0.8'; // 양쪽
+              // 데스크톱에서만 투명도 애니메이션 적용
+              if (window.innerWidth >= 1024) {
+                swiper.slides.forEach((slideElement, index) => {
+                  const slideContent = slideElement.querySelector('.slide-content') as HTMLElement;
+                  if (slideContent) {
+                    const distance = Math.abs(index - swiper.activeIndex);
+                    let opacity = '0.5';
+                    
+                    if (distance === 0) {
+                      opacity = '1';
+                    } else if (distance === 1) {
+                      opacity = '0.8';
+                    }
+                    
+                    slideContent.style.opacity = opacity;
                   }
-                  
-                  slideContent.style.opacity = opacity;
-                }
-              });
+                });
+              } else {
+                // 모바일에서는 모든 슬라이드 opacity를 1로 설정
+                swiper.slides.forEach((slideElement) => {
+                  const slideContent = slideElement.querySelector('.slide-content') as HTMLElement;
+                  if (slideContent) {
+                    slideContent.style.opacity = '1';
+                  }
+                });
+              }
             }}
           >
             {heroSlides.map((slide) => (
@@ -322,8 +345,8 @@ export default function DesignersPage() {
                     />
                     {slide.quote && isActive && (
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-800/90 rounded-lg">
-                        <div className="absolute bottom-0 left-0 right-0 p-5 text-center">
-                          <p className="text-white text-base leading-relaxed font-semibold mb-2">
+                        <div className="absolute bottom-0 left-0 right-0 p-3 md:p-5 text-center">
+                          <p className="text-white text-sm md:text-base leading-relaxed font-semibold mb-2 max-md:line-clamp-3">
                             {slide.quote.split('\n').map((line, lineIndex) => (
                               <span key={lineIndex}>
                                 {line}
@@ -331,7 +354,7 @@ export default function DesignersPage() {
                               </span>
                             ))}
                           </p>
-                          <p className="text-green-200 text-sm">{slide.author}</p>
+                          <p className="text-green-200 text-xs md:text-sm">{slide.author}</p>
                         </div>
                       </div>
                     )}
@@ -341,15 +364,15 @@ export default function DesignersPage() {
             ))}
           </Swiper>
           
-          {/* Navigation Arrows */}
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20">
+          {/* Navigation Arrows - 데스크톱에서만 표시 */}
+          <div className="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 z-20">
             <SlideArrows 
               type="01"
               direction="left"
               onClick={() => swiperInstance?.slidePrev()}
             />
           </div>
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20">
+          <div className="hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2 z-20">
             <SlideArrows 
               type="01"
               direction="right"
