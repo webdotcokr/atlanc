@@ -1,22 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, TargetAndTransition } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface MotionCardProps {
   children: ReactNode;
   className?: string;
-  whileHover?: {
-    scale?: number;
-    y?: number;
-    transition?: {
-      duration?: number;
-      ease?: string | number[];
-    };
-  };
-  whileTap?: {
-    scale?: number;
-  };
+  whileHover?: TargetAndTransition;
+  whileTap?: TargetAndTransition;
 }
 
 export default function MotionCard({
@@ -24,11 +15,7 @@ export default function MotionCard({
   className = '',
   whileHover = {
     scale: 1.02,
-    y: -5,
-    transition: {
-      duration: 0.3,
-      ease: [0.25, 0.1, 0.25, 1]
-    }
+    y: -5
   },
   whileTap = {
     scale: 0.98
