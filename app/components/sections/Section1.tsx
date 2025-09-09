@@ -1,4 +1,4 @@
-import MotionWrapper, { StaggerContainer, StaggerItem } from '../ui/motion-wrapper';
+import MotionWrapper from '../ui/motion-wrapper';
 
 export default function Section1() {
     return (

@@ -49,19 +49,19 @@ export default function AboutPage() {
                 </MotionWrapper>
                 <StaggerContainer className="grid grid-cols-5 gap-4 max-md:gap-2 mt-4 max-md:mt-2" staggerDelay={0.1} delay={0.6}>
                   <StaggerItem animation="scaleIn">
-                    <img src="/consult-1.webp" className="w-full h-auto" />
+                    <img src="/consult-1.webp" alt="컨설팅 이미지 1" className="w-full h-auto" />
                   </StaggerItem>
                   <StaggerItem animation="scaleIn">
-                    <img src="/consult-2.webp" className="w-full h-auto" />
+                    <img src="/consult-2.webp" alt="컨설팅 이미지 2" className="w-full h-auto" />
                   </StaggerItem>
                   <StaggerItem animation="scaleIn">
-                    <img src="/consult-3.webp" className="w-full h-auto" />
+                    <img src="/consult-3.webp" alt="컨설팅 이미지 3" className="w-full h-auto" />
                   </StaggerItem>
                   <StaggerItem animation="scaleIn">
-                    <img src="/consult-4.webp" className="w-full h-auto" />
+                    <img src="/consult-4.webp" alt="컨설팅 이미지 4" className="w-full h-auto" />
                   </StaggerItem>
                   <StaggerItem animation="scaleIn">
-                    <img src="/consult-5.webp" className="w-full h-auto" />
+                    <img src="/consult-5.webp" alt="컨설팅 이미지 5" className="w-full h-auto" />
                   </StaggerItem>
                 </StaggerContainer>   
             </div>          
@@ -70,13 +70,13 @@ export default function AboutPage() {
         <section className="pb-32 max-md:pt-[60px] max-md:pb-[60px] bg-white">
           <div className="tracking-[-1] flex flex-col items-center justify-center text-center">
             <MotionWrapper animation="fadeIn">
-              <img src="/about-2.webp" className="max-md:w-[140px]" />
+              <img src="/about-2.webp" alt="Man's Hair Consulting" className="max-md:w-[140px]" />
             </MotionWrapper>
             <MotionWrapper className="flex flex-col items-center mt-3 mb-6" animation="fadeInUp" delay={0.2}>
               <div className="w-px h-12 bg-black"></div>
             </MotionWrapper>
             <MotionWrapper animation="fadeInUp" delay={0.3}>
-              <h2 className="text-4xl max-md:text-[26px] text-bold font-semibold">Man's Hair Consulting</h2>
+              <h2 className="text-4xl max-md:text-[26px] text-bold font-semibold">Man&apos;s Hair Consulting</h2>
             </MotionWrapper>
             <MotionWrapper animation="fadeInUp" delay={0.4}>
               <p className="text-xl mt-4">남성의 인상은 헤어 스타일에 따라 크게 좌우됩니다. <br/>단지 획일화된 유행하는 스타일을 따르기엔 우리는 직업, 스타일, 두상, 얼굴형, 모발까지 <br/>다양한 특성을 가지고 있습니다. </p>
@@ -90,13 +90,13 @@ export default function AboutPage() {
         <section className="pb-32 max-md:pt-[60px] max-md:pb-[60px] bg-white tracking-[-1] break-keep">
           <div className="grid grid-cols-2 max-md:grid-cols-1 gap-20 items-center justify-center">
             <MotionWrapper className="text-right max-md:text-center max-md:order-2" animation="fadeInLeft">
-              <p className="num text-5xl max-md:text-[36px] font-bold text-[var(--color-gray-200)]">Man's Hair Counsulting</p>
-              <p className="text-xl mt-6">방문하시는 고객님들께서 가장 많이 물어보시는 질문이 <br/>"저는 어떤 머리가 어울릴까요?" 입니다.</p>
+              <p className="num text-5xl max-md:text-[36px] font-bold text-[var(--color-gray-200)]">Man&apos;s Hair Counsulting</p>
+              <p className="text-xl mt-6">방문하시는 고객님들께서 가장 많이 물어보시는 질문이 <br/>&quot;저는 어떤 머리가 어울릴까요?&quot; 입니다.</p>
               <p className="text-xl mt-8">최근에는 유행하는 스타일을 우후죽순 따라하는 것보다 <br className="max-md:hidden"/>개개인에게 어울리는 스타일을 찾고 싶다는 니즈가 세분화 되고. <br/><br className="md:hidden"/>
 저희 아뜰랑 맨즈헤어는 세분화 된 <br className="md:hidden"/>고객님의 니즈를 충족시켜 드리기 위해 <br/>고객님의 얼굴형, 두상, 모발 상태는 물론 <br/>직업과 라이프스타일까지 고려한 1:1 맞춤 헤어 컨설팅을 진행하고 있습니다. <br/><br className="md:hidden"/>단순한 유행을 넘어서, <br className="md:hidden"/>당신만의 인상을 디자인해 드립니다</p>
             </MotionWrapper>
             <MotionWrapper animation="fadeInRight" delay={0.2}>
-              <img src="/about-6.webp" className="max-md:order-1"/>
+              <img src="/about-6.webp" alt="아뜰랑 컨설팅" className="max-md:order-1"/>
             </MotionWrapper>
           </div>
         </section>

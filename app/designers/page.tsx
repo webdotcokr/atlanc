@@ -254,7 +254,6 @@ const heroSlides = [
 
 export default function DesignersPage() {
   const [activeTab, setActiveTab] = useState<'sinsa' | 'konkuk'>('sinsa');
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<{
     slidePrev: () => void;
     slideNext: () => void;
@@ -295,7 +294,6 @@ export default function DesignersPage() {
             className="h-full pb-12"
             onSwiper={setSwiperInstance}
             onSlideChange={(swiper) => {
-              setActiveSlideIndex(swiper.realIndex);
               // 모든 슬라이드의 투명도 업데이트
               swiper.slides.forEach((slideElement, index) => {
                 const slideContent = slideElement.querySelector('.slide-content') as HTMLElement;
