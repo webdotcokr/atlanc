@@ -111,7 +111,22 @@ const designersData = {
         booking: 'https://naver.me/GG7lQx3C'
       },
       description: '대한민국 남성의 두상·모질·라이프스타일까지 고려한 1:1 맞춤 헤어 컨설턴트, 승빈T',
-    }     
+    },
+    {
+      id: 6,
+      name: '범',
+      position: '디자이너',
+      image: '/sinsa/범.webp',
+      social: {
+        wonbar: '',
+        instagram: 'atlanc_bum'
+      },
+      urls: {
+        instagram: 'https://www.instagram.com/atlanc_bum',
+        booking: 'https://naver.me/FjC2sZ66'
+      },
+      description: '샤프하고 트렌디한 디자인을 추구합니다. 간편한 손질과 요즘 느낌의 멋스러운 포인트로, 본인이 가진 개성과 분위기를 살린 멋을 만들어 드립니다!!',
+    }
   ],
   konkuk: [
     {
@@ -227,24 +242,30 @@ const heroSlides = [
   },
   {
     id: 6,
+    image: '/sinsa/범.webp',
+    quote: '샤프하고 트렌디한 디자인을 추구합니다. 간편한 손질과 요즘 느낌의 멋스러운 포인트로, 본인이 가진 개성과 분위기를 살린 멋을 만들어 드립니다!!',
+    author: '범 디자이너'
+  },
+  {
+    id: 7,
     image: '/konkuk/민종.webp',
     quote: '대화와 디테일로 당신만의 분위기를 디자인해, 더 나은 하루를 만들어드립니다.',
     author: '민종 원장'
   },
   {
-    id: 7,
+    id: 8,
     image: '/konkuk/영재.webp',
     quote: '헤어스타일 하나로 당신의 인생이 달라지게 만들어 드리겠습니다!',
     author: '영재 팀장'
   },
   {
-    id: 8,
+    id: 9,
     image: '/konkuk/새로.webp',
     quote: '[당신만을 위한 1:1 맞춤 컨설팅] 실패 없는 맞춤 컨설팅으로 디테일한 디자인을 선물해드립니다.',
     author: '새로 디자이너'
   },
   {
-    id: 9,
+    id: 10,
     image: '/konkuk/승원.webp',
     quote: '스타일은 바뀌어도, \n인생머리는 진심에서 시작됩니다.',
     author: '승원 디자이너'
