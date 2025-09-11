@@ -39,7 +39,7 @@ export default function BtBanner() {
           
           {/* Secondary button (green) */}
           <a 
-            href="https://map.naver.com/p/entry/place/1547650412?" 
+            href="https://map.naver.com/p/search/%EC%95%84%EB%9C%B0%EB%9E%91%20%EB%A7%A8%EC%A6%88%ED%97%A4%EC%96%B4?c=15.00,0,0,0,dh" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-[#26d07c] text-white hover:bg-[#20b569] transition-colors duration-200 px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm tracking-tight"
