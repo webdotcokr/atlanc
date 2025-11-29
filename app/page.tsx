@@ -14,6 +14,7 @@ import MotionWrapper, {
 import AnimatedCounter from "./components/ui/animated-counter";
 import Section4 from "./components/sections/Section4";
 import Section5 from "./components/sections/Section5";
+import Section6 from "./components/sections/Section6";
 
 export default function Home() {
   // Sample news data - this will be replaced with DB data later
@@ -43,8 +44,10 @@ export default function Home() {
     },
   ];
 
+  
+
   return (
-    <div>
+    <div style={{ fontFamily: "'NanumSquareNeo', -apple-system, BlinkMacSystemFont, system-ui, sans-serif" }}>
       <h1 className="sr-only">아뜰랑 맨즈헤어, 프리미엄 남성 전문 헤어샵</h1>
       {/* Main Hero Section */}
       <section className="relative flex flex-col items-center gap-5 justify-center h-[890px] max-md:h-[656px] w-full text-center bg-[url('/hero.webp')]">
@@ -52,7 +55,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-2">
             <img className="w-[106px] aspect-square" src="/logo.svg"></img>
             <div className="text-center justify-start">
-              <p className="text-white text-[40px] font-bold  leading-[58px] font-[NanumSquareNeo]">
+              <p className="text-white text-[40px] font-bold  leading-[58px]">
                 미용실 창업으로
               </p>
               <div className=" relative">
@@ -60,7 +63,7 @@ export default function Home() {
                   className="bg-primary h-[62px]  absolute w-[526px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
                   style={{ transform: "skewX(-15deg)" }}
                 />
-                <p className=" text-black text-[40px] font-extrabold relative leading-[58px] font-[NanumSquareNeo]">
+                <p className=" text-black text-[40px] font-extrabold relative leading-[58px]">
                   월매출 6천만원, 마진율 40%
                 </p>
               </div>
@@ -68,7 +71,7 @@ export default function Home() {
           </div>
         </MotionWrapper>
         <MotionWrapper animation="fadeInUp" delay={0.3} duration={0.8}>
-          <p className="text-white text-[60px] max-md:text-[30px] font-bold leading-[1.3] tracking-[-2] font-[NanumSquareNeo]">
+          <p className="text-white text-[60px] max-md:text-[30px] font-bold leading-[1.3] tracking-[-2]">
             아뜰랑 맨즈헤어에서는<br></br>가능합니다
           </p>
         </MotionWrapper>
@@ -78,7 +81,7 @@ export default function Home() {
           animation="fadeInUp"
           delay={0.6}
         >
-          <span className="num text-white text-xl  font-medium tracking-wide mb-3 font-[NanumSquareNeo]">
+          <span className="num text-white text-xl  font-medium tracking-wide mb-3">
             스크롤을 내려서 성공창업을 확인해보세요!{" "}
           </span>
           <div className="w-px h-[46px] bg-white opacity-60"></div>
@@ -88,6 +91,8 @@ export default function Home() {
       <Section4></Section4>
       {/* 왜 미용실 창업이 적합할까요? */}
       <Section5></Section5>
+      {/* Who We Are Section */}
+      <Section6></Section6>
       {/* Hair Consulting Section */}
       <SynchronizedSliderProvider>
         <section className="pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-[url('/consulting-bg.webp')]">
@@ -138,107 +143,6 @@ export default function Home() {
           </div>
         </section>
       </SynchronizedSliderProvider>
-      {/* Who We Are Section */}
-      <section className="pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-white">
-        <div className="max-w-[1440px] mx-auto">
-          <MotionWrapper animation="fadeIn">
-            <h2 className="en text-lg max-md:text-[16px]] font-semibold text-center text-[var(--color-primary-500)]">
-              Who We Are
-            </h2>
-          </MotionWrapper>
-          <MotionWrapper animation="fadeInUp" delay={0.2}>
-            <p className="font-bold text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3 tracking-[-1.5]">
-              맨즈 헤어컨설팅 분야에서 <br />
-              끊임없이 실력을 증명해 왔습니다.
-            </p>
-          </MotionWrapper>
-          <div className="mt-10">
-            <StaggerContainer
-              className="grid grid-cols-4 max-md:grid-cols-1 gap-6 max-md:gap-4"
-              staggerDelay={0.1}
-              delay={0.3}
-            >
-              <StaggerItem animation="scaleIn">
-                <div className="flex flex-col justify-between bg-[var(--color-gray-50)] p-[40px] max-md:p-[30px]">
-                  <img
-                    src="/icon-1.png"
-                    alt="평균 고객 만족도"
-                    className="w-[90px] max-md:w-[70px]"
-                  />
-                  <div className="text-right mt-[120px] max-md:mt-[40px]">
-                    <h3 className="text-xl font-bold mt-2 tracking-tight">
-                      평균 고객 만족도
-                    </h3>
-                    <p className="num text-7xl italic font-semibold text-[var(--color--gray-500)] mt-1">
-                      <AnimatedCounter to={98} suffix="%" duration={2} />
-                    </p>
-                  </div>
-                </div>
-              </StaggerItem>
-              <StaggerItem animation="scaleIn">
-                <div className="flex flex-col justify-between bg-[var(--color-gray-50)] p-[40px] max-md:p-[30px]">
-                  <img
-                    src="/icon-2.png"
-                    alt="누적 방문 고객수"
-                    className="w-[90px] max-md:w-[70px]"
-                  />
-                  <div className="text-right mt-[120px] max-md:mt-[40px]">
-                    <h3 className="text-xl font-bold mt-2 tracking-tight">
-                      누적 방문 고객수
-                    </h3>
-                    <p className="num text-7xl italic font-semibold text-[var(--color--gray-500)] mt-1">
-                      <AnimatedCounter to={20000} suffix="+" duration={2.5} />
-                    </p>
-                  </div>
-                </div>
-              </StaggerItem>
-              <StaggerItem animation="scaleIn">
-                <div className="flex flex-col justify-between bg-[var(--color-gray-50)] p-[40px] max-md:p-[30px]">
-                  <img
-                    src="/icon-3.png"
-                    alt="평균 재방문율"
-                    className="w-[90px] max-md:w-[70px]"
-                  />
-                  <div className="text-right mt-[120px] max-md:mt-[40px]">
-                    <h3 className="text-xl font-bold mt-2 tracking-tight">
-                      평균 재방문율
-                    </h3>
-                    <p className="num text-7xl italic font-semibold text-[var(--color--gray-500)] mt-1">
-                      <AnimatedCounter to={98} suffix="%" duration={2} />
-                    </p>
-                  </div>
-                </div>
-              </StaggerItem>
-              <StaggerItem animation="scaleIn">
-                <div className="flex flex-col justify-between bg-[var(--color-gray-50)] p-[40px] max-md:p-[30px]">
-                  <img
-                    src="/icon-4.png"
-                    alt="평균 재방문율"
-                    className="w-[120px] max-md:w-[70px]"
-                  />
-                  <div className="text-right mt-[70px] max-md:mt-[30px]">
-                    <h3 className="text-2xl font-bold mt-2 tracking-tight">
-                      태원빠 | 남자머리 컨설턴트
-                    </h3>
-                    <p className="text-[var(--color-gray-600)] mt-1 tracking-tight">
-                      아뜰랑 맨즈헤어 원장 태원빠의 <br />
-                      B급 감성 남성 뷰티 채널
-                    </p>
-                    <p className="num text-5xl italic font-semibold text-[var(--color--gray-500)] mt-1">
-                      <AnimatedCounter
-                        to={41.6}
-                        suffix="K"
-                        decimals={1}
-                        duration={2.5}
-                      />
-                    </p>
-                  </div>
-                </div>
-              </StaggerItem>
-            </StaggerContainer>
-          </div>
-        </div>
-      </section>
       {/* News Section */}
       <NewsClient newsItems={newsData} />
       {/* Customer Reviews Section */}

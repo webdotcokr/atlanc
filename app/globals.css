@@ -284,3 +284,17 @@ a {
 .animate-clip-oscillate {
   animation: clip-oscillate 4s ease-in-out infinite;
 }
+
+/* Horizontal infinite scroll */
+@keyframes scroll-left-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left-infinite {
+  animation: scroll-left-infinite 20s linear infinite;
+}
