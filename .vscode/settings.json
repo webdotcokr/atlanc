@@ -1,0 +1,26 @@
+{
+  "tailwindCSS.lint.cssConflict": "warning",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "classList",
+    "ngClass"
+  ],
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.suggestions": true,
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.singleQuote": false,
+  "prettier.jsxSingleQuote": false
+}
