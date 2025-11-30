@@ -7,7 +7,7 @@ export default function Section11() {
         <MotionWrapper animation="fadeIn">
           <p className="text-[34px] leading-[1.3] text-white text-center">
             최고의 품질 유지를 위해 <br></br>
-            <b className="text-primary font-extrabold">
+            <b className="text-[#26E45C] font-extrabold">
               슈퍼바이저가 직접 매장을 관리합니다.
             </b>
           </p>

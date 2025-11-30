@@ -24,7 +24,7 @@ export default function Section5() {
                 src="/why1.webp"
               ></img>
               <div className="flex flex-col gap-[32px] pt-[123px]">
-                <p className="text-[22px] font-[900] font-[NanumSquareNeo] leading-[1.4] text-primary">
+                <p className="text-[22px] font-[900] font-[NanumSquareNeo] leading-[1.4] text-[#26E45C]">
                   01
                 </p>
                 <div className="flex flex-col gap-3">
@@ -51,7 +51,7 @@ export default function Section5() {
               </div>
 
               <div className="flex flex-col gap-[32px] pt-[107px]">
-                <p className="text-[22px] font-[900] font-[NanumSquareNeo] leading-[1.4] text-primary">
+                <p className="text-[22px] font-[900] font-[NanumSquareNeo] leading-[1.4] text-[#26E45C]">
                   02
                 </p>
                 <div className="flex flex-col gap-3">
@@ -78,7 +78,7 @@ export default function Section5() {
               </div>
 
               <div className="flex flex-col gap-[32px] pt-[107px]">
-                <p className="text-[22px] font-[900] font-[NanumSquareNeo] leading-[1.4] text-primary">
+                <p className="text-[22px] font-[900] font-[NanumSquareNeo] leading-[1.4] text-[#26E45C]">
                   03
                 </p>
                 <div className="flex flex-col gap-3">
@@ -134,7 +134,7 @@ export default function Section5() {
           <div className="flex flex-col gap-[16px] items-center">
             <div className="flex flex-col gap-4 items-center">
               <MotionWrapper animation="fadeIn">
-                <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-primary">
+                <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#26E45C]">
                   물론 누구나 가능한 것은 아닙니다.
                 </p>
               </MotionWrapper>
@@ -163,7 +163,7 @@ export default function Section5() {
                   </h1>
                 </div>
                 <Link href="#">
-                  <div className="absolute w-[379px] h-[70px] bg-primary rounded-full flex items-center justify-center gap-2.5 bottom-0 shadow-[0px_0px_20px_0px_rgba(0,0,0,0.40)] ">
+                  <div className="absolute w-[379px] h-[70px] bg-[#26E45C] rounded-full flex items-center justify-center gap-2.5 bottom-0 shadow-[0px_0px_20px_0px_rgba(0,0,0,0.40)] ">
                     <p className="text-2xl leading-[1.4] font-extrabold text-black font-[NanumSquareNeo]">
                       아뜰랑 태원원장의 운영 철학
                     </p>
@@ -179,7 +179,7 @@ export default function Section5() {
           </div>
 
           <div className="flex flex-col w-full">
-            <p className="text-[36px] leading-[1.4] font-extrabold font-poppins text-primary opacity-30">
+            <p className="text-[36px] leading-[1.4] font-extrabold font-poppins text-[#26E45C] opacity-30">
               Team ATLANC
             </p>
 

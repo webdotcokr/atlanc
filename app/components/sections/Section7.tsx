@@ -18,7 +18,7 @@ export default function Section7() {
         <div className="max-w-[1440px] mx-auto flex flex-col items-center">
           <div className=" flex flex-col items-center gap-4">
             <MotionWrapper animation="fadeIn">
-              <div className=" px-2 py-1 bg-primary text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
+              <div className=" px-2 py-1 bg-[#26E45C] text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
                 Point 01
               </div>
             </MotionWrapper>
@@ -38,7 +38,7 @@ export default function Section7() {
               </p>
             </MotionWrapper>
           </div>
-          <div className="mt-[47px]">
+          <div className="mt-[47px] w-full">
             <StaggerContainer
               className="grid grid-cols-3 max-md:grid-cols-1 gap-[21px] max-md:gap-4"
               staggerDelay={0.15}
@@ -79,11 +79,11 @@ export default function Section7() {
                   .map((_, index) => (
                     <div
                       key={`section7-${index}`}
-                      className="w-[5px] aspect-square rounded-full bg-primary"
+                      className="w-[5px] aspect-square rounded-full bg-[#26E45C]"
                     ></div>
                   ))}
               </div>
-              <h1 className="text-center font-bold text-[36px] text-primary leadign-[1.3]">
+              <h1 className="text-center font-bold text-[36px] text-[#26E45C] leadign-[1.3]">
                 이제는<br></br> 남성 고객도 눈이 높아졌습니다.
               </h1>
             </div>

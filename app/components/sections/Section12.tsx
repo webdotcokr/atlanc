@@ -2,11 +2,11 @@ import MotionWrapper from "../ui/motion-wrapper";
 
 export default function Section12() {
   return (
-    <section className="pt-[160px] pb-[73px] max-md:pt-[60px] max-md:pb-[60px] bg-[#090D09]  relative">
+    <section className=" bg-[#090D09]  relative pb-[73px]">
       <div className="bg-[url('/section12/bg.webp')] w-full h-[960px] flex flex-col items-center pt-[113px] pb-[43px]">
         <div className=" flex flex-col items-center gap-4">
           <MotionWrapper animation="fadeIn">
-            <div className=" px-2 py-1 bg-primary text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
+            <div className=" px-2 py-1 bg-[#26E45C] text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
               Point 05
             </div>
           </MotionWrapper>
@@ -87,7 +87,7 @@ export default function Section12() {
 
       <div className="flex flex-col gap-8 items-center">
         <div className="flex flex-col gap-4">
-          <h1 className="border-b-[2px] border-primary text-primary text-[36px] leading-[1.3] font-bold">
+          <h1 className="border-b-[2px] border-primary text-[#26E45C] text-[36px] leading-[1.3] font-bold">
             단지 높은 광고비가 아닌 오직 실력으로 승부합니다.
           </h1>
           <p className="text-2xl leading-[1.4] text-white text-center">

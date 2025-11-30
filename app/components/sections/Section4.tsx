@@ -1,4 +1,10 @@
+"use client";
+
 import MotionWrapper from "../ui/motion-wrapper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export default function Section4() {
   return (
@@ -6,12 +12,12 @@ export default function Section4() {
       <div className="w-full max-w-[1440px] flex flex-col gap-10 relative pt-[70px] pb-11 ">
         <h1 className="text-[66px] font-extrabold absolute left-0 bottom-0 font-poppins leading-[66px] text-white opacity-[0.06]">
           ATLANC<br></br>
-          <b className="font-extrabold text-primary">PREMIUM MEN’S HAIR</b>
+          <b className="font-extrabold text-[#26E45C]">PREMIUM MEN'S HAIR</b>
         </h1>
 
         <div className="flex flex-col gap-4">
           <MotionWrapper animation="fadeIn">
-            <p className="text-2xl font-bold leading-[1.4] font-[NanumSquareNeo] text-primary">
+            <p className="text-2xl font-bold leading-[1.4] font-[NanumSquareNeo] text-[#26E45C]">
               자영업자 100만 폐업시대
             </p>
           </MotionWrapper>
@@ -26,8 +32,63 @@ export default function Section4() {
 
         <MotionWrapper animation="fadeIn">
           <div className="flex gap-[60px]">
-            <div className="w-[640px] h-[459px]">
-              <img src="/image1.png"></img>
+            <div className="w-[640px] h-[459px] relative">
+              <Swiper
+                modules={[Navigation]}
+                spaceBetween={0}
+                slidesPerView={1}
+                navigation={{
+                  prevEl: ".section4-swiper-prev",
+                  nextEl: ".section4-swiper-next",
+                }}
+                loop={true}
+                className="section4-swiper w-full h-full"
+              >
+                <SwiperSlide>
+                  <img
+                    src="/image1.png"
+                    className="w-full h-full object-cover"
+                    alt="Image 1"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="/image1.png"
+                    className="w-full h-full object-cover"
+                    alt="Image 2"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="/image1.png"
+                    className="w-full h-full object-cover"
+                    alt="Image 3"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="/image1.png"
+                    className="w-full h-full object-cover"
+                    alt="Image 4"
+                  />
+                </SwiperSlide>
+              </Swiper>
+
+              {/* Navigation Buttons */}
+              <div className="section4-swiper-prev absolute left-[25px] top-1/2 -translate-y-1/2 cursor-pointer z-10">
+                <img
+                  src="/slide-arrow-1.svg"
+                  alt="Previous"
+                  className="w-[21px]"
+                />
+              </div>
+              <div className="section4-swiper-next absolute right-[25px] top-1/2 -translate-y-1/2 cursor-pointer z-10">
+                <img
+                  src="/slide-arrow-1.svg"
+                  alt="Next"
+                  className="w-[21px] rotate-180"
+                />
+              </div>
             </div>
 
             <div className="w-[700px] flex flex-col">
@@ -75,10 +136,10 @@ export default function Section4() {
                 </p>
               </div>
               <div className="flex items-center justify-between border-t border-[#F6F6F6] pt-[22px]">
-                <p className="text-[28px] leading-[1.4] text-primary font-[NanumSquareNeo] font-extrabold">
+                <p className="text-[28px] leading-[1.4] text-[#26E45C] font-[NanumSquareNeo] font-extrabold">
                   영업이익 (40%)
                 </p>
-                <p className="text-[28px] leading-[1.4] text-primary font-[NanumSquareNeo] font-extrabold">
+                <p className="text-[28px] leading-[1.4] text-[#26E45C] font-[NanumSquareNeo] font-extrabold">
                   0,000,000원
                 </p>
               </div>

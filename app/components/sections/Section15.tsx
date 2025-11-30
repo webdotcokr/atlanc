@@ -3,10 +3,10 @@ import MotionWrapper from "../ui/motion-wrapper";
 export default function Section15() {
   return (
     <section className="bg-[#090D09] py-[100px]">
-      <div className="w-full max-w-[1102px] flex flex-col gap-11 items-center mx-auto">
+      <div className="w-full max-w-[1140px] flex flex-col gap-11 items-center mx-auto">
         <div className=" flex flex-col items-center gap-4">
           <MotionWrapper animation="fadeIn">
-            <div className=" px-2 py-1 bg-primary text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
+            <div className=" px-2 py-1 bg-[#26E45C] text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
               Point 06
             </div>
           </MotionWrapper>

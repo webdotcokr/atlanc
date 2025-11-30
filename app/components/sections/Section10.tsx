@@ -6,7 +6,7 @@ export default function Section10() {
       <div className="w-full max-w-[1440px] flex flex-col items-center mx-auto">
         <div className=" flex flex-col items-center gap-4">
           <MotionWrapper animation="fadeIn">
-            <div className=" px-2 py-1 bg-primary text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
+            <div className=" px-2 py-1 bg-[#26E45C] text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
               Point 04
             </div>
           </MotionWrapper>
@@ -30,7 +30,7 @@ export default function Section10() {
         >
           <div className="w-[220px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
             <img src="/process-1.svg" className="w-16 aspect-square"></img>
-            <p className="text-[15px] leading-[1.7] font-bold text-primary mt-[10px]">
+            <p className="text-[15px] leading-[1.7] font-bold text-[#26E45C] mt-[10px]">
               SETP 01
             </p>
             <p className="text-xl leading-[1.7] font-extrabold text-white">
@@ -43,7 +43,7 @@ export default function Section10() {
           ></img>
           <div className="w-[220px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
             <img src="/process-2.svg" className="w-[65px] aspect-square"></img>
-            <p className="text-[15px] leading-[1.7] font-bold text-primary mt-[8px]">
+            <p className="text-[15px] leading-[1.7] font-bold text-[#26E45C] mt-[8px]">
               SETP 02
             </p>
             <p className="text-xl leading-[1.7] font-extrabold text-white">
@@ -56,7 +56,7 @@ export default function Section10() {
           ></img>
           <div className="w-[220px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
             <img src="/process-3.svg" className="w-[66px] aspect-square"></img>
-            <p className="text-[15px] leading-[1.7] font-bold text-primary mt-[7px]">
+            <p className="text-[15px] leading-[1.7] font-bold text-[#26E45C] mt-[7px]">
               SETP 03
             </p>
             <p className="text-xl leading-[1.7] font-extrabold text-white">

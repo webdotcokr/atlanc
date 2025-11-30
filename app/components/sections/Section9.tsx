@@ -6,7 +6,7 @@ export default function Section9() {
       <div className="flex flex-col items-center w-full mx-auto">
         <div className=" flex flex-col items-center gap-4">
           <MotionWrapper animation="fadeIn">
-            <div className=" px-2 py-1 bg-primary text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
+            <div className=" px-2 py-1 bg-[#26E45C] text-xl font-extrabold max-md:text-[16px]] text-center text-black w-fit">
               Point 03
             </div>
           </MotionWrapper>
@@ -34,12 +34,12 @@ export default function Section9() {
               className="w-[680px] h-[478px] opacity-[0.1]"
             ></img>
             <img
-              src="/sinsa-office.webp"
+              src="/store03.webp"
               alt="store"
               className="w-[680px] h-[478px] mr-5"
             ></img>
             <img
-              src="/ku-office.webp"
+              src="/store04.webp"
               className="w-[680px] h-[478px]"
               alt="store"
             ></img>
@@ -54,11 +54,13 @@ export default function Section9() {
                 src="/recept01.webp"
                 alt="recept"
                 className="w-[307px]"
+                style={{ boxShadow: "4px 12px 12px 0 rgba(0, 0, 0, 0.12)" }}
               ></img>
               <img
                 src="/recept02.webp"
                 alt="recept"
                 className="w-[307px]"
+                style={{ boxShadow: "4px 12px 12px 0 rgba(0, 0, 0, 0.12)" }}
               ></img>
             </div>
           </div>
@@ -66,7 +68,7 @@ export default function Section9() {
 
         <MotionWrapper animation="fadeInUp" delay={0.2} className="mt-[87px]">
           <div className="flex flex-col gap-4 items-center">
-            <h1 className="text-4xl leading-[1.3] font-bold text-primary border-b-[3px] border-primary">
+            <h1 className="text-4xl leading-[1.3] font-bold text-[#26E45C] border-b-[3px] border-primary">
               광고로 만든 일시적인 매출이 아닙니다.
             </h1>
             <p className="text-2xl text-white leading-[1.4] text-center">

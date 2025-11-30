@@ -148,7 +148,7 @@ export default function BeforeAfterSlider({
 
       {/* Slider Line */}
       <div
-        className={`absolute top-0 bottom-0 w-1 bg-[var(--color-primary-500)] cursor-ew-resize shadow-lg ${
+        className={`absolute top-0 bottom-0 w-0.5 bg-[#26E45C] cursor-ew-resize shadow-lg ${
           !hasInteracted && !isDragging ? "animate-slider-oscillate" : ""
         }`}
         style={{
@@ -160,7 +160,7 @@ export default function BeforeAfterSlider({
         {/* Slider Handle */}
         <div
           ref={sliderHandleRef}
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-[var(--color-primary-500)] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform duration-150 ${
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60px] aspect-square bg-[#26E45C] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform duration-150 ${
             !hasInteracted && !isDragging ? "animate-ripple" : ""
           }`}
           onPointerDown={handlePointerDown}
@@ -168,26 +168,41 @@ export default function BeforeAfterSlider({
         >
           {/* Left Arrow */}
           <svg
-            className="w-3 h-3 text-black mr-0.5 pointer-events-none"
-            fill="currentColor"
-            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="7"
+            height="9"
+            viewBox="0 0 7 9"
+            fill="none"
           >
             <path
-              fillRule="evenodd"
-              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-              clipRule="evenodd"
+              d="M0.386067 3.43746L4.53267 0.212318C5.18953 -0.298571 6.14661 0.169524 6.14661 1.00167V7.45195C6.14661 8.2841 5.18953 8.75219 4.53267 8.2413L0.386067 5.01616C-0.128679 4.6158 -0.128679 3.83782 0.386067 3.43746Z"
+              fill="black"
             />
           </svg>
+
+          {/* line */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1"
+            height="44"
+            viewBox="0 0 1 44"
+            fill="none"
+            className="mx-[14px]"
+          >
+            <path d="M0.5 0L0.499998 43.6639" stroke="#60F0A8" />
+          </svg>
+
           {/* Right Arrow */}
           <svg
-            className="w-3 h-3 text-black ml-0.5 pointer-events-none"
-            fill="currentColor"
-            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="7"
+            height="9"
+            viewBox="0 0 7 9"
+            fill="none"
           >
             <path
-              fillRule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clipRule="evenodd"
+              d="M5.76054 3.43746L1.61393 0.212318C0.957075 -0.298571 -7.62939e-06 0.169524 -7.62939e-06 1.00167V7.45195C-7.62939e-06 8.2841 0.957076 8.75219 1.61393 8.2413L5.76054 5.01616C6.27529 4.6158 6.27529 3.83782 5.76054 3.43746Z"
+              fill="black"
             />
           </svg>
         </div>

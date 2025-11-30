@@ -5,7 +5,7 @@ export default function Section13() {
     <section className="bg-[url('/welcome-bg.webp')] bg-[#090D09] pt-[96px] pb-[120px] max-md:pt-[60px] max-md:pb-[60px]">
       <div className="max-w-[1440px] mx-auto flex items-center flex-col gap-7">
         <MotionWrapper animation="fadeIn">
-          <h2 className="text-[34px] max-md:text-[16px] font-bold text-center text-primary leading-[1.4]">
+          <h2 className="text-[34px] max-md:text-[16px] font-bold text-center text-[#26E45C] leading-[1.4]">
             본사의 지속가능한 유튜브 마케팅
           </h2>
         </MotionWrapper>

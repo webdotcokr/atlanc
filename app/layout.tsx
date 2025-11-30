@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import Header from "./components/ui/header";
-import BtBanner from "./components/ui/bt-banner";
-import Footer from "./components/ui/footer";
+import ConditionalLayout from "./components/ui/conditional-layout";
 
 export const metadata: Metadata = {
   title: "아뜰랑 맨즈헤어",
@@ -58,8 +57,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <BtBanner />
-        <Footer />
+        <ConditionalLayout />
       </body>
     </html>
   );
