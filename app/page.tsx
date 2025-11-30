@@ -15,6 +15,9 @@ import AnimatedCounter from "./components/ui/animated-counter";
 import Section4 from "./components/sections/Section4";
 import Section5 from "./components/sections/Section5";
 import Section6 from "./components/sections/Section6";
+import Section7 from "./components/sections/Section7";
+import Section8 from "./components/sections/Section8";
+import Section9 from "./components/sections/Section9";
 
 export default function Home() {
   // Sample news data - this will be replaced with DB data later
@@ -44,10 +47,13 @@ export default function Home() {
     },
   ];
 
-  
-
   return (
-    <div style={{ fontFamily: "'NanumSquareNeo', -apple-system, BlinkMacSystemFont, system-ui, sans-serif" }}>
+    <div
+      style={{
+        fontFamily:
+          "'NanumSquareNeo', -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
+      }}
+    >
       <h1 className="sr-only">아뜰랑 맨즈헤어, 프리미엄 남성 전문 헤어샵</h1>
       {/* Main Hero Section */}
       <section className="relative flex flex-col items-center gap-5 justify-center h-[890px] max-md:h-[656px] w-full text-center bg-[url('/hero.webp')]">
@@ -94,55 +100,11 @@ export default function Home() {
       {/* Who We Are Section */}
       <Section6></Section6>
       {/* Hair Consulting Section */}
-      <SynchronizedSliderProvider>
-        <section className="pt-35 pb-35 max-md:pt-[60px] max-md:pb-[60px] bg-[url('/consulting-bg.webp')]">
-          <div className="max-w-[1440px] mx-auto">
-            <MotionWrapper animation="fadeIn">
-              <h2 className="en text-lg max-md:text-[16px]] font-semibold text-center text-[var(--color-primary-500)]">
-                HAIR CONSULTING
-              </h2>
-            </MotionWrapper>
-            <MotionWrapper animation="fadeInUp" delay={0.2}>
-              <p className="font-bold text-white text-center text-5xl max-md:text-[26px] leading-[1.3] mt-3 tracking-[-1.5]">
-                내게 맞는 헤어스타일만 찾아도 <br />
-                인상은 완전히 달라집니다.
-              </p>
-            </MotionWrapper>
-            <div className="mt-10">
-              <StaggerContainer
-                className="grid grid-cols-3 max-md:grid-cols-1 gap-6 max-md:gap-4"
-                staggerDelay={0.15}
-                delay={0.4}
-              >
-                <StaggerItem animation="fadeInUp">
-                  <BeforeAfterSlider
-                    beforeImage="before/before-1.webp"
-                    afterImage="after/after-1.webp"
-                    beforeLabel="BEFORE"
-                    afterLabel="AFTER"
-                  />
-                </StaggerItem>
-                <StaggerItem animation="fadeInUp">
-                  <BeforeAfterSlider
-                    beforeImage="before/before-2.webp"
-                    afterImage="after/after-2.webp"
-                    beforeLabel="BEFORE"
-                    afterLabel="AFTER"
-                  />
-                </StaggerItem>
-                <StaggerItem animation="fadeInUp">
-                  <BeforeAfterSlider
-                    beforeImage="before/before-3.webp"
-                    afterImage="after/after-3.webp"
-                    beforeLabel="BEFORE"
-                    afterLabel="AFTER"
-                  />
-                </StaggerItem>
-              </StaggerContainer>
-            </div>
-          </div>
-        </section>
-      </SynchronizedSliderProvider>
+      <Section7></Section7>
+      {/* point2 */}
+      <Section8></Section8>
+      {/* point3 */}
+      <Section9></Section9>
       {/* News Section */}
       <NewsClient newsItems={newsData} />
       {/* Customer Reviews Section */}

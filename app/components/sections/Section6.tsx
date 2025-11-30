@@ -45,7 +45,7 @@ export default function Section6() {
             <StaggerItem animation="scaleIn">
               <div className="flex flex-col gap-11 bg-[#0E0E0ECC] h-full items-center justify-center">
                 <img
-                  src="/icon-2.png"
+                  src="/icon-2.svg"
                   alt="누적 방문 고객수"
                   className="w-[90px] max-md:w-[70px]"
                 />
@@ -62,7 +62,7 @@ export default function Section6() {
             <StaggerItem animation="scaleIn">
               <div className="flex flex-col gap-11 bg-[#0E0E0ECC] h-full items-center justify-center">
                 <img
-                  src="/icon-3.png"
+                  src="/icon-3.svg"
                   alt="평균 재방문율"
                   className="w-[90px] max-md:w-[70px]"
                 />
@@ -77,17 +77,17 @@ export default function Section6() {
               </div>
             </StaggerItem>
             <StaggerItem animation="scaleIn">
-              <div className="flex flex-col gap-11 bg-[#0E0E0ECC] h-full items-center justify-center">
+              <div className="flex flex-col gap-[21px] bg-[#0E0E0ECC] h-full items-center justify-center">
                 <img
                   src="/icon-4.png"
                   alt="평균 재방문율"
-                  className="w-[120px] max-md:w-[70px]"
+                  className="w-[104px] max-md:w-[70px]"
                 />
                 <div className="text-center ">
-                  <h3 className="text-xl font-bold mt-2 tracking-[-0.4px] text-white">
+                  <h3 className="text-xl font-bold tracking-[-0.4px] text-white">
                     태원빠 | 남자머리 컨설턴트
                   </h3>
-                  <p className="text-[var(--color-gray-600)] mt-1 tracking-tight">
+                  <p className="text-base leading-[1.4] text-[#eee] mt-2 tracking-tight">
                     아뜰랑 맨즈헤어 원장 태원빠의 <br />
                     B급 감성 남성 뷰티 채널
                   </p>
