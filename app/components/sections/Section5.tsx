@@ -99,7 +99,7 @@ export default function Section5() {
         </div>
       </div>
 
-      <div className="pt-[338px] pb-[90px] relative w-full flex flex-col items-center">
+      <div className="pt-[338px] pb-[90px] relative w-full flex flex-col items-center overflow-hidden">
         <img
           src="/section5-bg.webp"
           alt="bg"

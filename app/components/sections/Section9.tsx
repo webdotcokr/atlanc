@@ -27,7 +27,7 @@ export default function Section9() {
         </div>
 
         <MotionWrapper animation="fadeIn" className="mt-11">
-          <div className="flex relative pb-[78px] gap-5 justify-center items-center">
+          <div className="flex relative pb-[78px] gap-5 justify-center items-center w-full overflow-hidden">
             <img
               src="/store01.webp"
               alt="store"

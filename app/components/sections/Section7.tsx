@@ -77,7 +77,10 @@ export default function Section7() {
                 {Array(3)
                   .fill(null)
                   .map((_, index) => (
-                    <div className="w-[5px] aspect-square rounded-full bg-primary"></div>
+                    <div
+                      key={`section7-${index}`}
+                      className="w-[5px] aspect-square rounded-full bg-primary"
+                    ></div>
                   ))}
               </div>
               <h1 className="text-center font-bold text-[36px] text-primary leadign-[1.3]">
