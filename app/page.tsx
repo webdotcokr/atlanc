@@ -18,6 +18,9 @@ import Section6 from "./components/sections/Section6";
 import Section7 from "./components/sections/Section7";
 import Section8 from "./components/sections/Section8";
 import Section9 from "./components/sections/Section9";
+import Section10 from "./components/sections/Section10";
+import Section11 from "./components/sections/Section11";
+import Section12 from "./components/sections/Section12";
 
 export default function Home() {
   // Sample news data - this will be replaced with DB data later
@@ -105,6 +108,12 @@ export default function Home() {
       <Section8></Section8>
       {/* point3 */}
       <Section9></Section9>
+      {/* point4 */}
+      <Section10></Section10>
+      {/* 최고의 품질 유지를 위해 */}
+      <Section11></Section11>
+      {/* point5 */}
+      <Section12></Section12>
       {/* News Section */}
       <NewsClient newsItems={newsData} />
       {/* Customer Reviews Section */}
