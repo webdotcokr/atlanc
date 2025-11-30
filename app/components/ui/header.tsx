@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 export interface HeaderProps {
   className?: string;
@@ -19,8 +19,8 @@ export default function Header({ className = "" }: HeaderProps) {
     };
 
     setIsScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // 모바일 메뉴 토글
@@ -30,17 +30,15 @@ export default function Header({ className = "" }: HeaderProps) {
 
   return (
     <>
-      <header 
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          hasMounted && isScrolled 
-            ? 'bg-black/30 backdrop-blur-[5px]' 
-            : ''
+          hasMounted && isScrolled ? "bg-black/30 backdrop-blur-[10px]" : ""
         } ${className}`}
       >
         {/* Desktop Header */}
         <div className="hidden md:block">
-          <div className="mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
+          <div className="mx-auto px-6">
+            <div className="flex items-center justify-between relative h-[88px]">
               {/* Logo */}
               <Link href="/" className="flex items-center">
                 <div>
@@ -49,27 +47,42 @@ export default function Header({ className = "" }: HeaderProps) {
               </Link>
 
               {/* Navigation */}
-              <nav className="flex items-center gap-16">
-                <Link 
-                  href="/atlanc" 
-                  className="text-white text-xl hover:text-[var(--color-primary-500)] transition-colors duration-200 font-semibold"
+              <nav className="flex items-center gap-[60px] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                <Link
+                  href="/atlanc"
+                  className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
                 >
                   Atlanc
                 </Link>
-                <Link 
-                  href="/designers" 
-                  className="text-white text-xl hover:text-[var(--color-primary-500)] transition-colors duration-200 font-semibold"
+                <Link
+                  href="/designers"
+                  className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
                 >
                   디자이너 소개
                 </Link>
+                <Link
+                  href="#"
+                  className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
+                >
+                  가맹문의
+                </Link>
+              </nav>
 
-            {/* CTA Button */}
-              <Link href="/#">
-                <button className="flex flex-row gap-2 items-center bg-white text-lg hover:bg-gray-100 px-5 py-3 rounded-full font-semibold">
-                  <span><img src="/cta-icon-1.png"/></span><span>문의하기</span><span><img src="/cta-icon-2.png"/></span>
+              {/* CTA Button */}
+              <Link href="#">
+                <button className="flex flex-row gap-2 items-center bg-white hover:bg-gray-100 px-5 h-[51px] rounded-full cursor-pointer">
+                  <div className="flex items-center gap-1 text-lg  font-semibold text-black">
+                    <span>
+                      <img src="/cta-icon-1.png" className="w-6" />
+                    </span>
+                    <span>무료 컨설팅</span>
+                  </div>
+
+                  <span>
+                    <img src="/cta-icon-2.png" />
+                  </span>
                 </button>
               </Link>
-              </nav>
             </div>
           </div>
         </div>
@@ -87,9 +100,21 @@ export default function Header({ className = "" }: HeaderProps) {
                 {/* Mobile CTA Button */}
                 <Link href="/#">
                   <button className="flex flex-row gap-2 items-center bg-white text-md hover:bg-gray-100 px-4 py-2 rounded-full font-semibold">
-                    <span><img src="/cta-icon-1.png" alt="CTA Icon 1" className="max-md:h-[14px]"/></span>
+                    <span>
+                      <img
+                        src="/cta-icon-1.png"
+                        alt="CTA Icon 1"
+                        className="max-md:h-[14px]"
+                      />
+                    </span>
                     <span>문의하기</span>
-                    <span><img src="/cta-icon-2.png" alt="CTA Icon 2" className="max-md:h-[10px]"/></span>
+                    <span>
+                      <img
+                        src="/cta-icon-2.png"
+                        alt="CTA Icon 2"
+                        className="max-md:h-[10px]"
+                      />
+                    </span>
                   </button>
                 </Link>
 
@@ -100,19 +125,19 @@ export default function Header({ className = "" }: HeaderProps) {
                   aria-label="메뉴 열기"
                 >
                   <div className="w-6 h-5 flex flex-col justify-between">
-                    <span 
+                    <span
                       className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                        isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+                        isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
                       }`}
                     />
-                    <span 
+                    <span
                       className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                        isMobileMenuOpen ? 'opacity-0' : ''
+                        isMobileMenuOpen ? "opacity-0" : ""
                       }`}
                     />
-                    <span 
+                    <span
                       className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                        isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                        isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
                       }`}
                     />
                   </div>
@@ -124,21 +149,21 @@ export default function Header({ className = "" }: HeaderProps) {
       </header>
 
       {/* Mobile Menu Overlay */}
-      <div 
+      <div
         className={`md:hidden fixed inset-0 z-60 transition-all duration-300 ${
-          isMobileMenuOpen 
-            ? 'opacity-100 pointer-events-auto' 
-            : 'opacity-0 pointer-events-none'
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
-        <div 
+        <div
           className="absolute inset-0 bg-black/50 backdrop-blur-md"
           onClick={() => setIsMobileMenuOpen(false)}
         />
-        
-        <div 
+
+        <div
           className={`absolute right-0 top-0 w-80 h-full bg-white backdrop-blur-md transform transition-transform duration-300 ease-in-out ${
-            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {/* Close Button */}
@@ -165,40 +190,64 @@ export default function Header({ className = "" }: HeaderProps) {
             {/* Navigation */}
             <nav className="space-y-8">
               <div className="border-b border-[var(--color-gray-100)] pb-6">
-                <Link 
-                  href="/atlanc" 
+                <Link
+                  href="/atlanc"
                   className="flex items-center justify-between text-xl font-semibold group"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <span>Atlanc</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </Link>
               </div>
 
               <div className="border-b border-[var(--color-gray-100)] pb-6">
-                <Link 
-                  href="/designers" 
+                <Link
+                  href="/designers"
                   className="flex items-center justify-between text-xl font-semibold group"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <span>디자이너 소개</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </Link>
               </div>
 
               <div className="border-b border-[var(--color-gray-100)] pb-6">
-                <Link 
-                  href="#" 
+                <Link
+                  href="#"
                   className="flex items-center justify-between text-xl font-semibold group"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <span>가맹문의</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  <svg
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </Link>
               </div>

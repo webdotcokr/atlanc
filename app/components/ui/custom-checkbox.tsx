@@ -27,7 +27,7 @@ export default function CustomCheckbox({
         {isChecked && (
           <img
             src="/ico-check.svg"
-            className="w-[14px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 absolute"
+            className="w-[14px] h-[12px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 absolute"
             alt="check"
           />
         )}
