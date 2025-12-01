@@ -29,21 +29,10 @@ export default function BtBanner() {
         
         {/* Button area */}
         <div className="flex gap-3 pt-4">
-          {/* Primary button (white) */}
+          {/* Primary button (green) */}
           <a
-            href="/franchise"
-            className="bg-white hover:bg-gray-100 transition-colors duration-200 px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm tracking-tight"
-          >
-            가맹 문의
-            <div className="w-2 h-2">
-              <img src="/arrowDark.svg" alt="" className="w-full h-full" />
-            </div>
-          </a>
-          
-          {/* Secondary button (green) */}
-          <a 
-            href="https://map.naver.com/p/search/%EC%95%84%EB%9C%B0%EB%9E%91%20%EB%A7%A8%EC%A6%88%ED%97%A4%EC%96%B4?c=15.00,0,0,0,dh" 
-            target="_blank" 
+            href="https://map.naver.com/p/search/%EC%95%84%EB%9C%B0%EB%9E%91%20%EB%A7%A8%EC%A6%88%ED%97%A4%EC%96%B4?c=15.00,0,0,0,dh"
+            target="_blank"
             rel="noopener noreferrer"
             className="bg-[#26d07c] text-white hover:bg-[#20b569] transition-colors duration-200 px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm tracking-tight"
           >

@@ -49,47 +49,46 @@ export default function Header({ className = "" }: HeaderProps) {
                 </div>
               </Link>
 
-              {/* Navigation - 가맹문의 페이지에서는 숨김 */}
-              {!isFranchisePage && (
-                <nav className="flex items-center gap-[60px] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-                  <Link
-                    href="/atlanc"
-                    className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
-                  >
-                    Atlanc
-                  </Link>
-                  <Link
-                    href="/designers"
-                    className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
-                  >
-                    디자이너 소개
-                  </Link>
+              {/* Navigation */}
+              <nav className="flex items-center gap-[60px] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                <Link
+                  href="/atlanc"
+                  className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
+                >
+                  Atlanc
+                </Link>
+                <Link
+                  href="/designers"
+                  className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
+                >
+                  디자이너 소개
+                </Link>
+                {/* 가맹문의는 가맹문의 페이지에서만 표시 */}
+                {isFranchisePage && (
                   <Link
                     href="/franchise"
                     className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
                   >
                     가맹문의
                   </Link>
-                </nav>
-              )}
+                )}
+              </nav>
 
-              {/* CTA Button - 가맹문의 페이지에서는 숨김 */}
-              {!isFranchisePage && (
-                <Link href="#">
-                  <button className="flex flex-row gap-2 items-center bg-white hover:bg-gray-100 px-5 h-[51px] rounded-full cursor-pointer">
-                    <div className="flex items-center gap-1 text-lg  font-semibold text-black">
-                      <span>
-                        <img src="/cta-icon-1.png" className="w-6" />
-                      </span>
-                      <span>무료 컨설팅</span>
-                    </div>
-
+              {/* CTA Button */}
+              <Link href="#">
+                <button className="flex flex-row gap-2 items-center bg-white hover:bg-gray-100 px-5 h-[51px] rounded-full cursor-pointer">
+                  <div className="flex items-center gap-1 text-lg  font-semibold text-black">
                     <span>
-                      <img src="/cta-icon-2.png" />
+                      <img src="/cta-icon-1.png" className="w-6" />
                     </span>
-                  </button>
-                </Link>
-              )}
+                    <span>무료 컨설팅</span>
+                  </div>
+
+                  <span>
+                    <img src="/cta-icon-2.png" />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -104,55 +103,51 @@ export default function Header({ className = "" }: HeaderProps) {
               </Link>
 
               <div className="flex items-center gap-3">
-                {/* Mobile CTA Button - 가맹문의 페이지에서는 숨김 */}
-                {!isFranchisePage && (
-                  <Link href="/#">
-                    <button className="flex flex-row gap-2 items-center bg-white text-md hover:bg-gray-100 px-4 py-2 rounded-full font-semibold">
-                      <span>
-                        <img
-                          src="/cta-icon-1.png"
-                          alt="CTA Icon 1"
-                          className="max-md:h-[14px]"
-                        />
-                      </span>
-                      <span>문의하기</span>
-                      <span>
-                        <img
-                          src="/cta-icon-2.png"
-                          alt="CTA Icon 2"
-                          className="max-md:h-[10px]"
-                        />
-                      </span>
-                    </button>
-                  </Link>
-                )}
-
-                {/* Hamburger Menu Button - 가맹문의 페이지에서는 숨김 */}
-                {!isFranchisePage && (
-                  <button
-                    onClick={toggleMobileMenu}
-                    className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-200"
-                    aria-label="메뉴 열기"
-                  >
-                    <div className="w-6 h-5 flex flex-col justify-between">
-                      <span
-                        className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                          isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
-                        }`}
+                {/* Mobile CTA Button */}
+                <Link href="/#">
+                  <button className="flex flex-row gap-2 items-center bg-white text-md hover:bg-gray-100 px-4 py-2 rounded-full font-semibold">
+                    <span>
+                      <img
+                        src="/cta-icon-1.png"
+                        alt="CTA Icon 1"
+                        className="max-md:h-[14px]"
                       />
-                      <span
-                        className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                          isMobileMenuOpen ? "opacity-0" : ""
-                        }`}
+                    </span>
+                    <span>문의하기</span>
+                    <span>
+                      <img
+                        src="/cta-icon-2.png"
+                        alt="CTA Icon 2"
+                        className="max-md:h-[10px]"
                       />
-                      <span
-                        className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                          isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-                        }`}
-                      />
-                    </div>
+                    </span>
                   </button>
-                )}
+                </Link>
+
+                {/* Hamburger Menu Button */}
+                <button
+                  onClick={toggleMobileMenu}
+                  className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                  aria-label="메뉴 열기"
+                >
+                  <div className="w-6 h-5 flex flex-col justify-between">
+                    <span
+                      className={`w-full h-0.5 bg-white transition-all duration-300 ${
+                        isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                      }`}
+                    />
+                    <span
+                      className={`w-full h-0.5 bg-white transition-all duration-300 ${
+                        isMobileMenuOpen ? "opacity-0" : ""
+                      }`}
+                    />
+                    <span
+                      className={`w-full h-0.5 bg-white transition-all duration-300 ${
+                        isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                      }`}
+                    />
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -242,26 +237,29 @@ export default function Header({ className = "" }: HeaderProps) {
                 </Link>
               </div>
 
-              <div className="border-b border-[var(--color-gray-100)] pb-6">
-                <Link
-                  href="/franchise"
-                  className="flex items-center justify-between text-xl font-semibold group"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <span>가맹문의</span>
-                  <svg
-                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
+              {/* 가맹문의는 가맹문의 페이지에서만 표시 */}
+              {isFranchisePage && (
+                <div className="border-b border-[var(--color-gray-100)] pb-6">
+                  <Link
+                    href="/franchise"
+                    className="flex items-center justify-between text-xl font-semibold group"
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </Link>
-              </div>
+                    <span>가맹문의</span>
+                    <svg
+                      className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              )}
             </nav>
           </div>
         </div>
