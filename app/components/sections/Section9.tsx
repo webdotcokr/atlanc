@@ -20,7 +20,7 @@ export default function Section9() {
           </MotionWrapper>
           <MotionWrapper animation="fadeInUp" delay={0.2}>
             <p className=" text-white text-center text-2xl  max-md:text-[26px] leading-[1.4]  tracking-[-1.5]">
-              아뜰랑 각 지점의 ‘실제 월매출'을<br></br> 거짓없이 투명하게
+              아뜰랑 각 지점의 &apos;실제 월매출&apos;을<br></br> 거짓없이 투명하게
               공개합니다.
             </p>
           </MotionWrapper>

@@ -33,7 +33,7 @@ export default function Section7() {
                 아뜰랑은 단순한 헤어 디자인이 아닌<br></br>
                 맨즈 컨설팅을 통해{" "}
                 <b className="font-extrabold">
-                  남성들의 ‘인상'을 디자인합니다.
+                  남성들의 &apos;인상&apos;을 디자인합니다.
                 </b>
               </p>
             </MotionWrapper>

@@ -1,17 +1,5 @@
 import React from "react";
-import { RightArrow } from "../components/ui";
-import Section1 from "../components/sections/Section1";
-import Section2Client from "../components/sections/Section2Client";
-import Section3 from "../components/sections/Section3";
-import NewsClient, { NewsItem } from "../components/sections/NewsClient";
-import BeforeAfterSlider from "../components/ui/BeforeAfterSlider";
-import { SynchronizedSliderProvider } from "../components/ui/SynchronizedSliderContext";
-import ReviewInfo from "../components/ui/review-info";
-import MotionWrapper, {
-  StaggerContainer,
-  StaggerItem,
-} from "../components/ui/motion-wrapper";
-import AnimatedCounter from "../components/ui/animated-counter";
+import MotionWrapper from "../components/ui/motion-wrapper";
 import CustomCheckbox from "../components/ui/custom-checkbox";
 import Section4 from "../components/sections/Section4";
 import Section5 from "../components/sections/Section5";
@@ -27,33 +15,6 @@ import Section14 from "../components/sections/Section14";
 import Section15 from "../components/sections/Section15";
 
 export default function FranchisePage() {
-  // Sample news data - this will be replaced with DB data later
-  const newsData: NewsItem[] = [
-    {
-      id: "1",
-      date: "25.07",
-      day: 26,
-      title: "신사미용실 아뜰랑 맨즈헤어 신사역점 남자 크롭컷 새로 디자이너",
-      imageUrl: "/news-1.webp",
-    },
-    {
-      id: "2",
-      date: "25.07",
-      day: 30,
-      title:
-        "스타일은 디테일에서 완성된다 아뜰랑 맨즈헤어, 남성 전문 그루밍샵으로 주목",
-      imageUrl: "/news-2.webp",
-    },
-    {
-      id: "3",
-      date: "25.07",
-      day: 26,
-      title:
-        "남자를 위한 특별한 공간, 아뜰랑 맨즈헤어에서 프리미엄 스타일링으로 차별화된 경험 선사합니다.",
-      imageUrl: "/news-3.webp",
-    },
-  ];
-
   return (
     <div
       style={{
@@ -124,15 +85,16 @@ export default function FranchisePage() {
       <div className="w-full h-[170px] flex items-center gap-11 overflow-hidden px-[16px] bg-[#1FD854]">
         <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0">
           {" "}
-          ATLANC PREMIUM MEN'S HAIR
+          ATLANC PREMIUM MEN&apos;S HAIR
         </h1>
         <img
           src="/black-logo.svg"
           className="w-[95px] aspect-square shrink-0"
+          alt="Atlanc Logo"
         ></img>
         <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0">
           {" "}
-          ATLANC PREMIUM MEN'S HAIR
+          ATLANC PREMIUM MEN&apos;S HAIR
         </h1>
       </div>
       {/* 성과는 단연코 개개인의 */}

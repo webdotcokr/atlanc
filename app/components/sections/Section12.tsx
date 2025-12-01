@@ -106,6 +106,7 @@ export default function Section12() {
             .fill(null)
             .map((_, index) => (
               <img
+                key={index}
                 src={`/section12/image-${index + 2}.webp`}
                 className="h-[421px] rounded-2xl shrink-0 mr-1"
                 alt="image"

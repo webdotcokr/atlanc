@@ -12,7 +12,7 @@ export default function Section4() {
       <div className="w-full max-w-[1440px] flex flex-col gap-10 relative pt-[70px] pb-11 ">
         <h1 className="text-[66px] font-extrabold absolute left-0 bottom-0 font-poppins leading-[66px] text-white opacity-[0.06]">
           ATLANC<br></br>
-          <b className="font-extrabold text-[#26E45C]">PREMIUM MEN'S HAIR</b>
+          <b className="font-extrabold text-[#26E45C]">PREMIUM MEN&apos;S HAIR</b>
         </h1>
 
         <div className="flex flex-col gap-4">

@@ -25,8 +25,10 @@ export default function Section11() {
                 .fill(null)
                 .map((_, index) => (
                   <img
+                    key={index}
                     src={`/section11/photo-${index + 2}.webp`}
                     className="w-full h-[180px] rounded-xl"
+                    alt={`매장 사진 ${index + 2}`}
                   ></img>
                 ))}
             </div>
