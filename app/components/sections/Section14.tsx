@@ -5,7 +5,7 @@ export default function Section14() {
     <section className="bg-[#090D09] flex flex-col gap-[33px] items-center pb-5 !px-0">
       <div className="flex flex-col gap-4">
         <MotionWrapper animation="fadeIn">
-          <h1 className="text-[46px] text-white leading-[1.3] text-center">
+          <h1 className="mt-[120px] text-[46px] text-white leading-[1.3] text-center">
             성과는 단연코 개개인의 <br></br>
             <b className="font-extrabold">편차 없이 높은 수준을 유지합니다.</b>
           </h1>

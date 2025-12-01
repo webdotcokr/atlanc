@@ -82,20 +82,43 @@ export default function FranchisePage() {
       {/* 아뜰랑 맨즈헤어 대표원장이 직접 소개합니다. */}
       <Section13></Section13>
       {/* 띠배너 */}
-      <div className="w-full h-[170px] flex items-center gap-11 overflow-hidden px-[16px] bg-[#1FD854]">
-        <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0">
-          {" "}
-          ATLANC PREMIUM MEN&apos;S HAIR
-        </h1>
-        <img
-          src="/black-logo.svg"
-          className="w-[95px] aspect-square shrink-0"
-          alt="Atlanc Logo"
-        ></img>
-        <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0">
-          {" "}
-          ATLANC PREMIUM MEN&apos;S HAIR
-        </h1>
+      <div className="w-full h-[170px] overflow-hidden bg-[#1FD854]">
+        <div className="flex items-center gap-11 h-full animate-scroll-left-infinite">
+          {/* 첫 번째 세트 */}
+          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap">
+            ATLANC PREMIUM MEN&apos;S HAIR
+          </h1>
+          <img
+            src="/black-logo.svg"
+            className="w-[95px] aspect-square shrink-0"
+            alt="Atlanc Logo"
+          />
+          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap">
+            ATLANC PREMIUM MEN&apos;S HAIR
+          </h1>
+          <img
+            src="/black-logo.svg"
+            className="w-[95px] aspect-square shrink-0"
+            alt="Atlanc Logo"
+          />
+          {/* 두 번째 세트 (복제 - 끊김 없는 루프) */}
+          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap">
+            ATLANC PREMIUM MEN&apos;S HAIR
+          </h1>
+          <img
+            src="/black-logo.svg"
+            className="w-[95px] aspect-square shrink-0"
+            alt="Atlanc Logo"
+          />
+          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap">
+            ATLANC PREMIUM MEN&apos;S HAIR
+          </h1>
+          <img
+            src="/black-logo.svg"
+            className="w-[95px] aspect-square shrink-0"
+            alt="Atlanc Logo"
+          />
+        </div>
       </div>
       {/* 성과는 단연코 개개인의 */}
       <Section14></Section14>
