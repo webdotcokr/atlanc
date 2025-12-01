@@ -2,12 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export interface HeaderProps {
   className?: string;
 }
 
 export default function Header({ className = "" }: HeaderProps) {
+  const pathname = usePathname();
+  const isFranchisePage = pathname === "/franchise";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
@@ -46,43 +49,47 @@ export default function Header({ className = "" }: HeaderProps) {
                 </div>
               </Link>
 
-              {/* Navigation */}
-              <nav className="flex items-center gap-[60px] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-                <Link
-                  href="/atlanc"
-                  className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
-                >
-                  Atlanc
-                </Link>
-                <Link
-                  href="/designers"
-                  className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
-                >
-                  디자이너 소개
-                </Link>
-                <Link
-                  href="#"
-                  className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
-                >
-                  가맹문의
-                </Link>
-              </nav>
+              {/* Navigation - 가맹문의 페이지에서는 숨김 */}
+              {!isFranchisePage && (
+                <nav className="flex items-center gap-[60px] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                  <Link
+                    href="/atlanc"
+                    className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
+                  >
+                    Atlanc
+                  </Link>
+                  <Link
+                    href="/designers"
+                    className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
+                  >
+                    디자이너 소개
+                  </Link>
+                  <Link
+                    href="/franchise"
+                    className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
+                  >
+                    가맹문의
+                  </Link>
+                </nav>
+              )}
 
-              {/* CTA Button */}
-              <Link href="#">
-                <button className="flex flex-row gap-2 items-center bg-white hover:bg-gray-100 px-5 h-[51px] rounded-full cursor-pointer">
-                  <div className="flex items-center gap-1 text-lg  font-semibold text-black">
+              {/* CTA Button - 가맹문의 페이지에서는 숨김 */}
+              {!isFranchisePage && (
+                <Link href="#">
+                  <button className="flex flex-row gap-2 items-center bg-white hover:bg-gray-100 px-5 h-[51px] rounded-full cursor-pointer">
+                    <div className="flex items-center gap-1 text-lg  font-semibold text-black">
+                      <span>
+                        <img src="/cta-icon-1.png" className="w-6" />
+                      </span>
+                      <span>무료 컨설팅</span>
+                    </div>
+
                     <span>
-                      <img src="/cta-icon-1.png" className="w-6" />
+                      <img src="/cta-icon-2.png" />
                     </span>
-                    <span>무료 컨설팅</span>
-                  </div>
-
-                  <span>
-                    <img src="/cta-icon-2.png" />
-                  </span>
-                </button>
-              </Link>
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -97,51 +104,55 @@ export default function Header({ className = "" }: HeaderProps) {
               </Link>
 
               <div className="flex items-center gap-3">
-                {/* Mobile CTA Button */}
-                <Link href="/#">
-                  <button className="flex flex-row gap-2 items-center bg-white text-md hover:bg-gray-100 px-4 py-2 rounded-full font-semibold">
-                    <span>
-                      <img
-                        src="/cta-icon-1.png"
-                        alt="CTA Icon 1"
-                        className="max-md:h-[14px]"
-                      />
-                    </span>
-                    <span>문의하기</span>
-                    <span>
-                      <img
-                        src="/cta-icon-2.png"
-                        alt="CTA Icon 2"
-                        className="max-md:h-[10px]"
-                      />
-                    </span>
-                  </button>
-                </Link>
+                {/* Mobile CTA Button - 가맹문의 페이지에서는 숨김 */}
+                {!isFranchisePage && (
+                  <Link href="/#">
+                    <button className="flex flex-row gap-2 items-center bg-white text-md hover:bg-gray-100 px-4 py-2 rounded-full font-semibold">
+                      <span>
+                        <img
+                          src="/cta-icon-1.png"
+                          alt="CTA Icon 1"
+                          className="max-md:h-[14px]"
+                        />
+                      </span>
+                      <span>문의하기</span>
+                      <span>
+                        <img
+                          src="/cta-icon-2.png"
+                          alt="CTA Icon 2"
+                          className="max-md:h-[10px]"
+                        />
+                      </span>
+                    </button>
+                  </Link>
+                )}
 
-                {/* Hamburger Menu Button */}
-                <button
-                  onClick={toggleMobileMenu}
-                  className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-200"
-                  aria-label="메뉴 열기"
-                >
-                  <div className="w-6 h-5 flex flex-col justify-between">
-                    <span
-                      className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                        isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
-                      }`}
-                    />
-                    <span
-                      className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                        isMobileMenuOpen ? "opacity-0" : ""
-                      }`}
-                    />
-                    <span
-                      className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                        isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-                      }`}
-                    />
-                  </div>
-                </button>
+                {/* Hamburger Menu Button - 가맹문의 페이지에서는 숨김 */}
+                {!isFranchisePage && (
+                  <button
+                    onClick={toggleMobileMenu}
+                    className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                    aria-label="메뉴 열기"
+                  >
+                    <div className="w-6 h-5 flex flex-col justify-between">
+                      <span
+                        className={`w-full h-0.5 bg-white transition-all duration-300 ${
+                          isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                        }`}
+                      />
+                      <span
+                        className={`w-full h-0.5 bg-white transition-all duration-300 ${
+                          isMobileMenuOpen ? "opacity-0" : ""
+                        }`}
+                      />
+                      <span
+                        className={`w-full h-0.5 bg-white transition-all duration-300 ${
+                          isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                        }`}
+                      />
+                    </div>
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -233,7 +244,7 @@ export default function Header({ className = "" }: HeaderProps) {
 
               <div className="border-b border-[var(--color-gray-100)] pb-6">
                 <Link
-                  href="#"
+                  href="/franchise"
                   className="flex items-center justify-between text-xl font-semibold group"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

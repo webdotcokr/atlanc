@@ -6,9 +6,10 @@ import Footer from "./footer";
 
 export default function ConditionalLayout() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  // franchise 페이지는 자체 CTA와 Footer가 있으므로 제외
+  const isFranchisePage = pathname === "/franchise";
 
-  if (isHome) {
+  if (isFranchisePage) {
     return null;
   }
 
