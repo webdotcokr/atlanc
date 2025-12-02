@@ -139,10 +139,10 @@ export default function BeforeAfterSlider({
       </div>
 
       {/* Labels */}
-      <div className="absolute top-[10px] left-[8px] bg-black bg-opacity-50 text-white px-2 py-[6px] rounded-sm text-base font-extrabold pointer-events-none">
+      <div className="absolute top-[10px] left-[8px] max-md:top-3 max-md:left-3 bg-black bg-opacity-50 text-white px-2 py-[6px] rounded-sm max-md:py-1 text-base max-md:text-[11px] font-extrabold pointer-events-none">
         {beforeLabel}
       </div>
-      <div className="absolute top-[10px] right-[8px] bg-black bg-opacity-50 text-white px-2 py-[6px] rounded-sm text-base font-extrabold pointer-events-none">
+      <div className="absolute top-[10px] right-[8px] max-md:top-3 max-md:right-3 bg-black bg-opacity-50 text-white px-2 py-[6px] rounded-sm text-base max-md:text-[11px] max-md:py-1 font-extrabold pointer-events-none">
         {afterLabel}
       </div>
 
@@ -160,7 +160,7 @@ export default function BeforeAfterSlider({
         {/* Slider Handle */}
         <div
           ref={sliderHandleRef}
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60px] aspect-square bg-[#26E45C] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform duration-150 ${
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60px] max-md:w-[44px] aspect-square bg-[#26E45C] rounded-full cursor-ew-resize flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform duration-150 ${
             !hasInteracted && !isDragging ? "animate-ripple" : ""
           }`}
           onPointerDown={handlePointerDown}
@@ -173,6 +173,7 @@ export default function BeforeAfterSlider({
             height="9"
             viewBox="0 0 7 9"
             fill="none"
+            className="max-md:w-[6px]"
           >
             <path
               d="M0.386067 3.43746L4.53267 0.212318C5.18953 -0.298571 6.14661 0.169524 6.14661 1.00167V7.45195C6.14661 8.2841 5.18953 8.75219 4.53267 8.2413L0.386067 5.01616C-0.128679 4.6158 -0.128679 3.83782 0.386067 3.43746Z"
@@ -187,7 +188,7 @@ export default function BeforeAfterSlider({
             height="44"
             viewBox="0 0 1 44"
             fill="none"
-            className="mx-[14px]"
+            className="mx-[14px] max-md:mx-[9px]"
           >
             <path d="M0.5 0L0.499998 43.6639" stroke="#60F0A8" />
           </svg>
@@ -199,6 +200,7 @@ export default function BeforeAfterSlider({
             height="9"
             viewBox="0 0 7 9"
             fill="none"
+            className="max-md:w-[6px]"
           >
             <path
               d="M5.76054 3.43746L1.61393 0.212318C0.957075 -0.298571 -7.62939e-06 0.169524 -7.62939e-06 1.00167V7.45195C-7.62939e-06 8.2841 0.957076 8.75219 1.61393 8.2413L5.76054 5.01616C6.27529 4.6158 6.27529 3.83782 5.76054 3.43746Z"
