@@ -24,20 +24,23 @@ export default function FranchisePage() {
     >
       <h1 className="sr-only">아뜰랑 맨즈헤어, 프리미엄 남성 전문 헤어샵</h1>
       {/* Main Hero Section */}
-      <section className="relative flex flex-col items-center gap-5 justify-center h-[890px] max-md:h-[656px] w-full text-center bg-[url('/hero.webp')] bg-[#090D09]">
+      <section className="relative flex flex-col items-center gap-5 max-md:gap-3 justify-center h-[890px] max-md:h-[631px] w-full text-center bg-[url('/new-hero.webp')] bg-[#090D09]">
         <MotionWrapper animation="fadeIn" duration={1}>
           <div className="flex flex-col items-center gap-2">
-            <img className="w-[106px] aspect-square" src="/logo.svg"></img>
+            <img
+              className="w-[106px] max-md:w-[70px] aspect-square"
+              src="/logo.svg"
+            ></img>
             <div className="text-center justify-start">
-              <p className="text-white text-[40px] font-bold  leading-[58px]">
+              <p className="text-white text-[40px] font-bold max-md:text-[22px] max-md:leading-[32px]  leading-[58px]">
                 미용실 창업으로
               </p>
               <div className=" relative">
                 <div
-                  className="bg-[#26E45C] h-[62px]  absolute w-[526px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
+                  className="bg-[#26E45C] h-[62px] max-md:w-[290px] max-md:h-8  absolute w-[526px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
                   style={{ transform: "skewX(-15deg)" }}
                 />
-                <p className=" text-black text-[40px] font-extrabold relative leading-[58px]">
+                <p className=" text-black text-[40px] font-extrabold relative leading-[58px] max-md:text-[22px] max-md:leading-[32px]  ">
                   월매출 6천만원, 마진율 40%
                 </p>
               </div>
@@ -45,17 +48,17 @@ export default function FranchisePage() {
           </div>
         </MotionWrapper>
         <MotionWrapper animation="fadeInUp" delay={0.3} duration={0.8}>
-          <p className="text-white text-[60px] max-md:text-[30px] font-bold leading-[1.3] tracking-[-2]">
+          <p className="text-white text-[60px] max-md:text-[32px] font-bold leading-[1.3] tracking-[-2]">
             아뜰랑 맨즈헤어에서는<br></br>가능합니다
           </p>
         </MotionWrapper>
         {/* Bottom Center Text with Line */}
         <MotionWrapper
-          className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+          className="absolute bottom-3 max-md:bottom-[63px] left-1/2 transform -translate-x-1/2 flex flex-col items-center"
           animation="fadeInUp"
           delay={0.6}
         >
-          <span className=" text-white text-xl  font-medium tracking-wide mb-3">
+          <span className=" text-white text-xl max-md:text-sm  font-medium tracking-wide mb-3">
             스크롤을 내려서 성공창업을 확인해보세요!{" "}
           </span>
           <div className="w-px h-[46px] bg-white opacity-60"></div>

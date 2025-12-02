@@ -95,30 +95,32 @@ export default function Header({ className = "" }: HeaderProps) {
 
         {/* Mobile Header */}
         <div className="block md:hidden">
-          <div className="px-4 py-4">
-            <div className="flex items-center justify-between">
+          <div className="px-3 h-[76px] flex items-center">
+            <div className="flex items-center justify-between w-full">
               {/* Mobile Logo */}
               <Link href="/" className="flex items-center">
-                <img src="/logo.png" alt="Logo" className="h-12" />
+                <img src="/logo.png" alt="Logo" className="h-11" />
               </Link>
 
               <div className="flex items-center gap-3">
                 {/* Mobile CTA Button */}
                 <Link href="/#">
-                  <button className="flex flex-row gap-2 items-center bg-white text-md hover:bg-gray-100 px-4 py-2 rounded-full font-semibold">
-                    <span>
-                      <img
-                        src="/cta-icon-1.png"
-                        alt="CTA Icon 1"
-                        className="max-md:h-[14px]"
-                      />
-                    </span>
-                    <span>문의하기</span>
+                  <button className="flex flex-row gap-2 items-center bg-white text-sm hover:bg-gray-100 w-[120px] h-[37px] justify-center rounded-full font-semibold cursor-pointer">
+                    <div className="flex items-center gap-1">
+                      <span>
+                        <img
+                          src="/cta-icon-1.png"
+                          alt="CTA Icon 1"
+                          className="h-4"
+                        />
+                      </span>
+                      <span>무료컨설팅</span>
+                    </div>
                     <span>
                       <img
                         src="/cta-icon-2.png"
                         alt="CTA Icon 2"
-                        className="max-md:h-[10px]"
+                        className="h-2"
                       />
                     </span>
                   </button>
@@ -127,7 +129,7 @@ export default function Header({ className = "" }: HeaderProps) {
                 {/* Hamburger Menu Button */}
                 <button
                   onClick={toggleMobileMenu}
-                  className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-200"
+                  className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-200 cursor-pointer"
                   aria-label="메뉴 열기"
                 >
                   <div className="w-6 h-5 flex flex-col justify-between">
