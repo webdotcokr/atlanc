@@ -27,7 +27,7 @@ export default function Section9() {
         </div>
 
         <MotionWrapper animation="fadeIn" className="mt-11 max-md:mt-10">
-          <div className="flex relative pb-[78px] gap-5 justify-center items-center w-full overflow-hidden max-md:flex-col max-md:gap-11">
+          <div className="flex relative md:pb-[78px] gap-5 justify-center items-center w-full overflow-hidden max-md:flex-col max-md:gap-11">
             <img
               src="/store01.webp"
               alt="store"
@@ -74,7 +74,7 @@ export default function Section9() {
         <MotionWrapper
           animation="fadeInUp"
           delay={0.2}
-          className="mt-[87px] max-md:pt-8"
+          className="mt-[87px] max-md:mt-8"
         >
           <div className="flex flex-col gap-4 items-center">
             <h1 className="text-4xl leading-[1.3] font-bold text-[#26E45C] border-b-[3px] max-md:border-b-[1px] border-primary max-md:text-2xl text-center">
