@@ -17,7 +17,7 @@ export default function Section10() {
             </p>
           </MotionWrapper>
           <MotionWrapper animation="fadeInUp" delay={0.2}>
-            <p className=" text-white text-center text-[46px] max-md:text-2xl leading-[1.3]  tracking-[-1.5]">
+            <p className=" text-white text-center text-[46px] max-lg:text-[40px] max-md:text-2xl leading-[1.3]  tracking-[-1.5]">
               체계적인 교육시스템으로<br className="md:hidden"></br> 어느
               매장에서나<br></br>
               <b className="font-extrabold">균일한 만족도를 제공합니다.</b>
@@ -76,7 +76,7 @@ export default function Section10() {
         </MotionWrapper>
 
         <MotionWrapper animation="fadeIn">
-          <p className="text-2xl leading-[1.7] text-white text-center max-md:text-[17px]">
+          <p className="text-2xl leading-[1.7] text-white text-center max-md:text-[17px] max-lg:text-xl">
             신규 채용부터 브랜드 맞춤 교육까지 <br></br>누구나 높은 만족도를
             제공할 수 있도록<br className="md:hidden"></br> 아뜰랑만의
             교육시스템을 갖췄습니다.

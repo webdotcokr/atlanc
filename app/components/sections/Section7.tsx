@@ -15,7 +15,7 @@ export default function Section7() {
   return (
     <SynchronizedSliderProvider>
       <section className="py-[120px] max-md:pt-[60px] max-md:pb-[80px] bg-[#1D1D1D] bg-[url('/consulting-bg.webp')] !px-0">
-        <div className="max-w-[1440px] mx-auto flex flex-col items-center">
+        <div className="max-w-[1440px] mx-auto flex flex-col items-center overflow-hidden w-full">
           <div className=" flex flex-col items-center gap-4 px-5">
             <MotionWrapper animation="fadeIn">
               <div className=" px-2 py-1 bg-[#26E45C] text-xl font-extrabold max-md:text-[16px] text-center text-black w-fit">

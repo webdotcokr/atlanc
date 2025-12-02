@@ -28,10 +28,10 @@ export default function Section5() {
                   01
                 </p>
                 <div className="flex flex-col gap-3 max-md:gap-2">
-                  <h1 className="text-[32px] leading-[1.4] font-extrabold text-white font-[NanumSquareNeo] max-md:text-lg">
+                  <h1 className="text-[32px] max-lg:text-[28px] leading-[1.4] font-extrabold text-white font-[NanumSquareNeo] max-md:text-lg">
                     어느 지역에서나 수요가 일정합니다.
                   </h1>
-                  <p className="text-[22px] text-[#eee] leading-[1.5] font-[NanumSquareNeo] max-md:text-sm">
+                  <p className="text-[22px] text-[#eee] max-lg:text-[20px] leading-[1.5] font-[NanumSquareNeo] max-md:text-sm">
                     수도권, 지방을 불문하고 상권이 있는 곳 어디든<br></br>
                     미용실 수요는 꾸준히 발생합니다. <br></br>
                     따라서, 전국 어디든 창업이 가능합니다.
@@ -55,10 +55,10 @@ export default function Section5() {
                   02
                 </p>
                 <div className="flex flex-col gap-3 max-md:gap-2">
-                  <h1 className="text-[32px] leading-[1.4] font-extrabold text-white font-[NanumSquareNeo] max-md:text-lg">
+                  <h1 className="text-[32px] leading-[1.4] max-lg:text-[30px]  font-extrabold text-white font-[NanumSquareNeo] max-md:text-lg">
                     객단가가 높고 투입 비용이 적습니다.
                   </h1>
-                  <p className="text-[22px] text-[#eee] leading-[1.5] font-[NanumSquareNeo] max-md:text-sm">
+                  <p className="text-[22px] text-[#eee] max-lg:text-[20px] leading-[1.5] font-[NanumSquareNeo] max-md:text-sm">
                     커트는 기본, 염색, 펌 등 시술로<br></br>
                     객단가를 높일 수 있는 방법이 많습니다. <br></br>
                     동시에 인력 기반 서비스이기 때문에,<br></br>
@@ -82,14 +82,14 @@ export default function Section5() {
                   03
                 </p>
                 <div className="flex flex-col gap-3 max-md:gap-2">
-                  <h1 className="text-[32px] leading-[1.4] font-extrabold text-white font-[NanumSquareNeo] max-md:text-lg">
+                  <h1 className="text-[32px] leading-[1.4] max-lg:text-[30px] font-extrabold text-white font-[NanumSquareNeo] max-md:text-lg">
                     재구매가 꾸준히 발생해<br></br> 매출이 안정적입니다.
                   </h1>
-                  <p className="text-[22px] text-[#eee] leading-[1.5] font-[NanumSquareNeo] max-md:text-sm">
+                  <p className="text-[22px] text-[#eee] max-lg:text-[20px] leading-[1.5] font-[NanumSquareNeo] max-md:text-sm">
                     대부분 한 번 방문한 고객은 꾸준히 방문합니다.<br></br>
                     초기 광고를 통해 고객들을 모으고
-                    <br className="md:hidden"></br> 만족도 높은 서비스를
-                    <br className="max-md:hidden"></br>
+                    <br className="lg:hidden"></br> 만족도 높은 서비스를
+                    <br className="max-lg:hidden"></br>
                     제공하면 시간이 지나면서<br></br>
                     안정적인 매출이 발생하는 구조입니다.
                   </p>

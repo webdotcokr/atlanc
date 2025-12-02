@@ -435,3 +435,12 @@ a {
 .animate-scroll-left-infinite {
   animation: scroll-left-infinite 20s linear infinite;
 }
+
+/* Section12 Swiper overflow visible */
+.section12-swiper .swiper {
+  overflow: visible !important;
+}
+
+.section12-swiper .swiper-wrapper {
+  overflow: visible !important;
+}

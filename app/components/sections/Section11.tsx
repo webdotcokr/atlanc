@@ -3,7 +3,7 @@ import MotionWrapper from "../ui/motion-wrapper";
 export default function Section11() {
   return (
     <section className="bg-[#090D09] pt-[110px] pb-[120px] max-md:pt-[80px] max-md:pb-[60px]">
-      <div className="w-full max-w-[1440px] mx-auto flex flex-col items-center">
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col items-center overflow-hidden">
         <MotionWrapper animation="fadeIn">
           <p className="text-[34px] leading-[1.3] text-white text-center max-md:text-[28px]">
             최고의 품질 유지를 위해 <br></br>
