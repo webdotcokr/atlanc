@@ -71,7 +71,7 @@ export default function Section6() {
                     평균 재방문율
                   </h3>
                   <p className="font-poppins text-[60px] italic font-semibold text-[#26E45C]">
-                    <AnimatedCounter to={98} suffix="%" duration={2} />
+                    <AnimatedCounter to={50} suffix="% +" duration={2} />
                   </p>
                 </div>
               </div>
