@@ -18,9 +18,9 @@ export default function Section5() {
         </MotionWrapper>
         <div className="w-full flex flex-col gap-6 max-md:gap-4">
           <MotionWrapper animation="fadeIn">
-            <div className="h-[480px] relative pr-[130px] max-xl:pr-[100px] max-lg:pr-[40px] flex lg:justify-end  md:items-center gap-[215px] overflow-hidden bg-gradient-to-r from-[#0E120E] to-[#181a18] max-md:h-[300px] max-md:pl-[32px] max-md:pb-[33px] max-lg:pb-[80px] max-md:pr-[27px]">
+            <div className="h-[480px] relative pr-[130px] max-xl:pr-[70px] max-lg:pr-[40px] flex lg:justify-end  md:items-center gap-[215px] overflow-hidden bg-gradient-to-r from-[#0E120E] to-[#181a18] max-md:h-[300px] max-md:pl-[32px] max-md:pb-[33px] max-lg:pb-[80px] max-md:pr-[27px]">
               <img
-                className="w-[287px] h-[480px] object-cover object-bottom absolute max-md:w-[124px] max-md:h-[222px] max-lg:right-[33px] max-lg:left-auto left-[238px] max-xl:left-[100px]"
+                className="w-[287px] h-[480px] object-cover object-bottom absolute max-md:w-[124px] max-md:h-[222px] max-lg:right-[33px] max-lg:left-auto left-[238px] max-xl:left-[80px]"
                 src="/why1.webp"
               ></img>
               <div className="flex flex-col gap-[32px] max-md:gap-5 max-lg:justify-end max-md:pt-0 shrink-0">
@@ -42,8 +42,8 @@ export default function Section5() {
           </MotionWrapper>
 
           <MotionWrapper animation="fadeIn">
-            <div className="h-[480px] relative  max-md:pt-[15px] pr-[130px] md:items-center max-xl:pr-[100px] max-lg:pr-[40px]  flex lg:justify-end  gap-[215px] overflow-hidden bg-gradient-to-r from-[#0E120E] to-[#181a18] max-md:h-[300px] max-md:pl-[32px] max-md:pb-[27px] max-md:pr-[21px]">
-              <div className="md:top-1/2 md:-translate-y-1/2 h-fit w-fit absolute max-md:top-[15px] max-lg:right-[22px] left-[238px] max-xl:left-[100px] max-lg:left-auto">
+            <div className="h-[480px] relative  max-md:pt-[15px] pr-[130px] md:items-center max-xl:pr-[70px] max-lg:pr-[40px]  flex lg:justify-end  gap-[215px] overflow-hidden bg-gradient-to-r from-[#0E120E] to-[#181a18] max-md:h-[300px] max-md:pl-[32px] max-md:pb-[27px] max-md:pr-[21px]">
+              <div className="md:top-1/2 md:-translate-y-1/2 h-fit w-fit absolute max-md:top-[15px] max-lg:right-[22px] left-[238px] max-xl:left-[80px] max-lg:left-auto">
                 <img
                   className="w-[314px] h-[259px] md:object-cover object-bottom max-md:w-[167px] max-md:h-[131px]"
                   src="/why2.webp"
@@ -69,8 +69,8 @@ export default function Section5() {
             </div>
           </MotionWrapper>
           <MotionWrapper animation="fadeIn">
-            <div className="h-[480px] relative  md:items-center max-md:pt-[15px]  pr-[130px] max-xl:pr-[80px] max-lg:pr-[40px]   flex lg:justify-end  gap-[215px] overflow-hidden bg-gradient-to-r from-[#0E120E] to-[#181a18] max-md:h-[300px] max-md:pl-[32px] max-md:pb-[27px] max-md:pr-[21px]">
-              <div className="md:top-1/2 md:-translate-y-1/2 h-fit w-fit  absolute max-md:top-[23px] max-lg:right-[24px] left-[238px] max-xl:left-[100px] max-lg:left-auto">
+            <div className="h-[480px] relative  md:items-center max-md:pt-[15px]  pr-[130px] max-xl:pr-[40px] max-lg:pr-[40px]   flex lg:justify-end  gap-[215px] overflow-hidden bg-gradient-to-r from-[#0E120E] to-[#181a18] max-md:h-[300px] max-md:pl-[32px] max-md:pb-[27px] max-md:pr-[21px]">
+              <div className="md:top-1/2 md:-translate-y-1/2 h-fit w-fit  absolute max-md:top-[23px] max-lg:right-[24px] left-[238px] max-xl:left-[80px] max-lg:left-auto">
                 <img
                   className="h-[246px] md:object-contain object-bottom max-md:w-[162px] max-md:h-[124px] "
                   src="/why3.webp"

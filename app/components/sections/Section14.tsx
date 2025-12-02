@@ -29,12 +29,12 @@ export default function Section14() {
           className="w-full md:h-[777px] max-md:aspect-[590/237] absolute md:top-0 max-md:bottom-0 max-md:bg-bottom-right md:left-0 max-md:right-0 object-cover "
         ></img>
         <div className="pt-2.5 px-2.5 max-md:px-1.5 max-md:pt-1.5 pb-[18px] max-md:pb-2.5 flex flex-col  rounded-lg bg-[#202020] gap-5 max-md:gap-2.5  relative">
-          <div className="w-[510px] max-lg:w-[380px] aspect-[510/423] max-md:w-[300px] max-md:aspect-[300/246] rounded-lg bg-[#383838]"></div>
+          <div className="w-[510px] max-lg:w-[330px] max-xl:w-[400px] aspect-[510/423] max-md:w-[300px] max-md:aspect-[300/246] rounded-lg bg-[#383838]"></div>
           <div className="flex justify-between pl-2.5 pr-[17px] ">
-            <p className="text-2xl leading-[1.4] text-white opacity-40 max-lg:text-[20px] max-md:text-base">
+            <p className="text-2xl leading-[1.4] text-white opacity-40  max-xl:text-[20px] max-md:text-base">
               1년 전
             </p>
-            <p className="md:pt-[11px] lading-[1.4] font-[900] text-[#aeaeae] text-[50px] max-lg:text-[35px] max-md:text-[28px]">
+            <p className="md:pt-[11px] lading-[1.4] max-xl:text-[40px] font-[900] text-[#aeaeae] text-[50px] max-lg:text-[32px] max-md:text-[28px]">
               36,715,085
             </p>
           </div>
@@ -48,19 +48,19 @@ export default function Section14() {
           ></img>
         </div>
         <div className="pt-2.5 px-2.5 max-md:px-1.5 max-md:pt-1.5 pb-[18px] max-md:pb-2.5 flex flex-col   rounded-lg bg-[#202020] gap-5 max-md:gap-2.5  relative">
-          <div className="w-[510px] max-lg:w-[380px] aspect-[510/423]  max-md:w-[300px] max-md:aspect-[300/246] rounded-lg bg-[#383838]"></div>
+          <div className="w-[510px] max-lg:w-[330px] max-xl:w-[400px] aspect-[510/423]  max-md:w-[300px] max-md:aspect-[300/246] rounded-lg bg-[#383838]"></div>
           <div className="flex justify-between pl-2.5 pr-[17px] ">
-            <p className="text-2xl leading-[1.4] text-white max-lg:text-[20px] max-md:text-base">
+            <p className="text-2xl leading-[1.4] text-white max-xl:text-[20px] max-md:text-base">
               1년 후
             </p>
-            <p className="md:pt-[11px] lading-[1.4] font-[900] text-[#26E45C] text-[50px] max-lg:text-[35px] max-md:text-[28px]">
+            <p className="md:pt-[11px] lading-[1.4] max-xl:text-[40px] font-[900] text-[#26E45C] text-[50px] max-lg:text-[32px] max-md:text-[28px]">
               50,025,440
             </p>
           </div>
 
           <img
             src="/section14/text.svg"
-            className="w-[184px]  absolute bottom-[45px] left-[102px] z-[1] max-lg:w-[150px] md:aspect-[184/114] max-md:w-[110px] max-md:h-[66px] max-md:bottom-[25px] max-md:left-[60px]"
+            className="w-[184px]  absolute bottom-[45px] max-xl:w-[150px] left-[102px] z-[1] max-lg:w-[130px] md:aspect-[184/114] max-md:w-[110px] max-md:h-[66px] max-md:bottom-[25px] max-md:left-[60px]"
           ></img>
         </div>
       </div>

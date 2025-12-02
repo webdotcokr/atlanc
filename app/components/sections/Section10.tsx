@@ -29,10 +29,10 @@ export default function Section10() {
           animation="fadeIn"
           className="mt-[52px] max-md:mt-10 mb-[32px] max-md:mb-[30px] flex items-center"
         >
-          <div className="w-[220px] max-md:w-[104px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
+          <div className="w-[220px] max-lg:w-[200px] max-md:w-[104px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
             <img
               src="/process-1.svg"
-              className="w-16 aspect-square max-md:w-[26px]"
+              className="w-16 aspect-square max-md:w-[26px] max-lg:w-14"
             ></img>
             <p className="text-[15px] leading-[1.7] font-bold text-[#26E45C] mt-[10px] max-md:mt-1 max-md:text-[11px]">
               SETP 01
@@ -43,12 +43,12 @@ export default function Section10() {
           </div>
           <img
             src="process-arrow.svg"
-            className="w-[23px] ml-[42px] mr-[46px] max-md:w-[7px] max-md:mx-2"
+            className="w-[23px] ml-[42px] mr-[46px] max-md:w-[7px] max-md:mx-2 max-lg:mx-[30px]"
           ></img>
-          <div className="w-[220px] max-md:w-[104px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
+          <div className="w-[220px] max-lg:w-[200px] max-md:w-[104px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
             <img
               src="/process-2.svg"
-              className="w-[65px] aspect-square max-md:w-[26px]"
+              className="w-[65px] aspect-square max-md:w-[26px] max-lg:w-14"
             ></img>
             <p className="text-[15px] leading-[1.7] font-bold text-[#26E45C] mt-[8px] max-md:mt-1 max-md:text-[11px]">
               SETP 02
@@ -59,12 +59,12 @@ export default function Section10() {
           </div>
           <img
             src="process-arrow.svg"
-            className="w-[23px] ml-[46px] mr-[55px] max-md:w-[7px] max-md:mx-2"
+            className="w-[23px] ml-[42px] mr-[46px] max-md:w-[7px] max-md:mx-2 max-lg:mx-[30px]"
           ></img>
-          <div className="w-[220px] max-md:w-[104px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
+          <div className="w-[220px] max-lg:w-[200px] max-md:w-[104px] aspect-square bg-[#00000099] rounded-full flex items-center justify-center flex-col">
             <img
               src="/process-3.svg"
-              className="w-[66px] aspect-square max-md:w-[26px]"
+              className="w-[66px] aspect-square max-md:w-[26px] max-lg:w-14"
             ></img>
             <p className="text-[15px] leading-[1.7] font-bold text-[#26E45C] mt-[8px] max-md:mt-1 max-md:text-[11px]">
               SETP 03
