@@ -261,10 +261,10 @@ export default function FranchisePage() {
                 placeholder="성함"
               ></input>
               <input
-                className="h-10 md:h-12 md:text-base px-[13px] rounded-sm text-[13px] font-bold placeholder:text-[#777] bg-white grow"
+                className="h-10 md:h-12 md:text-base px-[13px] rounded-sm text-[13px] font-bold placeholder:text-[#777] bg-white grow w-full"
                 placeholder="연락처"
               ></input>
-              <div className="cursor-pointer md:h-12 h-10 w-[98px] md:w- shrink-0 bg-[#26E45C] flex items-center gap-1 rounded-sm justify-center">
+              <div className="cursor-pointer md:h-12 h-10 w-[98px] md:w-[120px] shrink-0 bg-[#26E45C] flex items-center gap-1 rounded-sm justify-center">
                 <p className="text-[15px] text-black font-extrabold leading-[1.2] md:text-lg">
                   무료 상담
                 </p>

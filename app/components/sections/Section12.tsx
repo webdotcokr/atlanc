@@ -112,7 +112,7 @@ export default function Section12() {
 
       <div className="flex flex-col gap-8 items-center max-md:pt-5">
         <div className="flex flex-col gap-4 max-md:px-5">
-          <h1 className="border-b-[2px] max-lg:text-[32px] border-primary text-[#26E45C] text-[36px] leading-[1.3] font-bold max-md:text-2xl">
+          <h1 className="underline max-lg:text-[32px] text-center text-[#26E45C] text-[36px] leading-[1.3] font-bold max-md:text-2xl">
             단지 높은 광고비가 아닌 오직 실력으로 승부합니다.
           </h1>
           <p className="text-2xl leading-[1.4] text-white text-center max-md:text-[17px]">

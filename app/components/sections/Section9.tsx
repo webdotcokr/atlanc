@@ -77,7 +77,7 @@ export default function Section9() {
           className="mt-[87px] max-md:mt-8"
         >
           <div className="flex flex-col gap-4 items-center">
-            <h1 className="text-4xl leading-[1.3] font-bold text-[#26E45C] border-b-[3px] max-md:border-b-[1px] border-primary max-md:text-2xl text-center">
+            <h1 className="text-4xl leading-[1.3] font-bold text-[#26E45C] underline max-md:text-2xl text-center">
               광고로 만든 <br className="md:hidden"></br>일시적인 매출이
               아닙니다.
             </h1>
