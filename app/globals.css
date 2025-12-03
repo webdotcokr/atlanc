@@ -1,67 +1,11 @@
 @import "tailwindcss";
 
-/* Poppins Font Family */
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Thin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ThinItalic.ttf') format('truetype');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
+/* Poppins Font Family - 실제 사용하는 weight만 로드 (성능 최적화) */
 @font-face {
   font-family: 'Poppins';
   src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -75,25 +19,9 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
   src: url('/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -107,41 +35,9 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
   src: url('/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins/Poppins-BlackItalic.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -293,8 +189,20 @@
   }
 }
 
-* {
-  transition: 0.15s linear;
+/* 선택적 transition 적용 - 불필요한 전역 transition 제거 */
+a, button {
+  transition: color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+/* 모바일에서 애니메이션 성능 개선 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 html {
@@ -313,6 +221,53 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Hardware Acceleration - GPU 가속 활성화 */
+.gpu-accelerated,
+[class*="motion-"],
+[class*="animate-"],
+.swiper,
+.swiper-slide {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+/* 모바일 성능 최적화 */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 모바일에서 애니메이션 최적화 */
+  [class*="animate-"] {
+    will-change: transform, opacity;
+  }
+
+  /* 모바일 스크롤 성능 개선 */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 모바일 이미지 깜빡임 방지 */
+  img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  /* 모바일 텍스트 렌더링 최적화 */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
 .sr-only {
     position: absolute;
     width: 1px;

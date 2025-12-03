@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 interface MotionWrapperProps {
   children: ReactNode;
@@ -44,6 +44,20 @@ const animations: Record<string, Variants> = {
   }
 };
 
+// 모바일 감지 훅
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+};
+
 export default function MotionWrapper({
   children,
   className = '',
@@ -53,17 +67,29 @@ export default function MotionWrapper({
   once = true,
   amount = 0.1
 }: MotionWrapperProps) {
+  const isMobile = useIsMobile();
+
+  // 모바일에서 애니메이션 속도 향상 및 거리 감소
+  const mobileDuration = isMobile ? duration * 0.7 : duration;
+  const mobileAmount = isMobile ? 0.05 : amount;
+
   return (
     <motion.div
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount }}
+      viewport={{ once, amount: mobileAmount }}
       variants={animations[animation]}
       transition={{
-        duration,
+        duration: mobileDuration,
         delay,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: [0.25, 0.1, 0.25, 1],
+        // GPU 가속 강제
+        type: "tween"
+      }}
+      style={{
+        // 초기 깜빡임 방지
+        willChange: 'transform, opacity'
       }}
     >
       {children}
@@ -84,13 +110,16 @@ export function StaggerContainer({
   staggerDelay = 0.1,
   delay = 0
 }: StaggerContainerProps) {
+  const isMobile = useIsMobile();
+  const mobileStaggerDelay = isMobile ? staggerDelay * 0.5 : staggerDelay;
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         delayChildren: delay,
-        staggerChildren: staggerDelay
+        staggerChildren: mobileStaggerDelay
       }
     }
   };
@@ -100,8 +129,9 @@ export function StaggerContainer({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: isMobile ? 0.05 : 0.1 }}
       variants={containerVariants}
+      style={{ willChange: 'opacity' }}
     >
       {children}
     </motion.div>
@@ -117,11 +147,19 @@ export function StaggerItem({
   className?: string;
   animation?: keyof typeof animations;
 }) {
+  const isMobile = useIsMobile();
+  const itemDuration = isMobile ? 0.4 : 0.6;
+
   return (
     <motion.div
       className={className}
       variants={animations[animation]}
-      transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{
+        duration: itemDuration,
+        ease: [0.25, 0.1, 0.25, 1],
+        type: "tween"
+      }}
+      style={{ willChange: 'transform, opacity' }}
     >
       {children}
     </motion.div>

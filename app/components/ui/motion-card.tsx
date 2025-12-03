@@ -31,6 +31,12 @@ export default function MotionCard({
         stiffness: 400,
         damping: 30
       }}
+      style={{
+        // GPU 가속 및 깜빡임 방지
+        willChange: 'transform',
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden'
+      }}
     >
       {children}
     </motion.div>
