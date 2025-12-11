@@ -154,7 +154,7 @@ export default function Section15() {
                     >
                       예상 투자 비용
                     </td>
-                    <td className="px-[21px] py-5 bg-[#26E45C] text-right text-2xl font-extrabold text-black max-md:text-[15px]">
+                    <td className="px-[21px] py-5 bg-[#26E45C] text-right text-xl font-extrabold text-black max-md:text-[15px]">
                       3,862만원 ~ 4,050만원
                     </td>
                     <td className="bg-[#26E45C]  rounded-br-lg"></td>
