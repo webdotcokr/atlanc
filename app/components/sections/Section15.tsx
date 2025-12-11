@@ -66,7 +66,7 @@ export default function Section15() {
                       구분
                     </td>
                     <td className="w-[400px] max-md:w-[172px] px-9 py-6 text-xl max-md:px-[14px] max-md:py-4 leading-[1.4] font-bold max-md:text-[15px] text-white bg-[#323232]">
-                      내용(20평 기준)
+                      내용(17평 / 4인 운영 기준)
                     </td>
                     <td className="w-[270px] px-9 py-6 text-xl max-md:px-[14px] max-md:py-4 leading-[1.4] max-md:text-[15px] font-bold text-white bg-[#323232] text-center">
                       금액(VAT별도)
@@ -78,40 +78,15 @@ export default function Section15() {
 
                   <tr>
                     <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      보증금
+                      로얄티
                     </td>
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] max-md:text-[13px] text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      매장 보증금
+                      본사의 브랜드 노하우, 교육, 운영 시스템 등
                     </td>
-                    <td className="px-[21px] py-5 font-bold text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
-                      500원
+                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
+                      112.5만원 ~ 300만원
                     </td>
                     <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
-                  </tr>
-                  <tr>
-                    <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      가맹비
-                    </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] max-md:text-[13px] text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      본사의 브랜드, 노하우, 교육, 운영 시스템 등
-                    </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] border-b border-r border-dashed border-[#D3D3D3] bg-white text-right">
-                      <div className="flex items-center gap-4 max-md:gap-1 justify-end">
-                        <p className="text-[#6b6b6b] text-lg leading-[1.6] line-through max-md:text-[13px]">
-                          500만원
-                        </p>
-                        <p className=" font-bold text-black text-xl  leading-[1.6] max-md:text-[15px]">
-                          0원
-                        </p>
-                      </div>
-                    </td>
-                    <td className="border-b border-dashed border-[#D3D3D3] bg-white max-md:px-[11px] max-md:py-[14px]">
-                      <div className="flex items-center justify-center">
-                        <div className="px-2.5 py-[5px] max-md:px-1.5 max-md:py-[3px] bg-[#26E45C] transform-[rotate(-8deg)] text-lg max-md:text-sm leading-[1.6] font-extrabold">
-                          선착순 면제
-                        </div>
-                      </div>
-                    </td>
                   </tr>
                   <tr>
                     <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
@@ -121,23 +96,10 @@ export default function Section15() {
                       바닥, 천장, 조명, 전기공사, 도장 등<br></br>전체적인
                       공사비가 포함
                     </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] border-b border-r border-dashed border-[#D3D3D3] bg-white text-right">
-                      <div className="flex items-center gap-4 max-md:gap-1 justify-end">
-                        <p className="text-[#6b6b6b] text-lg leading-[1.6] line-through max-md:text-[13px]">
-                          1,200만원
-                        </p>
-                        <p className=" font-bold text-black text-xl  leading-[1.6] max-md:text-[15px]">
-                          800만원
-                        </p>
-                      </div>
+                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
+                      2,500만원
                     </td>
-                    <td className="border-b border-dashed border-[#D3D3D3] bg-white max-md:px-[11px] max-md:py-[14px]">
-                      <div className="flex items-center justify-center">
-                        <div className="px-2.5 py-[5px] max-md:px-1.5 max-md:py-[3px] bg-[#26E45C] transform-[rotate(-8deg)] text-lg max-md:text-sm leading-[1.6] font-extrabold">
-                          한시적 할인
-                        </div>
-                      </div>
-                    </td>
+                    <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
                   </tr>
 
                   <tr>
@@ -148,9 +110,15 @@ export default function Section15() {
                       사업 운영에 필요한 설비나 도구류
                     </td>
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
-                      1,500만원
+                      700만원
                     </td>
-                    <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
+                    <td className="border-b border-dashed border-[#D3D3D3] bg-white max-md:px-[11px] max-md:py-[14px]">
+                      <div className="flex items-center justify-center">
+                        <div className="px-2.5 py-[5px] max-md:px-1.5 max-md:py-[3px] bg-[#26E45C] transform-[rotate(-8deg)] text-lg max-md:text-sm leading-[1.6] font-extrabold">
+                          한시적 할인
+                        </div>
+                      </div>
+                    </td>
                   </tr>
 
                   <tr>
@@ -174,7 +142,7 @@ export default function Section15() {
                       현수막, 전단지, 간판, 온라인 마케팅 등
                     </td>
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
-                      200만원
+                      250만원
                     </td>
                     <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
                   </tr>
@@ -187,7 +155,7 @@ export default function Section15() {
                       예상 투자 비용
                     </td>
                     <td className="px-[21px] py-5 bg-[#26E45C] text-right text-2xl font-extrabold text-black max-md:text-[15px]">
-                      2,000만원~
+                      3,862만원 ~ 4,050만원
                     </td>
                     <td className="bg-[#26E45C]  rounded-br-lg"></td>
                   </tr>
@@ -211,7 +179,7 @@ export default function Section15() {
                       구분
                     </td>
                     <td className="w-[400px] max-md:w-[172px] px-9 py-6 text-xl max-md:px-[14px] max-md:py-4 leading-[1.4] font-bold max-md:text-[15px] text-white bg-[#323232]">
-                      내용(20평 기준)
+                      내용(17평 / 4인 운영 기준)
                     </td>
                     <td className="w-[270px] px-9 py-6 text-xl max-md:px-[14px] max-md:py-4 leading-[1.4] max-md:text-[15px] font-bold text-white bg-[#323232] text-center">
                       금액(VAT별도)
@@ -223,58 +191,27 @@ export default function Section15() {
 
                   <tr>
                     <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      보증금
-                    </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] max-md:text-[13px] text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      매장 보증금
-                    </td>
-                    <td className="px-[21px] py-5 font-bold text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
-                      500원
-                    </td>
-                    <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
-                  </tr>
-                  <tr>
-                    <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      가맹비
-                    </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] max-md:text-[13px] text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      본사의 브랜드, 노하우, 교육, 운영 시스템 등
-                    </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] border-b border-r border-dashed border-[#D3D3D3] bg-white text-right">
-                      <div className="flex items-center gap-4 max-md:gap-1 justify-end">
-                        <p className="text-[#6b6b6b] text-lg leading-[1.6] line-through max-md:text-[13px]">
-                          500만원
-                        </p>
-                        <p className=" font-bold text-black text-xl  leading-[1.6] max-md:text-[15px]">
-                          0원
-                        </p>
-                      </div>
-                    </td>
-                    <td className="border-b border-dashed border-[#D3D3D3] bg-white max-md:px-[11px] max-md:py-[14px]">
-                      <div className="flex items-center justify-center">
-                        <div className="px-2.5 py-[5px] max-md:px-1.5 max-md:py-[3px] bg-[#26E45C] transform-[rotate(-8deg)] text-lg max-md:text-sm leading-[1.6] font-extrabold">
-                          선착순 면제
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
                       내부 인테리어
                     </td>
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] text-black text-xl max-md:text-[13px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.4]">
                       바닥, 천장, 조명, 전기공사, 도장 등<br></br>전체적인
                       공사비가 포함
                     </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] border-b border-r border-dashed border-[#D3D3D3] bg-white text-right">
-                      <div className="flex items-center gap-4 max-md:gap-1 justify-end">
-                        <p className="text-[#6b6b6b] text-lg leading-[1.6] line-through max-md:text-[13px]">
-                          1,200만원
-                        </p>
-                        <p className=" font-bold text-black text-xl  leading-[1.6] max-md:text-[15px]">
-                          800만원
-                        </p>
-                      </div>
+                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
+                      2,500만원
+                    </td>
+                    <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
+                  </tr>
+
+                  <tr>
+                    <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
+                      집기
+                    </td>
+                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] max-md:text-[13px] text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
+                      사업 운영에 필요한 설비나 도구류
+                    </td>
+                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
+                      700만원
                     </td>
                     <td className="border-b border-dashed border-[#D3D3D3] bg-white max-md:px-[11px] max-md:py-[14px]">
                       <div className="flex items-center justify-center">
@@ -287,19 +224,6 @@ export default function Section15() {
 
                   <tr>
                     <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      집기
-                    </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] max-md:text-[13px] text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
-                      사업 운영에 필요한 설비나 도구류
-                    </td>
-                    <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
-                      1,500만원
-                    </td>
-                    <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
-                  </tr>
-
-                  <tr>
-                    <td className="px-[31px] py-5 max-md:px-[14px] max-md:py-[15px] font-extrabold text-black text-[22px] max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
                       가구류
                     </td>
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] max-md:text-[13px] text-black text-xl border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6]">
@@ -308,7 +232,13 @@ export default function Section15() {
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
                       300만원
                     </td>
-                    <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
+                    <td className="border-b border-dashed border-[#D3D3D3] bg-white max-md:px-[11px] max-md:py-[14px]">
+                      <div className="flex items-center justify-center">
+                        <div className="px-2.5 py-[5px] max-md:px-1.5 max-md:py-[3px] bg-[#26E45C] transform-[rotate(-8deg)] text-lg max-md:text-sm leading-[1.6] font-extrabold">
+                          한시적 할인
+                        </div>
+                      </div>
+                    </td>
                   </tr>
 
                   <tr>
@@ -319,7 +249,7 @@ export default function Section15() {
                       현수막, 전단지, 간판, 온라인 마케팅 등
                     </td>
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
-                      200만원
+                      250만원
                     </td>
                     <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
                   </tr>
@@ -332,7 +262,7 @@ export default function Section15() {
                       예상 투자 비용
                     </td>
                     <td className="px-[21px] py-5 bg-[#26E45C] text-right text-2xl font-extrabold text-black max-md:text-[15px]">
-                      2,000만원~
+                      3,750만원
                     </td>
                     <td className="bg-[#26E45C]  rounded-br-lg"></td>
                   </tr>

@@ -14,11 +14,7 @@ export default function Section11() {
         </MotionWrapper>
         <MotionWrapper animation="fadeIn">
           <div className="mt-10 mb-11 flex flex-col gap-7 max-md:gap-2 items-center max-md:mt-8">
-            <div className="bg-[url(/section11/photo-1.webp)] w-full max-w-[1100px] flex items-center justify-center rounded-xl aspect-[1100/463] max-md:aspect-[335/204] max-md:rounded-lg bg-cover bg-center">
-              <p className="text-[50px] leading-[1.7] font-extrabold text-white opacity-70 max-md:hidden">
-                단체사진
-              </p>
-            </div>
+            <div className="bg-[url(/section11/photo-1.webp)] w-full max-w-[1100px] flex items-center justify-center rounded-xl aspect-[1100/463] max-md:aspect-[335/204] max-md:rounded-lg bg-cover bg-center"></div>
 
             <div className="w-full gap-5 grid  grid-cols-4 max-md:grid-cols-2 overflow-hidden max-md:gap-2">
               {Array(4)

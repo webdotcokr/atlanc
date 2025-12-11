@@ -41,8 +41,8 @@ export default function Section9() {
               ></img>
 
               <img
-                src="/recept01.webp"
-                alt="recept"
+                src="/recipt01.webp"
+                alt="recipt"
                 className="w-[307px] absolute md:top-[92px] md:left-[383px] max-md:bottom-0 max-md:left-1/2 max-md:-translate-x-1/2"
                 style={{ boxShadow: "4px 12px 12px 0 rgba(0, 0, 0, 0.12)" }}
               ></img>
@@ -56,8 +56,8 @@ export default function Section9() {
               ></img>
 
               <img
-                src="/recept02.webp"
-                alt="recept"
+                src="/recipt02.webp"
+                alt="recipt"
                 className="w-[307px] absolute md:top-[92px] md:right-[383px] max-md:bottom-0 max-md:left-1/2 max-md:-translate-x-1/2"
                 style={{ boxShadow: "4px 12px 12px 0 rgba(0, 0, 0, 0.12)" }}
               ></img>

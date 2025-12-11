@@ -97,55 +97,85 @@ export default function Section4() {
 
             <div className="w-[700px] flex flex-col max-xl:w-full">
               <div className="text-[28px] leading-[1.4] font-[NanumSquareNeo] font-bold pb-[21px] border-b w-full border-white text-white max-md:pb-[14px] max-md:text-[16px]">
-                2025년 9월 건대 직영점 실제 월매출
+                2025년 N월 직영점 매출 시뮬레이션
               </div>
               <div className="flex items-center justify-between border-b border-[#F6F6F633] pt-6 pb-[22px] max-md:py-[14px]">
                 <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
-                  매출
+                  총매출
                 </p>
-                <p className="text-[22px]  font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
-                  14,952,300원
-                </p>
+                <div className="flex items-center gap-3">
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    60,000,000원
+                  </p>
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    100.0%
+                  </p>
+                </div>
               </div>
               <div className="flex items-center justify-between border-b border-[#F6F6F633] pt-6 pb-[22px] max-md:py-[14px]">
                 <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
-                  도입비
+                  대표매출
                 </p>
-                <p className="text-[22px]  font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] line-through max-md:text-[17px]">
-                  0원
-                </p>
+                <div className="flex items-center gap-3">
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    15,000,000원
+                  </p>
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    25%
+                  </p>
+                </div>
               </div>
               <div className="flex items-center justify-between border-b border-[#F6F6F633] pt-6 pb-[22px] max-md:py-[14px]">
                 <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
-                  가맹비
+                  직원매출
                 </p>
-                <p className="text-[22px]  font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] line-through max-md:text-[17px]">
-                  0원
-                </p>
+                <div className="flex items-center gap-3">
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    45,000,000원
+                  </p>
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    75%
+                  </p>
+                </div>
               </div>
               <div className="flex items-center justify-between border-b border-[#F6F6F633] pt-6 pb-[22px] max-md:py-[14px]">
                 <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
-                  인건비
+                  직원급여
                 </p>
-                <p className="text-[22px]  font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] line-through max-md:text-[17px]">
-                  0,000,000원
-                </p>
+                <div className="flex items-center gap-3">
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    22,500,000원
+                  </p>
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    37.5%
+                  </p>
+                </div>
               </div>
-              <div className="flex items-center justify-between  pt-[27px] pb-[25px] max-md:py-[14px]">
+              <div className="flex items-center justify-between pt-[27px] pb-[25px] max-md:py-[14px]">
                 <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
-                  임대료 및 운영잡비
+                  임대료 및 기타 운영비
                 </p>
-                <p className="text-[22px]  font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] line-through max-md:text-[17px]">
-                  0,000,000원
-                </p>
+                <div className="flex items-center gap-3">
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    6,000,000원
+                  </p>
+                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                    10%
+                  </p>
+                </div>
               </div>
               <div className="flex items-center justify-between border-t border-[#F6F6F6] pt-[22px] max-md:pt-[14px]">
                 <p className="text-[28px] leading-[1.4] text-[#26E45C] font-[NanumSquareNeo] font-extrabold max-md:text-[22px]">
-                  영업이익 (40%)
+                  순이익
                 </p>
-                <p className="text-[28px] leading-[1.4] text-[#26E45C] font-[NanumSquareNeo] font-extrabold max-md:text-[22px]">
-                  0,000,000원
-                </p>
+                <div className="flex items-center gap-3">
+                  <p className="text-[28px] leading-[1.4] text-[#26E45C] font-[NanumSquareNeo] font-extrabold max-md:text-[22px]">
+                    31,500,000원
+                  </p>
+                  <p className="text-[28px] leading-[1.4] text-[#26E45C] font-[NanumSquareNeo] font-extrabold max-md:text-[22px]">
+                    52.5%
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 export default function Section12() {
   return (
     <section className=" bg-[#090D09]  relative pb-[73px] !px-0 max-md:pb-[40px] overflow-hidden">
-      <div className="bg-[url('/section12/bg.webp')] bg-no-repeat w-full flex flex-col items-center pt-[113px] pb-[43px] max-md:pb-6 max-md:px-5">
+      <div className="bg-[url('/section12/bg.webp')] bg-cover bg-no-repeat w-full flex flex-col items-center pt-[113px] pb-[43px] max-md:pb-6 max-md:px-5">
         <div className=" flex flex-col items-center gap-4">
           <MotionWrapper animation="fadeIn">
             <div className=" px-2 py-1 bg-[#26E45C] text-xl font-extrabold max-md:text-[16px] text-center text-black w-fit">
