@@ -72,7 +72,7 @@ export default function Section6() {
                   </h3>
 
                   <p className="font-poppins text-[60px] italic font-semibold text-[#26E45C] max-md:text-[30px] max-xl:text-[40px]">
-                    <AnimatedCounter to={50} suffix="%" duration={2} />
+                    <AnimatedCounter to={50} suffix="% ↑" duration={2} />
                   </p>
                 </div>
               </div>

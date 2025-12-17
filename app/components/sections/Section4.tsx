@@ -113,27 +113,27 @@ export default function Section4() {
                 </div>
               </div>
               <div className="flex items-center justify-between border-b border-[#F6F6F633] pt-6 pb-[22px] max-md:py-[14px]">
-                <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
+                <p className="text-xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
                   대표매출
                 </p>
                 <div className="flex items-center gap-3">
-                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                  <p className="text-[18px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
                     15,000,000원
                   </p>
-                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                  <p className="text-[18px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
                     25%
                   </p>
                 </div>
               </div>
               <div className="flex items-center justify-between border-b border-[#F6F6F633] pt-6 pb-[22px] max-md:py-[14px]">
-                <p className="text-2xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
+                <p className="text-xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
                   직원매출
                 </p>
                 <div className="flex items-center gap-3">
-                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                  <p className="text-[18px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
                     45,000,000원
                   </p>
-                  <p className="text-[22px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
+                  <p className="text-[18px] font-[NanumSquareNeo] leading-[1.4] text-[#f6f6f6] max-md:text-[17px]">
                     75%
                   </p>
                 </div>

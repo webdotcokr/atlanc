@@ -84,7 +84,7 @@ export default function Section15() {
                       본사의 브랜드 노하우, 교육, 운영 시스템 등
                     </td>
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
-                      112.5만원 ~ 300만원
+                      3 ~ 8%
                     </td>
                     <td className="border-b border-dashed border-[#D3D3D3] bg-white "></td>
                   </tr>
@@ -112,13 +112,7 @@ export default function Section15() {
                     <td className="px-[21px] py-5 max-md:px-[11px] max-md:py-[14px] font-bold text-black text-xl max-md:text-[15px] border-b border-r border-dashed border-[#D3D3D3] bg-white leading-[1.6] text-right">
                       700만원
                     </td>
-                    <td className="border-b border-dashed border-[#D3D3D3] bg-white max-md:px-[11px] max-md:py-[14px]">
-                      <div className="flex items-center justify-center">
-                        <div className="px-2.5 py-[5px] max-md:px-1.5 max-md:py-[3px] bg-[#26E45C] transform-[rotate(-8deg)] text-lg max-md:text-sm leading-[1.6] font-extrabold">
-                          한시적 할인
-                        </div>
-                      </div>
-                    </td>
+                    <td className="border-b border-dashed border-[#D3D3D3] bg-white max-md:px-[11px] max-md:py-[14px]"></td>
                   </tr>
 
                   <tr>
