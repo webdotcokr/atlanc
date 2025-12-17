@@ -16,12 +16,7 @@ import Section15 from "../components/sections/Section15";
 
 export default function FranchisePage() {
   return (
-    <div
-      style={{
-        fontFamily:
-          "'NanumSquareNeo', -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
-      }}
-    >
+    <div>
       <h1 className="sr-only">아뜰랑 맨즈헤어, 프리미엄 남성 전문 헤어샵</h1>
       {/* Main Hero Section */}
       <section className="relative flex flex-col items-center gap-5 max-md:gap-3 justify-center h-[890px] max-md:h-[631px] w-full text-center bg-[url('/new-hero.webp')] bg-[#090D09]">
@@ -88,7 +83,7 @@ export default function FranchisePage() {
       <div className=" w-full h-[170px] overflow-hidden bg-[#1FD854] max-md:h-[72px]">
         <div className="flex items-center gap-11 h-full animate-scroll-left-infinite max-md:gap-4">
           {/* 첫 번째 세트 */}
-          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap max-md:text-[30px]">
+          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap max-md:text-[30px] en">
             ATLANC PREMIUM MEN&apos;S HAIR
           </h1>
           <img
@@ -96,7 +91,7 @@ export default function FranchisePage() {
             className="w-[95px] aspect-square shrink-0 max-md:w-7"
             alt="Atlanc Logo"
           />
-          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap max-md:text-[30px]">
+          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap max-md:text-[30px] en">
             ATLANC PREMIUM MEN&apos;S HAIR
           </h1>
           <img
@@ -105,7 +100,7 @@ export default function FranchisePage() {
             alt="Atlanc Logo"
           />
           {/* 두 번째 세트 (복제 - 끊김 없는 루프) */}
-          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap max-md:text-[30px]">
+          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap max-md:text-[30px] en">
             ATLANC PREMIUM MEN&apos;S HAIR
           </h1>
           <img
@@ -113,7 +108,7 @@ export default function FranchisePage() {
             className="w-[95px] aspect-square shrink-0 max-md:w-7"
             alt="Atlanc Logo"
           />
-          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap max-md:text-[30px]">
+          <h1 className="text-[74px] font-poppins font-bold text-black leading-[1.7] shrink-0 whitespace-nowrap max-md:text-[30px] en">
             ATLANC PREMIUM MEN&apos;S HAIR
           </h1>
           <img
