@@ -113,7 +113,7 @@ export default function Section4() {
                 </div>
               </div>
               <div className="flex items-center justify-between border-b border-[#F6F6F633] pt-6 pb-[22px] max-md:py-[14px]">
-                <p className="text-xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
+                <p className="text-base leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
                   대표매출
                 </p>
                 <div className="flex items-center gap-3">
@@ -126,7 +126,7 @@ export default function Section4() {
                 </div>
               </div>
               <div className="flex items-center justify-between border-b border-[#F6F6F633] pt-6 pb-[22px] max-md:py-[14px]">
-                <p className="text-xl leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
+                <p className="text-base leading-[1.4] font-bold font-[NanumSquareNeo] text-[#f6f6f6] max-md:text-[17px]">
                   직원매출
                 </p>
                 <div className="flex items-center gap-3">

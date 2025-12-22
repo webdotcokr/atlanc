@@ -188,7 +188,7 @@ export default function Home() {
                       평균 재방문율
                     </h3>
                     <p className="num text-7xl italic font-semibold text-[var(--color--gray-500)] mt-1">
-                      <AnimatedCounter to={50} suffix="% +" duration={2} />
+                      <AnimatedCounter to={50} suffix="% ↑" duration={2} />
                     </p>
                   </div>
                 </div>
