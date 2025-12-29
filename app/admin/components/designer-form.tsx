@@ -197,24 +197,9 @@ export default function DesignerForm({ designer, mode }: DesignerFormProps) {
         <label className="block text-sm font-medium text-gray-700 mb-2">
           프로필 이미지 <span className="text-red-500">*</span>
         </label>
-        <div className="flex items-start gap-4">
-          {/* Preview */}
-          <div className="w-32 h-32 rounded-lg bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center overflow-hidden">
-            {formData.image ? (
-              <img
-                src={formData.image}
-                alt="Preview"
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            )}
-          </div>
-
+        <div className="space-y-4">
           {/* Upload Controls */}
-          <div className="flex-1">
+          <div>
             <input
               ref={fileInputRef}
               type="file"
@@ -233,12 +218,21 @@ export default function DesignerForm({ designer, mode }: DesignerFormProps) {
             <p className="text-sm text-gray-500 mt-2">
               JPG, PNG, WebP 형식 (최대 5MB)
             </p>
-            {formData.image && (
-              <p className="text-sm text-gray-600 mt-1 truncate">
-                현재: {formData.image}
-              </p>
-            )}
           </div>
+
+          {/* Preview */}
+          {formData.image && (
+            <div className="space-y-2">
+              <p className="text-sm text-gray-600">미리보기:</p>
+              <div
+                className="w-32 h-32 rounded-lg bg-gray-200 bg-cover bg-center border border-gray-300"
+                style={{ backgroundImage: `url(${formData.image})` }}
+              />
+              <p className="text-xs text-gray-500 break-all max-w-md">
+                {formData.image}
+              </p>
+            </div>
+          )}
         </div>
       </div>
 
