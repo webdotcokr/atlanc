@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import type { DesignerDisplay } from '@/app/lib/types/database';
 
 interface DesignerFormProps {
@@ -202,11 +201,9 @@ export default function DesignerForm({ designer, mode }: DesignerFormProps) {
           {/* Preview */}
           <div className="w-32 h-32 rounded-lg bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center overflow-hidden">
             {formData.image ? (
-              <Image
+              <img
                 src={formData.image}
                 alt="Preview"
-                width={128}
-                height={128}
                 className="w-full h-full object-cover"
               />
             ) : (
