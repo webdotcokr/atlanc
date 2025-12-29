@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import type { DesignerDisplay } from '@/app/lib/types/database';
 
 interface DesignerFormProps {
@@ -11,7 +12,9 @@ interface DesignerFormProps {
 
 export default function DesignerForm({ designer, mode }: DesignerFormProps) {
   const router = useRouter();
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
 
   const [formData, setFormData] = useState({
@@ -28,6 +31,50 @@ export default function DesignerForm({ designer, mode }: DesignerFormProps) {
     displayOrder: designer?.displayOrder ?? 0,
     isActive: designer?.isActive ?? true,
   });
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    // Validate file type
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+    if (!allowedTypes.includes(file.type)) {
+      setError('JPG, PNG, WebP 이미지만 업로드 가능합니다.');
+      return;
+    }
+
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      setError('파일 크기는 5MB 이하만 가능합니다.');
+      return;
+    }
+
+    setError('');
+    setUploading(true);
+
+    try {
+      const uploadFormData = new FormData();
+      uploadFormData.append('file', file);
+      uploadFormData.append('location', formData.location);
+
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: uploadFormData,
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || '업로드에 실패했습니다.');
+      }
+
+      const data = await response.json();
+      setFormData({ ...formData, image: data.path });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '업로드에 실패했습니다.');
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -146,20 +193,56 @@ export default function DesignerForm({ designer, mode }: DesignerFormProps) {
         </div>
       </div>
 
-      {/* Image */}
+      {/* Image Upload */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          이미지 경로 <span className="text-red-500">*</span>
+          프로필 이미지 <span className="text-red-500">*</span>
         </label>
-        <input
-          type="text"
-          value={formData.image}
-          onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-          placeholder="예: /sinsa/이름.webp"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#26D07C] focus:border-transparent outline-none"
-          required
-        />
-        <p className="text-sm text-gray-500 mt-1">public 폴더 기준 경로를 입력하세요.</p>
+        <div className="flex items-start gap-4">
+          {/* Preview */}
+          <div className="w-32 h-32 rounded-lg bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center overflow-hidden">
+            {formData.image ? (
+              <Image
+                src={formData.image}
+                alt="Preview"
+                width={128}
+                height={128}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            )}
+          </div>
+
+          {/* Upload Controls */}
+          <div className="flex-1">
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+              onChange={handleFileChange}
+              className="hidden"
+            />
+            <button
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              disabled={uploading}
+              className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50"
+            >
+              {uploading ? '업로드 중...' : '이미지 선택'}
+            </button>
+            <p className="text-sm text-gray-500 mt-2">
+              JPG, PNG, WebP 형식 (최대 5MB)
+            </p>
+            {formData.image && (
+              <p className="text-sm text-gray-600 mt-1 truncate">
+                현재: {formData.image}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* Social */}
@@ -279,7 +362,7 @@ export default function DesignerForm({ designer, mode }: DesignerFormProps) {
       <div className="flex gap-4 pt-4">
         <button
           type="submit"
-          disabled={loading}
+          disabled={loading || !formData.image}
           className="flex-1 bg-[#26D07C] text-white py-3 rounded-lg font-semibold hover:bg-[#1fb86a] transition-colors disabled:opacity-50"
         >
           {loading ? '저장 중...' : mode === 'create' ? '디자이너 추가' : '수정 완료'}

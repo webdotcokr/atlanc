@@ -81,7 +81,7 @@ export default function Header({ className = "" }: HeaderProps) {
               </nav>
 
               {/* CTA Button */}
-              <Link href="#">
+              {/* <Link href="#">
                 <button className="flex flex-row gap-2 items-center bg-white hover:bg-gray-100 px-5 h-[51px] rounded-full cursor-pointer">
                   <div className="flex items-center gap-1 text-lg  font-semibold text-black">
                     <span>
@@ -94,7 +94,7 @@ export default function Header({ className = "" }: HeaderProps) {
                     <img src="/cta-icon-2.png" />
                   </span>
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { DesignerCard, SlideArrows } from '../components/ui';
-import MotionWrapper, { StaggerContainer, StaggerItem } from '../components/ui/motion-wrapper';
+import MotionWrapper from '../components/ui/motion-wrapper';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -484,22 +484,34 @@ export default function DesignersPage() {
           </MotionWrapper>
 
           {/* Designer Cards */}
-          <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-8" staggerDelay={0.15} delay={0.2}>
-            {designersData[activeTab].map((designer) => (
-              <StaggerItem key={designer.id} animation="fadeInUp">
-                <DesignerCard 
-                name={designer.name}
-                position={designer.position}
-                image={designer.image}
-                social={designer.social}
-                urls={designer.urls}
-                description={designer.description}
-                onDetailClick={() => console.log(`Detail for ${designer.name}`)}
-                onBookingClick={() => console.log(`Booking for ${designer.name}`)}
-                />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          {loading ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="animate-pulse bg-gray-100 h-[400px] rounded-lg" />
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {designersData[activeTab].map((designer, index) => (
+                <MotionWrapper
+                  key={designer.id}
+                  animation="fadeInUp"
+                  delay={index * 0.1}
+                >
+                  <DesignerCard
+                    name={designer.name}
+                    position={designer.position}
+                    image={designer.image}
+                    social={designer.social}
+                    urls={designer.urls}
+                    description={designer.description}
+                    onDetailClick={() => console.log(`Detail for ${designer.name}`)}
+                    onBookingClick={() => console.log(`Booking for ${designer.name}`)}
+                  />
+                </MotionWrapper>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>
