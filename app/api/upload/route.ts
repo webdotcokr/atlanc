@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { validateSession } from '@/app/lib/auth';
-import { writeFile, mkdir } from 'fs/promises';
-import path from 'path';
+import { createServerClient } from '@/app/lib/supabase/server';
+
+const BUCKET_NAME = 'designers';
 
 export async function POST(request: Request) {
   try {
@@ -42,27 +43,37 @@ export async function POST(request: Request) {
 
     // Generate unique filename
     const timestamp = Date.now();
-    const originalName = file.name.replace(/[^a-zA-Z0-9가-힣._-]/g, '_');
-    const ext = path.extname(originalName) || '.webp';
-    const baseName = path.basename(originalName, ext);
-    const fileName = `${baseName}_${timestamp}${ext}`;
+    const ext = file.name.split('.').pop() || 'webp';
+    const fileName = `${location}/${timestamp}.${ext}`;
 
-    // Create directory if it doesn't exist
-    const uploadDir = path.join(process.cwd(), 'public', location);
-    await mkdir(uploadDir, { recursive: true });
-
-    // Save file
-    const filePath = path.join(uploadDir, fileName);
+    // Upload to Supabase Storage
+    const supabase = createServerClient();
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    await writeFile(filePath, buffer);
 
-    // Return the public path
-    const publicPath = `/${location}/${fileName}`;
+    const { error: uploadError } = await supabase.storage
+      .from(BUCKET_NAME)
+      .upload(fileName, buffer, {
+        contentType: file.type,
+        upsert: true,
+      });
+
+    if (uploadError) {
+      console.error('Supabase upload error:', uploadError);
+      return NextResponse.json(
+        { error: 'Failed to upload file to storage' },
+        { status: 500 }
+      );
+    }
+
+    // Get public URL
+    const { data: urlData } = supabase.storage
+      .from(BUCKET_NAME)
+      .getPublicUrl(fileName);
 
     return NextResponse.json({
       success: true,
-      path: publicPath,
+      path: urlData.publicUrl,
       fileName,
     });
   } catch (error) {
