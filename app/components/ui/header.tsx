@@ -56,7 +56,7 @@ export default function Header({ className = "" }: HeaderProps) {
               </Link>
 
               {/* Navigation */}
-              <nav className="flex items-center gap-[60px] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+              <nav className="flex items-center gap-[60px]">
                 <Link
                   href="/atlanc"
                   className="text-white text-xl hover:text-[#26E45C] transition-colors duration-200 font-semibold leading-[1.4]"
@@ -79,22 +79,6 @@ export default function Header({ className = "" }: HeaderProps) {
                   </Link>
                 )}
               </nav>
-
-              {/* CTA Button */}
-              {/* <Link href="#">
-                <button className="flex flex-row gap-2 items-center bg-white hover:bg-gray-100 px-5 h-[51px] rounded-full cursor-pointer">
-                  <div className="flex items-center gap-1 text-lg  font-semibold text-black">
-                    <span>
-                      <img src="/cta-icon-1.png" className="w-6" />
-                    </span>
-                    <span>무료 컨설팅</span>
-                  </div>
-
-                  <span>
-                    <img src="/cta-icon-2.png" />
-                  </span>
-                </button>
-              </Link> */}
             </div>
           </div>
         </div>
