@@ -1,6 +1,6 @@
 import React from "react";
 import MotionWrapper from "../components/ui/motion-wrapper";
-import CustomCheckbox from "../components/ui/custom-checkbox";
+import FranchiseForm from "../components/ui/franchise-form";
 import Section4 from "../components/sections/Section4";
 import Section5 from "../components/sections/Section5";
 import Section6 from "../components/sections/Section6";
@@ -134,162 +134,33 @@ export default function FranchisePage() {
             </h1>
           </div>
 
-          <div className="pt-11 pb-[38px] max-md:p-4 max-md:pt-5 px-10 bg-[#00000099] border border-[#FFFFFF26] flex lg:items-end gap-4 max-md:gap-8 rounded-lg overflow-hidden max-lg:flex-col">
-            <div className="flex flex-col gap-2.5 max-md:gap-5">
-              <div className="flex items-center gap-4 max-lg:flex-col">
-                <div className="flex flex-col gap-1.5 max-lg:w-full">
-                  <p className="text-base font-bold leading-[1.3] text-white">
-                    성함
-                  </p>
-                  <input
-                    className="bg-white w-[222px] max-lg:w-full max-md:h-12 h-[54px] px-[17px] py-[15px] text-[16px] max-md:py-[14px] max-md:px-[14px] max-md:text-[15px] font-bold leading-[1.4] placeholder:text-[#777] outline-none rounded-sm"
-                    placeholder="성함을 입력하세요"
-                  ></input>
-                </div>
-                <div className="flex flex-col gap-1.5 max-lg:w-full">
-                  <p className="text-base font-bold leading-[1.3] text-white">
-                    연락처
-                  </p>
-                  <input
-                    className="bg-white w-[222px] max-lg:w-full max-md:h-12 h-[54px] px-[17px] py-[15px] text-[16px] max-md:py-[14px] max-md:px-[14px] max-md:text-[15px] font-bold leading-[1.4] placeholder:text-[#777] outline-none rounded-sm"
-                    placeholder="연락처를 입력하세요"
-                    type="number"
-                  ></input>
-                </div>
-                <div className="flex flex-col gap-1.5 max-lg:w-full">
-                  <p className="text-base font-bold leading-[1.3] text-white">
-                    창업 희망지역
-                  </p>
-                  <input
-                    className="bg-white w-[222px] max-lg:w-full max-md:h-12 h-[54px] px-[17px] py-[15px] text-[16px] max-md:py-[14px] max-md:px-[14px] max-md:text-[15px] font-bold leading-[1.4] placeholder:text-[#777] outline-none rounded-sm"
-                    placeholder="희망 지역을 입력하세요.(ex. 성남 분당)"
-                  ></input>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-5 lg:justify-end">
-                <CustomCheckbox />
-                <p className="cursor-pointer text-sm max-md:text-[13px] leading-1.4 text-white underline">
-                  약관보기
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-[#26E45C] py-4 pl-[24px] cursor-pointer pr-5 rounded-lg w-[192px] h-[87px] max-lg:w-full max-md:h-[54px] flex items-center justify-center gap-[15px] max-md:gap-2">
-              <p className="text-[22px] text-black font-extrabold leading-[1.2] max-md:text-lg">
-                무료 컨설팅 <br className="max-lg:hidden"></br>신청하기
-              </p>
-              <img
-                src="ico-arrow-2.svg"
-                alt="ico-arrow"
-                className="w-5 max-md:w-[18px]"
-              ></img>
-            </div>
-          </div>
+          <FranchiseForm variant="main" />
         </div>
       </section>
 
-      {/* 하단 상담신청 */}
+      {/* 하단 상담신청 - Desktop */}
       <div className="h-[102px] w-full max-lg:hidden">
         <section className="bg-[#313532] w-full h-[102px] fixed bottom-0 left-0 z-[1] flex flex-col !px-0">
           <div className="w-full h-[3px] bg-gradient-to-r from-[#26e45c] to-[#187d68]" />
           <div className="max-w-[1440px] px-5 flex items-center mx-auto grow justify-center">
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
-                <img
-                  src="/ico-call.svg"
-                  alt="ico-call"
-                  className="w-4 max-lg:w-3"
-                ></img>
-                <p className="text-lg text-white font-bold leading-[1.4] max-lg:text-base">
-                  가맹문의
-                </p>
+                <img src="/ico-call.svg" alt="ico-call" className="w-4 max-lg:w-3" />
+                <p className="text-lg text-white font-bold leading-[1.4] max-lg:text-base">가맹문의</p>
               </div>
-              <p className="text-[21px] font-extrabold text-[#26E45C] leading-[1.4] max-lg:text-[18px]">
-                0507-1341-9532
-              </p>
+              <p className="text-[21px] font-extrabold text-[#26E45C] leading-[1.4] max-lg:text-[18px]">0507-1341-9532</p>
             </div>
-            <div className="flex items-center justify-center">
-              <div className="flex items-center gap-3 ml-[29px] mr-6">
-                <input
-                  className="bg-white w-[222px] max-xl:w-[190px] max-lg:w-[180px] h-[54px] px-[17px] py-[15px] text-[16px] font-bold leading-[1.4] placeholder:text-[#777] outline-none rounded-sm"
-                  placeholder="성함을 입력하세요"
-                ></input>
-                <input
-                  className="bg-white w-[244px] max-xl:w-[190px] max-lg:w-[180px] h-[54px] px-[17px] py-[15px] text-[16px] font-bold leading-[1.4] placeholder:text-[#777] outline-none rounded-sm"
-                  placeholder="연락처를 입력하세요"
-                  type="number"
-                ></input>
-                <input
-                  className="max-xl:hidden bg-white w-[313px] h-[54px] px-[17px] py-[15px] text-[16px] font-bold leading-[1.4] placeholder:text-[#777] outline-none rounded-sm"
-                  placeholder="희망 지역을 입력하세요.(ex. 성남 분당)"
-                ></input>
-
-                <div className="flex flex-col gap-[3px] items-end  max-lg:gap-2 ">
-                  <CustomCheckbox label="개인정보 수집동의" />
-                  <p className="cursor-pointer text-sm leading-1.4 text-white underline">
-                    약관보기
-                  </p>
-                </div>
-              </div>
-              <div className="bg-[#26E45C] py-4  cursor-pointer  rounded-lg w-[192px] max-lg:w-[160px] h-[68px] flex items-center justify-center gap-[15px]">
-                <p className="text-[22px] text-black font-extrabold leading-[1.2] max-lg:text-lg">
-                  무료상담 신청
-                </p>
-                <img
-                  src="ico-arrow-2.svg"
-                  alt="ico-arrow"
-                  className="w-5"
-                ></img>
-              </div>
-            </div>
+            <FranchiseForm variant="desktop-bar" />
           </div>
         </section>
       </div>
+
+      {/* 하단 상담신청 - Mobile */}
       <div className="w-full h-[95px] lg:hidden md:h-[120px]">
         <section className="bg-[#313532] w-full max-md:h-[95px] h-[120px] fixed bottom-0 left-0 z-[1] flex flex-col !px-0">
           <div className="w-full h-[3px] bg-gradient-to-r from-[#26e45c] to-[#187d68]" />
           <div className="w-full px-5 flex flex-col gap-2.5 py-[11px] md:pt-4 justify-between">
-            <div className="flex gap-2">
-              <input
-                className="h-10 md:h-12 md:text-base px-[13px] rounded-sm text-[13px] shrink-0 font-bold placeholder:text-[#777] bg-white w-[30%] outline-none"
-                placeholder="성함"
-              ></input>
-              <input
-                className="h-10 md:h-12 md:text-base px-[13px] rounded-sm text-[13px] font-bold placeholder:text-[#777] bg-white grow w-full"
-                placeholder="연락처"
-              ></input>
-              <div className="cursor-pointer md:h-12 h-10 w-[98px] md:w-[120px] shrink-0 bg-[#26E45C] flex items-center gap-1 rounded-sm justify-center">
-                <p className="text-[15px] text-black font-extrabold leading-[1.2] md:text-lg">
-                  무료 상담
-                </p>
-                <img
-                  src="ico-arrow-2.svg"
-                  alt="ico-arrow"
-                  className="w-3"
-                ></img>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center  gap-3">
-                <CustomCheckbox label="개인정보 수집동의" />
-                <p className="cursor-pointer text-[11px] leading-1.4 text-white underline md:text-sm">
-                  약관보기
-                </p>
-              </div>
-
-              <div className="flex items-center gap-1 md:gap-2">
-                <img
-                  src="/ico-call.svg"
-                  alt="ico-call"
-                  className="w-2.5 md:w-4"
-                ></img>
-                <p className="text-xs font-extrabold text-[#26E45C] leading-[1.4] md:text-base">
-                  0507-1341-9532
-                </p>
-              </div>
-            </div>
+            <FranchiseForm variant="mobile-bar" />
           </div>
         </section>
       </div>

@@ -4,19 +4,33 @@ import { useState } from "react";
 
 interface CustomCheckboxProps {
   label?: string;
+  checked?: boolean;
+  onChange?: (checked: boolean) => void;
 }
 
 export default function CustomCheckbox({
   label = "개인정보 수집에 동의합니다",
+  checked,
+  onChange,
 }: CustomCheckboxProps) {
-  const [isChecked, setIsChecked] = useState(false);
+  const [internalChecked, setInternalChecked] = useState(false);
+
+  // Support both controlled and uncontrolled modes
+  const isChecked = checked !== undefined ? checked : internalChecked;
+  const handleChange = (newChecked: boolean) => {
+    if (onChange) {
+      onChange(newChecked);
+    } else {
+      setInternalChecked(newChecked);
+    }
+  };
 
   return (
     <label className="flex items-center gap-1.5 cursor-pointer">
       <input
         type="checkbox"
         checked={isChecked}
-        onChange={(e) => setIsChecked(e.target.checked)}
+        onChange={(e) => handleChange(e.target.checked)}
         className="sr-only"
       />
       <div

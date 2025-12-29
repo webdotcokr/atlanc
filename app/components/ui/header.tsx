@@ -11,6 +11,7 @@ export interface HeaderProps {
 export default function Header({ className = "" }: HeaderProps) {
   const pathname = usePathname();
   const isFranchisePage = pathname === "/franchise";
+  const isAdminPage = pathname?.startsWith("/admin");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
@@ -25,6 +26,11 @@ export default function Header({ className = "" }: HeaderProps) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // admin 페이지에서는 헤더 숨김
+  if (isAdminPage) {
+    return null;
+  }
 
   // 모바일 메뉴 토글
   const toggleMobileMenu = () => {

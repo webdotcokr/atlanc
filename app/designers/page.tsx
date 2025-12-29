@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { DesignerCard, SlideArrows } from '../components/ui';
@@ -20,7 +20,7 @@ const swiperStyles = `
     border-radius: 50% !important;
     margin: 0 4px !important;
   }
-  
+
   .swiper-pagination-bullet-custom-active {
     background: #26d07c !important;
   }
@@ -33,8 +33,26 @@ if (typeof document !== 'undefined') {
   document.head.appendChild(style);
 }
 
-// Mock designer data
-const designersData = {
+// Designer interface
+interface Designer {
+  id: string | number;
+  name: string;
+  position: string;
+  image: string;
+  social: {
+    wonbar?: string;
+    instagram?: string;
+  };
+  urls: {
+    instagram: string;
+    booking: string;
+    youtube?: string;
+  };
+  description: string;
+}
+
+// Fallback designer data (used when API is not available)
+const fallbackDesignersData: { sinsa: Designer[]; konkuk: Designer[] } = {
   sinsa: [
     {
       id: 1,
@@ -279,6 +297,39 @@ export default function DesignersPage() {
     slidePrev: () => void;
     slideNext: () => void;
   } | null>(null);
+  const [designersData, setDesignersData] = useState<{ sinsa: Designer[]; konkuk: Designer[] }>(fallbackDesignersData);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchDesigners() {
+      try {
+        const response = await fetch('/api/designers');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.designers && data.designers.length > 0) {
+            // Group designers by location
+            const sinsa = data.designers.filter((d: Designer & { location: string }) => d.location === 'sinsa');
+            const konkuk = data.designers.filter((d: Designer & { location: string }) => d.location === 'konkuk');
+
+            // Only update if we got data
+            if (sinsa.length > 0 || konkuk.length > 0) {
+              setDesignersData({
+                sinsa: sinsa.length > 0 ? sinsa : fallbackDesignersData.sinsa,
+                konkuk: konkuk.length > 0 ? konkuk : fallbackDesignersData.konkuk,
+              });
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Failed to fetch designers:', error);
+        // Keep using fallback data
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchDesigners();
+  }, []);
 
   return (
     <div className="bg-white">
