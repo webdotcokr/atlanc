@@ -54,7 +54,7 @@ export default function Section14() {
               1년 후
             </p>
             <p className="md:pt-[11px] lading-[1.4] max-xl:text-[40px] font-[900] text-[#26E45C] text-[50px] max-lg:text-[32px] max-md:text-[28px]">
-              50,025,440
+              65,000,000
             </p>
           </div>
 
