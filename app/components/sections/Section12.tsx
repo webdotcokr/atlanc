@@ -2,7 +2,7 @@
 
 import MotionWrapper from "../ui/motion-wrapper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -121,27 +121,56 @@ export default function Section12() {
           </p>
         </div>
 
-        <div className="flex items-center justify-center gap-5 overflow-hidden max-md:hidden">
-          <img
-            src="/section12/image-1.webp"
-            className="h-[421px] rounded-2xl opacity-[0.08] shrink-0"
-            alt="image"
-          ></img>
-          {Array(5)
-            .fill(null)
-            .map((_, index) => (
-              <img
-                key={index}
-                src={`/section12/image-${index + 2}.webp`}
-                className="h-[421px] rounded-2xl shrink-0 mr-1"
-                alt="image"
-              ></img>
-            ))}
-          <img
-            src="/section12/image-1.webp"
-            className="h-[421px] rounded-2xl opacity-[0.08] shrink-0"
-            alt="image"
-          ></img>
+        <div className="relative overflow-hidden w-full section12-swiper-pc max-md:hidden">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView="auto"
+            centeredSlides={true}
+            navigation={{
+              prevEl: ".pc-swiper-prev",
+              nextEl: ".pc-swiper-next",
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            speed={800}
+            loop={true}
+            slideToClickedSlide={true}
+          >
+            {Array(12)
+              .fill(null)
+              .map((_, index) => (
+                <SwiperSlide key={index} style={{ width: "auto" }}>
+                  {({ isActive, isPrev, isNext }) => (
+                    <img
+                      alt={`image ${(index % 6) + 1}`}
+                      src={`/section12/image-${(index % 6) + 1}.webp`}
+                      className="h-[421px] w-auto rounded-2xl shrink-0 transition-opacity duration-300"
+                      style={{
+                        opacity: isActive || isPrev || isNext ? 1 : 0.08,
+                      }}
+                    />
+                  )}
+                </SwiperSlide>
+              ))}
+          </Swiper>
+          {/* Navigation Buttons */}
+          <div className="pc-swiper-prev absolute left-[50px] top-1/2 -translate-y-1/2 cursor-pointer z-10">
+            <img
+              src="/slide-arrow-1.svg"
+              alt="Previous"
+              className="w-[30px]"
+            />
+          </div>
+          <div className="pc-swiper-next absolute right-[50px] top-1/2 -translate-y-1/2 cursor-pointer z-10">
+            <img
+              src="/slide-arrow-1.svg"
+              alt="Next"
+              className="w-[30px] rotate-180"
+            />
+          </div>
         </div>
 
         <div className="relative overflow-visible w-full section12-swiper px-9 md:hidden">

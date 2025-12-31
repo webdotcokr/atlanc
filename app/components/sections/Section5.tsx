@@ -157,7 +157,7 @@ export default function Section5() {
                 ></img>
                 <div className="absolute right-[-27px] flex items-end w-fit bottom-[119px] h-fit gap-1.5 max-md:gap-1 max-md:right-0 max-md:botom-[88px]">
                   <p className="text-lg leading-[1.3] text-white font-[NanumSquareNeo] max-md:text-xs">
-                    아뜨랑 대표원장
+                    아뜰랑 대표원장
                   </p>
                   <h1 className="text-[32px] leading-[1.3] font-extrabold text-white font-[NanumSquareNeo] max-md:text-lg">
                     김 태원
